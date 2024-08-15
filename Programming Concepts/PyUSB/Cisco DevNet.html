@@ -1,0 +1,4008 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#bulk-interrupt-and-isochronous-communications -->
+<html lang="en"><!-- InstanceBegin template="/Templates/apiContent.dwt" codeOutsideHTMLIsLocked="true" --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  
+   
+
+        
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+ 
+  
+      <!-- InstanceBeginEditable name="doctitle" -->
+          <title>Cisco DevNet</title>
+      <!-- InstanceEndEditable -->      
+     
+  
+         <meta http-equiv="X-UA-Compatible" content="IE=EDGE">  
+<link rel="shortcut icon" href="https://developer.cisco.com/images/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/reset.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/text.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/1120_14_10_10.css">
+
+
+
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/dp_core.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/dp_form.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/dp_content.css">
+    <link rel="stylesheet" type="text/css" media="print" href="./Cisco DevNet_files/dp_print.css">
+
+
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/validationEngine.jquery.css" title="no title" charset="utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/superfish.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/superfish-navbar.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/superfish-vertical.css">
+	 
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/breadcrumb.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/colorbox.css">
+	 
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/tablesorter.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/jquery.jgrowl.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/jquery-ui-1.10.0.custom.css">
+    <link rel="stylesheet" href="./Cisco DevNet_files/chosen.css" type="text/css">
+	<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/formbuilder.css">
+    <link rel="stylesheet" type="text/css" href="./Cisco DevNet_files/yt_player.css">
+	
+
+	<!-- load client core styles here: -->
+	<!-- load client form styles here: -->
+	<!-- load client content styles here: -->
+    <link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/shCoreDefault.css">
+	<!-- load client custom styles here: -->
+    
+   
+    <link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/typography.css">
+	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/isotopes.css">
+	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/primary_menu.css">
+	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/common.css">
+	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/shCore.css">
+	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/shThemeDefault.css">
+    <link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/design.css"> 
+      	<link type="text/css" rel="stylesheet" href="./Cisco DevNet_files/dp_ticket_overwrites.css">
+
+
+
+ <link rel="stylesheet" type="text/css" media="print" href="./Cisco DevNet_files/print.css">
+ <link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/cisco-fonts.css">
+ <link rel="stylesheet" type="text/css" href="./Cisco DevNet_files/crankset.css">
+ <style>
+	#stalk{display:none;}
+</style>
+ 
+      
+    
+        
+<!-- load client core styles here: -->
+<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="./Cisco DevNet_files/print(1).css">
+
+<!-- load client custom styles here: -->
+<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/custom.css">
+        
+        
+ 
+
+    
+	<script async="" src="https://altocloud-sdk.com/ac.js"></script><script async="" src="./Cisco DevNet_files/analytics.js"></script><script src="./Cisco DevNet_files/jquery-1.9.1.min.js" type="text/javascript" library="jquery"></script><style type="text/css"></style><style type="text/css"></style>
+
+	<script type="application/x-javascript" src="./Cisco DevNet_files/jqtouch.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.validationEngine-en.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.validationEngine.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/hoverIntent.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/superfish.js"></script>
+    
+    
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery-ui-1.10.0.custom.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.flip.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/flip_script.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.easing.1.3.js" language="JavaScript"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.jBreadCrumb.1.1.js" language="JavaScript"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.colorbox.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/slide.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.elastic.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/iso8601dateparse.js"></script> 
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.highlight.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.alternate.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.jgrowl.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/jquery.collapser.js"></script>  	 
+    <script type="text/javascript" src="./Cisco DevNet_files/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/shCore.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/shBrushJScript.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/shBrushXml.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/shBrushBash.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/shBrushJava.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/shBrushPhp.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/shBrushPython.js"></script>
+
+	<script type="text/javascript" src="./Cisco DevNet_files/helper_functions.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/flowplayer-3.2.12.min.js"></script>
+	<script type="text/javascript" src="./Cisco DevNet_files/flowplayer.ipad-3.2.1.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/jive-widget-devcenter.js"></script>
+    <script type="text/javascript" src="./Cisco DevNet_files/jive-events-widget.js"></script>
+    
+     
+	 
+	 
+	<script type="text/javascript" src="./Cisco DevNet_files/design.js"></script>
+
+
+<!-- community tools -->
+<script type="text/javascript" language="JavaScript">
+  
+
+var keys = {
+	 
+	"devnet-stage.kpimdp.com"  : "#$2cbe54757f0609f8569",	  
+	"devworks-prod.kpimdp.com" : "#$2cbe54757f0609f8569",
+	"developer.cisco.com" : "#$11395c5b08ce4ecae03",
+	"www.developer.cisco.com" : "#$11395c5b08ce4ecae03"
+	
+};
+
+</script>
+
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<script type="text/javascript" src="./Cisco DevNet_files/jquery.tablesorter.js"></script>
+    
+    <script>
+		$(document).ready(function(){ 
+		
+			$(".sortMe").tablesorter();
+			$(".sortMe th").click(function(){
+				var $allImg = $(".sortMe th").find("img");
+				$allImg.prop("src","/images/crankset/tablesort/notSorted.jpg");
+		
+				var $target = $(this);
+				var $myImg = $target.find("img","");
+				$myImg.prop("src","/images/crankset/tablesort/sorted.jpg");
+			}); 
+			
+		
+			var $myStalker = $("#glassme");
+			var $window = $(window);
+			 
+			var myStalkFn =  function() {
+				
+				 var myTop = $window.scrollTop();
+				 
+				 if(myTop > 76){
+					 $myStalker.css({
+						'margin-top' : "-85px", 
+						position: "fixed"
+							 
+					 });  
+					 
+				 }else{
+					 $myStalker.css({
+						'margin-top' : "0",
+						position: "absolute"
+							 
+					 }); 		 
+				 }
+				 
+			};
+			
+			window.addEventListener('scroll', myStalkFn);
+			
+			
+	    }); 
+	
+	</script>
+        
+<script type="text/javascript" src="./Cisco DevNet_files/all.js"></script>
+<script>
+	$(window).scroll(function() {
+		var $myTop = $(document).scrollTop();
+		if ($myTop > 162) {
+			$(".lang-selector, .tocify-wrapper").addClass("stick-top");
+		} else {
+			$(".lang-selector, .tocify-wrapper").removeClass("stick-top");    
+		}
+	});
+	$(window).scroll(function() {
+		var $myBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+		if ($myBottom < 142) {
+			$(".lang-selector, .tocify-wrapper").addClass("stick-bottom");
+		} else {
+			$(".lang-selector, .tocify-wrapper").removeClass("stick-bottom");    
+		}  
+	});
+	var myHeaderWidth = $(".header-login").width();	
+</script>
+        <script type="text/javascript">
+
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+Date();a=s.createElement(o),
+ 
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4043100-1', 'cisco.com');
+  ga('send', 'pageview');
+  
+</script>
+        
+        
+        <style>
+ body{
+	 font:13px/1.5  'CiscoSansLight',Arial,Helvetica,sans-serif;
+ } 
+ 
+ .content h1, .content section h1, .content h2, .content section h2, .content h3, .content section h3, .content h4, .content h5, .content h6, .content section h4, .content section h5, .content section h6, html, body {
+font-family:  'CiscoSansLight',Arial,Helvetica,sans-serif
+}
+
+
+.social-floater{display:none;}
+ </style>
+        
+  
+   <!-- InstanceBeginEditable name="header_region" -->
+  
+   <!-- InstanceEndEditable -->
+  
+<style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style></head>  
+  <!--[if lt IE 7]> <body class="no-js ie6 oldie index"> <![endif]-->
+  <!--[if IE 7]>    <body class="no-js ie7 oldie index"> <![endif]-->
+  <!--[if IE 8]>    <body class="no-js ie8 oldie index"> <![endif]-->
+  <!--[if gt IE 8 | !(IE)]><!--> <body class="no-js index" style="zoom: 1;"> <!--<![endif]-->
+  
+      <!-- Include header and navigation -->
+    
+    
+     <!--incl refs -->
+        
+        <!-- Include header and navigation -->
+        <div id="majorMenu"> 
+            <link rel="stylesheet" href="https://developer.cisco.com/site/css/adbase/cranksetMegamenu.css">
+<link rel="stylesheet" href="https://developer.cisco.com/site/css/adbase/headermenu.css">
+<!-- Container without grid allows for background to fill full width -->
+<div class="header-container full-width">
+    <div class="container_14">
+        <div class="header grid_14">
+            
+            <div class="logo grid_3 omega">
+            	 
+                <a href="http://www.cisco.com/" title="Visit Cisco.com">
+                	<img src="./Cisco DevNet_files/logo-cisco.png" alt="CISCO" class="main-logo">
+                </a>
+                
+               <div name="header-text" data-unique="header-text"></div><h1 id="header-text"> 
+                    <a href="https://developer.cisco.com/" style="font-weight:bold; font-size:30px; margin-left:-10px;">
+                       <!--  <img src="/images/devnet.png"  /> -->
+                      DevNet
+                    </a> 
+               </h1> 
+                
+            </div>
+ 
+            
+             
+             	
+                <div class="header-login ">
+   
+    <div id="menuWrangler" style="float:right;">	 
+    	<div id="itemsHolder"> 
+    		<div class="menuLoggedInOut">
+	            
+
+
+<script>
+
+$("#myAccountMenu").superfish();
+</script>
+  	
+	              
+    
+      
+<div class="menuItem"> 
+	 
+    <a href="https://developer.cisco.com/SSO/login">
+        Log In  
+    </a>   
+</div> 
+
+<div class="menuItem"> 
+	 |
+    
+    <a href="https://tools.cisco.com/IDREG/guestRegistration.do?exit_url=https%3A%2F%2Fdeveloper.cisco.com%2Fsite%2Fdevnet%2Fhome%2Findex.gsp&locale=en_US"> 
+        Register
+    </a>  
+</div> 
+    
+<div class="menuItem" id="subscribeBlock"> 
+	 | 
+    <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" id="subscribeMe" style="outline: 0;">
+    	Subscribe 
+    </a> 
+    
+    
+     <div id="hiddenSubscribeMe" style="display:none;">
+        <!-- Begin MailChimp Signup Form -->
+    
+        <div id="mc_embed_signup">
+        
+            <form action="https://cisco.us3.list-manage.com/subscribe/post?u=19967f55b08d5cffa07dfc7a9&id=a8b330fbc6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate">
+            
+                <div id="mc_embed_signup_scroll">
+                 
+             
+                    <div class="mc-field-group">
+                        Get the latest news and updates from DevNet.
+                         <br> <br>
+                        <input type="email" placeholder="your email address" value="" name="EMAIL" class="required email" id="mce-EMAIL" aria-required="true"> 
+                        
+                       
+                        <input type="text" placeholder="your first name" value="" name="FNAME" class="required" id="mce-FNAME" aria-required="true">
+                    
+                         <input type="text" placeholder="your last name" value="" name="LNAME" class="required" id="mce-LNAME" aria-required="true">
+                         
+                    </div>
+                    
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    
+                    <div style="position: absolute; left: -5000px;">
+                        <input type="text" name="b_19967f55b08d5cffa07dfc7a9_a8b330fbc6" tabindex="-1" value="">
+                    </div>
+                
+                    <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    
+                </div>
+                
+            </form>
+            
+        </div> 
+        
+    </div>
+</div>    
+    
+    <script type="text/javascript" src="./Cisco DevNet_files/mc-validate.js"></script>
+<script type="text/javascript">
+
+	(function($) {
+		window.fnames = new Array(); 
+		window.ftypes = new Array();
+		fnames[0]='EMAIL';
+		ftypes[0]='email';
+	}(jQuery));
+	
+	var $mcj = jQuery.noConflict(true);
+
+
+</script>
+    
+    
+<script>
+$("#subscribeMe").click(function(){
+	
+	$("#hiddenSubscribeMe").toggle();
+	
+	
+	
+	$(document).mouseup(function (e)
+	{
+		var container = $("#hiddenSubscribeMe");
+	
+		if (!container.is(e.target)  && container.has(e.target).length === 0){
+			container.hide();
+		}
+	});
+	
+	
+	
+	
+	
+	return false;	
+});
+    
+</script>
+
+ <style type="text/css">
+       
+
+
+#subscribeBlock{position:relative;}
+#subscribeMe{position:relative;}
+#subscribeBlock .arrow-down {
+width: 0;
+height: 0;
+border-left: 3px solid transparent;
+border-right: 3px solid transparent;
+border-top: 3px solid #fff;
+display: inline;
+position: absolute;
+top: 14px;
+left: 69px;
+}
+
+
+.email{padding: 3px;
+font-size: 13px;}
+
+#hiddenSubscribeMe{
+	color:#000;
+	position:absolute;  
+	z-index:300000; 
+	right:-10px;
+	top:17px;
+    background-color:#e6e6e6;
+	width:250px;
+	min-height:100px;
+	padding:10px;
+	padding-top:20px;
+	box-shadow: 0 0 20px 0 rgba(0,0,0, .25);
+}
+
+#mc_embed_signup input{
+	width: 224px;	
+	margin-bottom:5px;
+	height:20px;
+	margin-left:10px;
+}
+
+input#mc-embedded-subscribe{
+	
+	margin-top: 15px;
+    margin-left: 65px;
+	width: 120px;
+	height: 40px;
+	background-color:#F8B133;
+	font-size:20px;
+	font-weight:normal;
+	
+	
+}
+
+ 
+div#mce-responses{
+	clear:both;
+	display:block;
+	overflow:auto;
+	visibility:inherit;
+	width:auto;
+	height:auto;
+	font-family:'CiscoSansLight', Arial,'Liberation Sans',FreeSans,sans-serif;
+	  
+}
+#mc_embed_signup input{font-family:'CiscoSansLight', Arial,'Liberation Sans',FreeSans,sans-serif; font-weight:normal; border:none; cursor:pointer;}
+ 
+#mc_embed_signup input.mce_inline_error{border-color:#fdd7dc}
+ 
+ 
+div.mce_inline_error{display:none !important;}  
+    </style>
+    
+    
+    
+    
+
+      
+   
+     
+
+      
+			</div>
+            
+            <div class="menuItem spSpecial"> 
+                <a target="_blank" href="http://solutionpartner.cisco.com/">Solution Partner</a>
+            </div>
+    
+            <div class="menuItem mpSpecial">       
+                <a target="_blank" href="https://marketplace.cisco.com/"> Marketplace</a>  
+            </div>
+            
+        </div>
+     
+    </div>
+
+</div>
+
+
+<style>
+.spSpecial{
+	background-color: #ce623f;
+	 
+	
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-topleft: 0;
+ 
+	-webkit-border-bottom-left-radius: 0; 
+	-webkit-border-top-left-radius: 0;
+	
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 0;	 
+ 
+    height:25px;
+	margin-top:-5px;
+	padding-top:5px;
+
+	 
+	 
+}
+ 
+.header-login .spSpecial a, .header-login .mpSpecial a{
+	 
+}
+
+.mpSpecial{
+	background-color: #d5912c;	
+	
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topright: 0;
+ 
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 3px; 
+	
+	border-top-right-radius:0;	 
+	border-bottom-right-radius:3px;
+	
+	height:25px;
+	margin-top:-5px;
+	padding-top:5px;
+
+} 
+
+.mpSpecial {
+	color: #fff;
+}
+
+#menuWrangler{
+	width:100%;
+	float:right;
+}
+#menuWrangler .menuItem{
+	float:left;
+}
+
+#itemsHolder{
+	float:right;
+}
+
+.header-login #menuWrangler, .header-login #menuWrangler > a{  color:#e9e9e9;
+		font-size:14px; 
+		margin-left: 10px;	 
+		padding-right: 0; 
+}
+
+.header-login #menuWrangler .menu-header li a{
+	font-size:14px; 
+		margin-left: 10px;	 
+		padding-right: 10px; 
+		text-align:left;
+		 
+}
+
+.header-login #menuWrangler ul.menu-header li ul{
+	z-index:300001;
+}
+	
+.header-login .menuItem a {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding: 0 8px 0 9px !important;
+}	
+
+.menuLoggedInOut {
+	margin-right: 22px;
+	float: left;
+}
+</style>
+
+<script>
+	$(document).ready(function() {
+		var cDomain = window.location.hostname;
+		switch(cDomain) {
+			case "devnet-stage.kpimdp.com":
+				$(".spSpecial a").prop("href", "/site/spp/");
+			break;
+			
+			case "devworks-qa.kpiint.com":
+			case "spp-qa.kpiint.com":
+				$(".spSpecial a").prop("href", "http://spp-qa.kpiint.com/");
+			break;
+			
+			default:
+				$(".spSpecial a").prop("href", "http://solutionpartner.cisco.com/");
+		}
+	});
+</script>  
+                 
+                <div class="bigMenu">
+                    <div class="siteMenu">
+					
+					<div class="searchTop  ">
+                     
+                      <!--  <ul class="search-tabs">
+                            <li><a href="/" class='active'>DevNet</a>
+                            </li>
+                            <li><a href="https://solutionpartner.cisco.com/" target='_blank'>Solution Partner</a>
+                            </li>
+                        </ul>   -->
+                        <form id="SearchForm_SearchForm" action="https://developer.cisco.com/luceneSearch/search">
+                            <input type="text" name="criteria">
+                            <input type="image" src="./Cisco DevNet_files/search_blank.png" class="searchbox_submit" value="">
+                        </form>
+                    </div>                    	  
+                        <div class="siteMenuLinkWrap">
+	                        <style>
+  .megamenuHidden {
+    display: none;
+  }
+</style>
+
+            
+<div id="mega-m-wrapper">
+
+ 
+ <a class="menu-link megamenu-trigger " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#nogo">
+   Browse 
+   <div class="arrow-down">  </div>   
+</a>
+ 
+ 
+
+
+        <div id="mega-m" class="megamenuHidden container_14" style="">
+
+            <div id="mega-m-tabs" class="alpha">
+              <ul>
+                  <li>
+                      <span id="mega-m-tab1">
+                        DevNet
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab2" class="inactive">
+                        IoT
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab3" class="inactive">
+                        Cloud
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab4" class="inactive">
+                        Networking
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab5" class="inactive">
+                        Data Center
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab6" class="inactive">
+                        Collaboration
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab7" class="inactive">
+                        Security
+                      </span>
+                  </li>
+                  <li>
+                      <span id="mega-m-tab8" class="inactive">
+                        Services
+                      </span>
+                  </li>                  
+              </ul>
+            </div>
+            
+            <div id="mega-m-block" class="grid_9 omega">
+
+              <div class="mega-m-container" id="mega-m-tab1-content" style="display: block;">
+                  <div class="mega-m-container-inner">
+                    
+                    <ul class="mega-m-list devnet-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/overview/index.gsp">
+          DevNet Overview  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item2">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/faqs/">
+          General FAQs  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item3">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/home/">
+          Home  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item4">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/support/">
+          Support  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item5">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/sandbox/">
+          Sandbox  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item6">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/index/">
+          API Index  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item7 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Learn  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/devnet/learningLabs/overview.gsp">
+      	Learning Labs
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item8 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Events and Contests  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/devnet/events-contests/events/">
+      	Future and Past Events
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/devnet/events-contests/cisco-developer-challenge/">
+      	Cisco Developer Challenge
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/ietf-hackathon/">
+      	IETF 92 Hackathon
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item9">  
+      <a class="menu-link" target="_new" href="https://communities.cisco.com/community/developer">
+          Forum  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item10">  
+      <a class="menu-link" href="https://developer.cisco.com/site/devnet/authentication/overview/">
+          Authentication  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/dpPlatformRegistration/myapps">
+      	App Registration
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/devnet/authentication/oauth-dev-guide/">
+      	OAuth Developer Guide
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/devnet/authentication/overview/">
+      	Overview
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item11">  
+      <a class="menu-link" href="http://iwe.cisco.com/web/cisco-developer-community-program/">
+          DevNet Policies (Cisco Internal)  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item12">  
+      <a class="menu-link" target="_new" href="https://developer.cisco.com/form/bug/">
+          Site Change Request (Cisco Internal)  
+      </a>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab2-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/iot" class="mega-m-section-link mega-m-section-link-two">
+                      IoT - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                    
+                    <ul class="mega-m-list two-columns-ul iot-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Internet of Things  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/data-in-motion/">
+      	Data in Motion
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/">
+      	Enterprise IoT (EIoT)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/iox/">
+      	IOx
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/utilities-industry/overview.gsp">
+      	Utilities Industry
+      </a>
+      
+      <ul>
+      	   
+  
+  <li>  
+      <a href="https://cdn.cisco.com/web/cegd">
+      	Cisco Enabled Grid Devices
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://communities.cisco.com/community/developer/networking/internet-of-things/utilities-industry/field-area-networks/">
+      	Field Area Networks
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/residential-automation/overview/">
+      	Residential Automation (Smart+Connected)
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item2 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Interoperability Services  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/cisco-instant-connect/">
+      	Cisco Instant Connect
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item3 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Mobility  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/cmx-mobility-services/">
+      	CMX Mobility Services
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/compatible-ext/home/">
+      	Compatible Extensions
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/guest-user/overview/">
+      	Guest User Services API
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab3-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/cloud" class="mega-m-section-link mega-m-section-link-three">
+                      Cloud - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                    
+                    <ul class="mega-m-list two-columns-ul cloud-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Cloud and Systems Management  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/energy-management/">
+      	Cisco Energy Management
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/intel-cloud-mgmt/overview/">
+      	Intelligent Automation for Cloud
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li class="mega-m-no-link">  
+      <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+      	Prime Home
+      </a>
+      
+      <ul>
+      	   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/prime-home-compatible/overview/">
+      	Prime Home Compatible
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/prime-home-client/overview/">
+      	Prime Home Client
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/prime-home-apps/overview/">
+      	Prime Home Applications
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item2 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Intercloud  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/intercloud/">
+      	Intercloud Fabric
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item3 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Media  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/medianet/overview/">
+      	Medianet
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/msi/overview/">
+      	Media Services Interface Management
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/msp/overview/">
+      	Media Services Proxy
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/videoscape-open-ux/overview/">
+      	Videoscape Open UX
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/vvv/overview/">
+      	Videoscape Voyager Vantage
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab4-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/networking" class="mega-m-section-link mega-m-section-link-four">
+                      Networking - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                             
+                    <ul class="mega-m-list two-columns-ul networking-mega">
+                        
+
+   
+
+   
+
+  <li class="menu-item root-item1 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Application Experience  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/app-vis-control/overview/">
+      	Application Visibility &amp; Control
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item2 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Mobility  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/cmx-mobility-services/">
+      	CMX Mobility Services
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/compatible-ext/home/">
+      	Compatible Extensions
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/guest-user/overview/">
+      	Guest User Services API
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item3 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Network Management  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/confD">
+      	ConfD
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item4 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Network and Service Orchestrator  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/ncs">
+      	NCS
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item5 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Routers &amp; Switches  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/energywise/">
+      	Energywise
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/nexus1000/overview/">
+      	Nexus 1000
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/nexus9000/overview/">
+      	Nexus 9000
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/upoe/overview/">
+      	Universal Power Over Ethernet
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item6 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Software Defined Networks (SDN)  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/apic-em/">
+      	APIC Enterprise Module (EM)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/onepk/">
+      	onePK
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/openSDN/index.gsp">
+      	Cisco Open SDN Controller
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/wae/">
+      	WAN Automation Engine (WAE)
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item7 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Servers  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/e-series/overview/index.gsp">
+      	E-Series
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+
+  <li class="menu-item root-item8 mega-m-no-link">  
+      <a class="menu-link " href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Virtualization  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/axp/overview/">
+      	Application eXtension Platform (AXP)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/srev/">
+      	Service Ready Engine Virtualization
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+
+              <div class="mega-m-container" id="mega-m-tab5-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/data-center" class="mega-m-section-link mega-m-section-link-five">
+                      Data Center - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                             
+                    <ul class="mega-m-list two-columns-ul data-center-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Nexus  
+      </a>
+      
+      <ul>
+          
+   
+
+   
+  <li class="menu-item ">  
+      <a class="menu-link" href="https://developer.cisco.com/site/nexus9000/home/">
+          Nexus 9000  
+      </a>
+                
+  </li>
+
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item2 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Software Defined Networks (SDN)  
+      </a>
+      
+      <ul>
+          
+   
+
+   
+  <li class="menu-item ">  
+      <a class="menu-link" href="https://developer.cisco.com/site/apic-dc/">
+          ACI  
+      </a>
+                
+  </li>
+
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item3 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Converged Infrastructure  
+      </a>
+      
+      <ul>
+          
+   
+
+   
+  <li class="menu-item ">  
+      <a class="menu-link" href="https://developer.cisco.com/site/dfa/">
+          Dynamic Fabric Automation (DFA)  
+      </a>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item ">  
+      <a class="menu-link" href="https://developer.cisco.com/site/ucs-director/overview/">
+          UCS Director  
+      </a>
+                
+  </li>
+
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item4 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          UCS Systems Management  
+      </a>
+      
+      <ul>
+          
+   
+
+   
+  <li class="menu-item ">  
+      <a class="menu-link" href="https://developer.cisco.com/site/ucs-dev-center/">
+          UCS Manager - Centeral - Standalone C-Series  
+      </a>
+                
+  </li>
+
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab6-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/collaboration" class="mega-m-section-link mega-m-section-link-six">
+                      Collaboration - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                             
+                    <ul class="mega-m-list two-columns-ul collaboration-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Call Control  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/curri/overview/">
+      	CURRI
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/jtapi/overview/">
+      	JTAPI
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/tapi/overview/">
+      	TAPI
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/uc-express-services/overview/">
+      	UC Express Services Interface
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/uc-gateway-services/overview/">
+      	UC Gateway Services
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/uc-manager-sip/overview/">
+      	UC Manager SIP
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/unified-presence/overview/">
+      	Unified Presence API
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/voice-gateway/overview/">
+      	Voice Gateway API (VGAPI)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/webdialer/webdialer/index.gsp">
+      	WebDialer
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item2 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Contact Center  
+      </a>
+      
+      <ul>
+             
+  
+  <li class="mega-m-no-link">  
+      <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+      	Contact Center Enterprise (CCE)
+      </a>
+      
+      <ul>
+      	   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/cti-protocol/overview/">
+      	CTI Server Protocol (GED-188)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/ctios/overview/">
+      	CTIOS
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/ent-app-gateway/overview/">
+      	Enterprise Application Gateway Protocol
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/customer-voice-portal/overview/">
+      	Customer Voice Portal
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/cvp/overview/">
+      	Customer Voice Portal API
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/express-cti/overview/">
+      	Express CTI
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/express-scripting/overview/">
+      	Express Scripting
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/finesse/">
+      	Finesse
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/packaged-contact-center/overview/">
+      	Packaged Contact Center Enterprise
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/reporting/overview/">
+      	Reporting
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/socialminer/overview/">
+      	SocialMiner
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/uccxapi/overview/">
+      	Express Configuration API
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item3 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Endpoints  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/dxseries/overview/">
+      	DX Series
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/extension-mobility/overview/">
+      	Extension Mobility API
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/ip-phone-services/overview/">
+      	IP Phone Services
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/java-midlet/overview/">
+      	Java MIDlet API
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item4 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Jabber  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/jabber-guestsdk/guestsdk/">
+      	Guest SDK
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/jabber-websdk/overview/">
+      	Web SDK
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/uc-manager-accessory/overview/">
+      	Jabber Accessory Manager
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item5 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Management  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/axl/overview/">
+      	AXL
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/hcs/overview/">
+      	HCS
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/interactive-exp-platform/overview/">
+      	Interactive Experience Platform
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/paws/overview/">
+      	PAWS Developer
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/sxml/overview/">
+      	UC Manager Serviceability
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/user-data-services/overview/">
+      	User Data Services
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item6 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Recordings  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/mediasense/overview/">
+      	MediaSense
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item7 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Telepresence  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/tp-av-integrator/home/">
+      	AV Integrator
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item8 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Voicemail  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/unity-connection/overview/">
+      	Unity Connection
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+   
+
+   
+  <li class="menu-item root-item9 mega-m-no-link">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          WebEx  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/webex-developer/web-conferencing/">
+      	WebEx Conferencing
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab7-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                    <a href="https://developer.cisco.com/security" class="mega-m-section-link mega-m-section-link-seven">
+                      Security - Dev Center &gt;
+                      <span class="icon"></span>
+                      
+                    </a>                             
+                    <ul class="mega-m-list two-columns-ul security-mega">
+                        
+
+   
+
+   
+  <li class="menu-item mega-m-no-link">  
+      <a class="menu-link root-item1" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+          Security  
+      </a>
+      
+      <ul>
+             
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/identity-services-engine/overview/">
+      	Identity Services Engine (ISE)
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/physical-security/overview/">
+      	Physical Security
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/pxgrid/">
+      	pxGrid
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>
+              <div class="mega-m-container" id="mega-m-tab8-content" style="display: none;">
+                  <div class="mega-m-container-inner">
+                                               
+                    <ul class="mega-m-list two-columns-ul security-mega">
+                        
+
+   
+
+   
+  <li class="menu-item root-item1">  
+      <a class="menu-link" href="https://developer.cisco.com/site/spg/">
+          Services  
+      </a>
+                
+  </li>
+
+
+ 
+
+
+  
+   
+  
+
+                    </ul>
+                </div>
+              </div>                            
+              
+              
+              
+              
+            </div>
+            <div style="clear: both;"></div>
+
+        </div>
+    </div>    
+
+	                        <a href="https://developer.cisco.com/site/devnet/sandbox/"> Sandbox </a>
+	                        <a target="_blank" href="https://communities.cisco.com/community/developer"> Community </a>
+	                        <a href="https://developer.cisco.com/site/devnet/events-contests/events/"> Events </a>
+	                        <a href="https://developer.cisco.com/site/devnet/support/"> Support </a>
+                        </div>
+                        
+                          
+                        
+                    </div>
+                  
+                </div>
+
+              
+
+            </div>
+        </div><!-- /logo -->
+    </div><!-- /header -->
+    
+    
+    
+    
+    <!-- add to stylesheet for launch -->
+    
+    
+
+
+    
+        </div>    
+            
+        <div id="stalk" style="position: fixed;">     
+            <link rel="stylesheet" href="https://developer.cisco.com/site/css/adbase/cranksetMegamenu.css?v=1">
+<link rel="stylesheet" href="https://developer.cisco.com/site/css/adbase/headermenu.css?v=1">
+
+<style>
+ div#mega-m {
+	left: 0px !important;
+	z-index:220000;
+	display:none;
+}
+div#mega-m li{
+	list-style:none;
+	float: none;
+	 
+	margin: 0;
+	padding: 0;
+	position:relative;
+	 
+	 
+}
+
+
+
+
+
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;	
+	border-bottom: 5px solid rgba(255, 255, 255, 1);
+	display:inline;
+	position: absolute;
+	top:14px;
+	left:72px;
+	
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;	
+	border-top: 5px solid rgba(255, 255, 2555, 1);
+	display:inline;
+	position: absolute;
+	top:14px;
+	left:72px;
+}
+
+
+.searchTop .searchbox_submit {
+background-color: transparent;
+position: absolute;
+top: 4px;
+left: 184px;
+width: 32px;
+height: 25px;
+width: 25px !important;
+border: none !important;
+padding: 0 !important;
+}
+
+
+
+.mega-m-no-link > a:hover {
+	text-decoration: none !important;
+	cursor: default;
+}
+</style>
+<div class="nav-container">
+    <div class="container_14">
+        <div class="primaryMenu nav grid_14">  
+            
+            <ul class="menu sf-js-enabled sf-arrows" style="clear:both;">
+                
+ 
+ 
+ <!--myPath=site/eiot -->
+
+
+
+    
+         
+  
+  <li class="menu-item">  
+      <a class="menu-link" href="https://developer.cisco.com/site/eiot/">
+      	EIoT
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li class="menu-item">  
+      <a class="menu-link sf-with-ul" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" style="cursor: default;">
+      	Discover
+      </a>
+      
+      <ul style="display: none;">
+      	   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/discover/overview/">
+      	EIoT Overview
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/discover/videos/">
+      	Cisco EIoT Videos
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/discover/getting-started/">
+      	EIoT DevKit Program
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/form/eiotearlyaccess">
+      	DevKit Application
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+   
+  
+  <li class="menu-item">  
+      <a class="menu-link sf-with-ul" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" style="cursor: default;">
+      	Documents
+      </a>
+      
+      <ul style="display: none;">
+      	   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/documents/quick-start/">
+      	EIoT DevKit Quick Start Guide
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/">
+      	Cisco PyUSB Developer Guide
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://developer.cisco.com/site/eiot/documents/sample-apps">
+      	Cisco PyUSB Sample Apps
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+   
+  
+  <li class="menu-item">  
+      <a class="menu-link sf-with-ul" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" style="cursor: default;">
+      	Downloads
+      </a>
+      
+      <ul style="display: none;">
+      	   
+  
+  <li class="">  
+      <a target="_new" href="https://developer.cisco.com/fileMedia/download/07105378-e70e-442c-8061-e70b200b402c">
+      	Cisco PyUSB Module
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a target="_new" href="https://developer.cisco.com/fileMedia/download/f54daa28-05fa-42d9-b188-351690e9b8f7">
+      	C3560-C Compact Catalyst Switch iOS Image
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a target="_new" href="https://developer.cisco.com/fileMedia/download/9d05970f-f6e2-4335-bf58-be54fab88f80">
+      	C3850 Catalyst Switch iOS Image
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+   
+  
+  <li class="menu-item">  
+      <a class="menu-link sf-with-ul" href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" style="cursor: default;">
+      	Help
+      </a>
+      
+      <ul style="display: none;">
+      	   
+  
+  <li>  
+      <a href="https://communities.cisco.com/community/developer/networking/internet-of-things/eiot/blog">
+      	Blog
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://communities.cisco.com/community/developer/networking/internet-of-things/eiot">
+      	Community
+      </a>
+      	      
+  </li>
+  
+   
+  
+  <li>  
+      <a href="https://communities.cisco.com/docs/DOC-55026">
+      	FAQ
+      </a>
+      	      
+  </li>
+  
+
+      </ul>
+      	      
+  </li>
+  
+
+    
+
+ 
+ 
+
+
+ 
+   
+            </ul>
+        </div> 
+
+    </div>
+</div>
+
+<script type="text/javascript">
+/*Invoke Superfish*/
+$('ul.menu').superfish();
+$('ul.menu-header').superfish();
+
+ 
+
+</script>  
+        </div>
+        
+         
+     
+    <div class="main-container container_14">
+    	
+
+  
+ 
+<div class="breadcrumbs grid_14 alpha">
+   
+   
+
+             
+            
+             <!--Path: site/eiot  -->  
+            
+            
+                
+               
+                	<a href="https://developer.cisco.com/site/eiot/">
+               
+                   		Enterprise IoT (EIoT)
+                        
+                         
+                          
+                
+               		</a>
+               
+               
+               
+                <span>
+                	&gt;
+                </span> 
+               
+                
+            
+            
+        
+             
+            
+             <!--Path: site/eiot/documents  -->  
+            
+            
+                
+               
+                	<a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#">
+               
+                   		Documents
+                        
+                         
+                          
+                
+               		</a>
+               
+               
+               
+                <span>
+                	&gt;
+                </span> 
+               
+                
+            
+            
+        
+             
+            
+             <!--Path: site/eiot/documents/pyusb-dev-guide  -->  
+            
+            
+                
+               
+                   		Cisco PyUSB Developer Guide
+                        
+                         
+                          
+               
+               
+               
+                
+            
+            
+           
+
+  
+    <p></p>
+</div> 
+ 
+
+
+    </div>
+    
+        <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" id="nav-button">
+        <span>
+        </span>
+    </a>
+    <div class="tocify-wrapper stick-top">                    
+        <div class="search">
+            <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+        <div id="toc" class="tocify">
+        <ul id="tocify-header0" class="tocify-header"><li class="tocify-item" data-unique="header-text" style="cursor: pointer;"><a> 
+                    
+                       
+                      DevNet
+                     
+               </a></li></ul><ul id="tocify-header1" class="tocify-header"><li class="tocify-item" data-unique="the-cisco-pyusb-developer-guide" style="cursor: pointer;"><a>The Cisco PyUSB Developer Guide</a></li><ul class="tocify-subheader" data-tag="2" style="display: block;"><li class="tocify-item" data-unique="introduction" style="cursor: pointer;"><a>Introduction</a></li><li class="tocify-item" data-unique="logging-and-debugging-with-pyusb" style="cursor: pointer;"><a>Logging and Debugging with PyUSB</a></li><li class="tocify-item" data-unique="the-pyusb-modules" style="cursor: pointer;"><a>The PyUSB Modules</a></li><li class="tocify-item" data-unique="pyusb-hello-world-program" style="cursor: pointer;"><a>PyUSB Hello World Program</a></li><li class="tocify-item" data-unique="pyusb-find-function" style="cursor: pointer;"><a>PyUSB find function</a></li><ul class="tocify-subheader" data-tag="3" style="display: none;"><li class="tocify-item" data-unique="a-simple-pyusb-find-example"><a>A Simple PyUSB find example</a></li><li class="tocify-item" data-unique="find-a-specific-class-of-device"><a>find a Specific Class of Device</a></li><li class="tocify-item" data-unique="find-all-devices-of-a-specific-class"><a>find All Devices of a Specific Class</a></li><li class="tocify-item" data-unique="the-find_alltrue-parameter"><a>The find_all=True Parameter</a></li><li class="tocify-item" data-unique="customer_match-combined-with-other-parameters"><a>customer_match Combined With Other Parameters</a></li></ul><li class="tocify-item" data-unique="reading-device-attributes" style="cursor: pointer;"><a>Reading Device Attributes</a></li><ul class="tocify-subheader" data-tag="3" style="display: none;"><li class="tocify-item" data-unique="read-all-of-the-device-configuration" style="cursor: pointer;"><a>Read All of the Device Configuration</a></li><li class="tocify-item" data-unique="random-access-of-device-descriptors" style="cursor: pointer;"><a>Random Access of Device Descriptors</a></li></ul><li class="tocify-item" data-unique="the-find_descriptor-function" style="cursor: pointer;"><a>The find_descriptor Function</a></li><li class="tocify-item" data-unique="dealing-with-multiple-identical-devices" style="cursor: pointer;"><a>Dealing with multiple identical devices</a></li><li class="tocify-item" data-unique="usb-device-configuration" style="cursor: pointer;"><a>USB Device Configuration</a></li><li class="tocify-item" data-unique="usb-interface-alternative-settings" style="cursor: pointer;"><a>USB Interface Alternative Settings</a></li><li class="tocify-item" data-unique="using-an-interface-object-as-a-parameter"><a>Using an Interface Object as a Parameter</a></li><li class="tocify-item" data-unique="communicating-with-usb-devices"><a>Communicating With USB Devices</a></li><ul class="tocify-subheader" data-tag="3" style="display: block;"><li class="tocify-item" data-unique="control-transfer-communications"><a>Control Transfer Communications</a></li><li class="tocify-item tocify-focus" data-unique="bulk-interrupt-and-isochronous-communications"><a>Bulk, Interrupt, and Isochronous Communications</a></li></ul><li class="tocify-item" data-unique="additional-topics" style="cursor: pointer;"><a>Additional Topics</a></li><ul class="tocify-subheader" data-tag="3" style="display: none;"><li class="tocify-item" data-unique="additional-modules"><a>Additional Modules</a></li><li class="tocify-item" data-unique="backend-parameter-for-find-function"><a>Backend Parameter for find Function</a></li><li class="tocify-item" data-unique="python-memory-management"><a>Python Memory Management</a></li><li class="tocify-item" data-unique="specifying-python-libraries-by-hand"><a>Specifying Python Libraries by Hand</a></li></ul><li class="tocify-item" data-unique="cisco-extensions-to-pyusb" style="cursor: pointer;"><a>Cisco Extensions to PyUSB</a></li><li class="tocify-item" data-unique="cisco-pyusb-hello-world-program" style="cursor: pointer;"><a>Cisco PyUSB Hello World Program</a></li></ul></ul></div>
+        <ul class="toc-footer">
+            <li>V1.0.0<br>
+                Copyright 2014 by Cisco Systems, Inc.<br> All Rights Reserved.
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="dark-box"></div>
+        <div class="content">
+  
+      <!-- InstanceBeginEditable name="api_content" -->
+ <div name="the-cisco-pyusb-developer-guide" data-unique="the-cisco-pyusb-developer-guide"></div><h1 id="the-cisco-pyusb-developer-guide">The Cisco PyUSB Developer Guide</h1>
+<p></p><aside class="notice">PyUSB was originally written and documented by Wander Lairson Costa as an open sourced project.  It is hosted on <a href="https://github.com/walac/pyusb">GitHub</a>.  This document is based upon the <em>PyUSB Tutorial</em> provided in the GitHub.  The original copyright statement is: <p></p>
+
+<p>Copyright © 2009-2014 Wander Lairson Costa.
+
+The following terms apply to all files associated with the software unless explicitly disclaimed in individual files.</p>
+
+<p>The authors hereby grant permission to use, copy, modify, distribute, and license this software and its documentation for any purpose, provided that existing copyright notices are retained in all copies and that this notice is included verbatim in any distributions. No written agreement, license, or royalty fee is required for any of the authorized uses. Modifications to this software may be copyrighted by their authors and need not follow the licensing terms described here, provided that the new terms are clearly indicated on the first page of each file where they apply.</p>
+
+<p>IN NO EVENT SHALL THE AUTHORS OR DISTRIBUTORS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF THIS SOFTWARE, ITS DOCUMENTATION, OR ANY DERIVATIVES THEREOF, EVEN IF THE AUTHORS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+<p>THE AUTHORS AND DISTRIBUTORS SPECIFICALLY DISCLAIM ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.  THIS SOFTWARE IS PROVIDED ON AN “AS IS” BASIS, AND THE AUTHORS AND DISTRIBUTORS HAVE NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.</p>
+
+<p></p></aside><p></p>
+<div name="introduction" data-unique="introduction"></div><h2 id="introduction">Introduction</h2>
+<p>The Cisco PyUSB is the Python library used to program the Cisco PoE to USB adapter.  When combined with the PoE to USB adapter, the Cisco PyUSB allows you to use the same USB access programs written with PyUSB to access your USB devices over a Network rather than being confined to a local USB connection.</p>
+
+<p>The Cisco PyUSB library operates consistently with the standard PyUSB Python Library and as such most of this document talks about the standard calls.  As such, because the Cisco PyUSB is based upon PyUSB, this document will describe what you can do with PyUSB and will follow this with an explanation of the Cisco unique extensions at the bottom of the guide.  But basically, the Cisco PyUSB provides the same features as PyUSB with the addition of the Cisco Network Interfaces.  These features include:</p>
+
+<ul>
+<li><p><em>100% written in Python</em> - this allows Python programmers to better understand how PyUSB works.</p></li>
+<li><p><em>Platform neutrality</em> - PyUSB version implements a frontend-backend architecture to isolate the API from system specific implementation details. The glue between the two layers is the <code class="prettyprint">IBackend</code> interface. While the open source PyUSB comes with builtin backends for libusb 0.1, libusb 1.0 and OpenUSB, the Cisco Version comes with a backend that redirects to the Network interface used by the EIoT PoE to USB adapter.</p></li>
+<li><p><em>Portability</em> - Cisco PyUSB will run on any platform with Python &gt;= 2.4 and ‘ctypes’ along with the EIoT PoE to USB adapter.</p></li>
+<li><p><em>Ease of Programming</em> - because of the ease of programming with PyUSB, you can use the Cisco PyUSB to easily communicate with a USB device over the network.  While USB is a complicated protocol, PyUSB (and thus Cisco PyUSB) has good defaults for most common configurations.</p></li>
+<li><p><em>Cisco Extensions</em> - using the backend capabilities of PyUSB, Cisco has extended the functions to allow you to find, configure, and communicate with USB devices that have been connected to your network using the EIoT DevKit via a Cisco switch.</p></li>
+</ul>
+<div name="logging-and-debugging-with-pyusb" data-unique="logging-and-debugging-with-pyusb"></div><h2 id="logging-and-debugging-with-pyusb">Logging and Debugging with PyUSB</h2>
+<p>Every function in PyUSB will raise an exception when an error is encountered. In addition to the <a href="http://docs.python.org/library/exceptions.html">Python standard exceptions</a>, PyUSB defines <code class="prettyprint">usb.core.USBError</code> for PyUSB specific errors.</p>
+
+<p>You can trap and log errors in PyUSB by using the <a href="http://docs.python.org/library/logging.html">standard Python logging module</a>. To enable PyUSB logging, you define the environment variable <code class="prettyprint">PYUSB_DEBUG</code> with one of the following logging level values:</p>
+
+<ul>
+<li><code class="prettyprint">critical</code> - only log critical errors</li>
+<li><code class="prettyprint">error</code> - only log critical errors and errors</li>
+<li><code class="prettyprint">warning</code> - log warnings, errors, and critical errors</li>
+<li><code class="prettyprint">info</code> - log info, warnings, errors, and critical errors</li>
+<li><code class="prettyprint">debug</code> - log everything including debug messages</li>
+</ul>
+
+<p>By default, logged messages are sent to <a href="http://docs.python.org/library/sys.html"><code class="prettyprint">sys.stderr</code></a>.  You can redirect log messages to a file by defining the <code class="prettyprint">PYUSB_LOG_FILENAME</code> environment variable to a string that is a valid file path and all logged messages will be written to the file rather than being sent to <code class="prettyprint">sys.stderr</code>.</p>
+
+<p></p><aside class="notice"> Although PyUSB makes USB programming less painful, it is still assumed in this guide that you have a minimal knowledge of the USB protocol. If you don’t know anything about USB, and would like to know more, the original author of PyUSB recommends that you refer to the, <em>USB Complete</em> by Jan Axelson. </aside><p></p>
+
+<p></p><aside class="notice">Since the PyUSB library is low level, it is typically necessary to use a <a href="http://www.totalphase.com/products/beagle-usb480/">USB bus analyzer</a> to determine the USB configuration and read/write commands.</aside><p></p>
+<div name="the-pyusb-modules" data-unique="the-pyusb-modules"></div><h2 id="the-pyusb-modules">The PyUSB Modules</h2><pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">()</span>
+</pre>
+
+<p>Below is an overview on the PyUSB modules. Cisco PyUSB modules are under the <code class="prettyprint">usb</code> package and contains the modules below.  The last, USBIP is a unique backend provided by Cisco.</p>
+
+<table><thead>
+<tr>
+<th>Module Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>core</td>
+<td>The main USB module.</td>
+</tr>
+<tr>
+<td>util</td>
+<td>Utility functions.</td>
+</tr>
+<tr>
+<td>control</td>
+<td>Standard control requests.</td>
+</tr>
+<tr>
+<td>legacy</td>
+<td>Module to provide compatibility with previous versions of PyUSB.</td>
+</tr>
+<tr>
+<td>backend</td>
+<td>Module that contains all of the built-in backends.</td>
+</tr>
+<tr>
+<td>USBIP</td>
+<td>Cisco backend that connects PyUSB to USB devices connected over an IP Network using the Cisco to PoE Adapter connected to a Cisco Switch</td>
+</tr>
+</tbody></table>
+
+<p>You will import modules into your Python code using the import command.  For example, to import the <code class="prettyprint">core</code> module, you would use the code on the right.</p>
+<div name="pyusb-hello-world-program" data-unique="pyusb-hello-world-program"></div><h2 id="pyusb-hello-world-program">PyUSB Hello World Program</h2>
+<blockquote>
+<p>PyUSB Hello World</p>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="kn">import</span> <span class="nn">usb.util</span>
+
+<span class="c"># find our device</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">idVendor</span><span class="o">=</span><span class="mh">0xfffe</span><span class="p">,</span> <span class="n">idProduct</span><span class="o">=</span><span class="mh">0x0001</span><span class="p">)</span>
+
+<span class="c"># was it found?</span>
+<span class="k">if</span> <span class="n">dev</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'Device not found'</span><span class="p">)</span>
+
+<span class="c"># set the active configuration. With no arguments, the first</span>
+<span class="c"># configuration will be the active one</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">()</span>
+
+<span class="c"># get an endpoint instance</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">get_active_configuration</span><span class="p">()</span>
+<span class="n">intf</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+
+<span class="n">ep</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_descriptor</span><span class="p">(</span>
+    <span class="n">intf</span><span class="p">,</span>
+    <span class="c"># match the first OUT endpoint</span>
+    <span class="n">custom_match</span> <span class="o">=</span> \
+    <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> \
+        <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">endpoint_direction</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">bEndpointAddress</span><span class="p">)</span> <span class="o">==</span> \
+        <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">ENDPOINT_OUT</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">ep</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>
+
+<span class="c"># write the data</span>
+<span class="n">ep</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span>
+
+</pre>
+
+<p>To the right is a simplistic program that sends the ‘hello world’ string to the first OUT endpoint found.</p>
+
+<p>The first two lines of code imports PyUSB package modules. <code class="prettyprint">usb.core</code> is the main module, and <code class="prettyprint">usb.util</code> contains utility functions. </p>
+
+<p>The next line searches for our device and returns an instance object if it is found. If not, <code class="prettyprint">None</code> is returned.  </p>
+
+<p>Next, we set the device configuration for subsequent use.  Note that no argument were supplied to indicate any special device configurations were needed; we simply used the default.  You will see, many PyUSB functions have defaults that work for most common devices. In this case, the configuration set is the first one found.</p>
+
+<p>Next, we look for the endpoint that we are interested in. We search for it inside the first interface we have. After finding the endpoint, we send the data to it.</p>
+
+<p>Finally, we write string ‘Hello Word’ to our device. </p>
+
+<p>Each of the functions called in this example will be explained in this document.</p>
+<div name="pyusb-find-function" data-unique="pyusb-find-function"></div><h2 id="pyusb-find-function">PyUSB <code class="prettyprint">find</code> function</h2>
+<p>The <code class="prettyprint">find</code> function in PyUSB is used to locate a USB device on the system.  With Cisco PyUSB, the device that you locate will be on the network due to the PoE to USB adapter.  Once you find the device you can initialize it and communicate to it over the network using the other PyUSB commands</p>
+<div name="a-simple-pyusb-find-example" data-unique="a-simple-pyusb-find-example"></div><h3 id="a-simple-pyusb-find-example">A Simple PyUSB <code class="prettyprint">find</code> example</h3>
+<blockquote>
+<p>Using the PyUSB <code class="prettyprint">find</code> function</p>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+
+<span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">idVendor</span><span class="o">=</span><span class="mh">0xfffe</span><span class="p">,</span> <span class="n">idProduct</span><span class="o">=</span><span class="mh">0x0001</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">dev</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'Our device is not connected'</span><span class="p">)</span>
+</pre>
+
+<p>The <code class="prettyprint">find</code> function part of the <code class="prettyprint">core</code> module, is used to find and to enumerate devices connected to the system. For example, let’s say that your device has a vendor ID equal to <code class="prettyprint">0xfffe</code> and product ID equals to <code class="prettyprint">0x0001</code>. To find it, you would use the code to the right.</p>
+<div name="find-a-specific-class-of-device" data-unique="find-a-specific-class-of-device"></div><h3 id="find-a-specific-class-of-device"><code class="prettyprint">find</code> a Specific Class of Device</h3>
+<blockquote>
+<p>Find a Printer</p>
+</blockquote>
+<pre class="highlight python"><span class="c"># use bDeviceClass=7 for printer</span>
+<span class="k">if</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">bDeviceClass</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'No printer found'</span><span class="p">)</span>
+</pre>
+
+<p>The <code class="prettyprint">find</code> function will return a <code class="prettyprint">usb.core.Device</code> object representing your device. If the device is not found, it returns <code class="prettyprint">None</code>. You can use any field of the Device Descriptor you need. For example, to discover if there is a USB printer connected to the network, you can use the code to the right. In the example, the <code class="prettyprint">bDeviceClass</code> of <code class="prettyprint">7</code> is the class code specified in the USB specification for a printer.</p>
+<div name="find-all-devices-of-a-specific-class" data-unique="find-all-devices-of-a-specific-class"></div><h3 id="find-all-devices-of-a-specific-class"><code class="prettyprint">find</code> All Devices of a Specific Class</h3>
+<blockquote>
+<p>Find All Printers</p>
+</blockquote>
+<pre class="highlight python"><span class="c"># Look for all bDeviceClass=7 which are all printers</span>
+<span class="n">printers</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">find_all</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bDeviceClass</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="c"># now write out the number of printers</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'There are '</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">printers</span><span class="p">)</span> <span class="o">+</span> <span class="s">' in the system</span><span class="se">\n</span><span class="s">.'</span><span class="p">)</span>
+</pre>
+
+<p>Using the code in the example to the right, you can find all printers on the system.</p>
+
+<p><code class="prettyprint">find</code> also has a parameter called <code class="prettyprint">find_all</code> that defaults to <code class="prettyprint">false</code>. When it is set to <code class="prettyprint">false</code> or defaults to <code class="prettyprint">false</code>, <code class="prettyprint">find</code> will return the first device found that matches the specified criteria. However, if you give it a <code class="prettyprint">true</code> value, <code class="prettyprint">find</code> will instead return a list with all devices matching the criteria. </p>
+<div name="the-find_alltrue-parameter" data-unique="the-find_alltrue-parameter"></div><h3 id="the-find_alltrue-parameter">The <code class="prettyprint">find_all=True</code> Parameter</h3>
+<blockquote>
+<p>Complete Program To Find All Printers</p>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="kn">import</span> <span class="nn">usb.util</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">class</span> <span class="nc">find_class</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">_class</span> <span class="o">=</span> <span class="n">class_</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+        <span class="c"># first, let's check the device</span>
+        <span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">bDeviceClass</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_class</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="c"># ok, transverse all devices to find an</span>
+        <span class="c"># interface that matches our class</span>
+        <span class="k">for</span> <span class="n">cfg</span> <span class="ow">in</span> <span class="n">device</span><span class="p">:</span>
+            <span class="c"># find_descriptor: what's it?</span>
+            <span class="n">intf</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_descriptor</span><span class="p">(</span>
+                                        <span class="n">cfg</span><span class="p">,</span>
+                                        <span class="n">bInterfaceClass</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_class</span>
+                                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">intf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="n">printers</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">find_all</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">custom_match</span><span class="o">=</span><span class="n">find_all</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</pre>
+
+<p>Many USB devices actually put their class information in the <em>Interface Descriptor</em> instead of the <em>Device Descriptor</em>. To accurately find all printers connected to the system, you need to transverse all configurations and all interfaces looking for a <code class="prettyprint">bInterfaceClass</code> field that is equal to 7. </p>
+
+<p>The code to the right shows an elegant way to do this in PyUSB by finding all printers regardless of how they describe themselves by using the parameter <code class="prettyprint">custom_match</code>.</p>
+<div name="customer_match-combined-with-other-parameters" data-unique="customer_match-combined-with-other-parameters"></div><h3 id="customer_match-combined-with-other-parameters"><code class="prettyprint">customer_match</code> Combined With Other Parameters</h3>
+<blockquote>
+<p>Combine <code class="prettyprint">custom_match</code> With Other Parameters</p>
+</blockquote>
+<pre class="highlight python"><span class="c"># find all printers that belongs to vendor 0xfffe</span>
+<span class="n">printers</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">find_all</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> \
+    <span class="n">custom_match</span><span class="o">=</span><span class="n">find_class</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span> \
+    <span class="n">idVendor</span><span class="o">=</span><span class="mh">0xfffe</span><span class="p">)</span>    
+</pre>
+
+<p>The <code class="prettyprint">custom_match</code> parameter will work with any callable object that accepts the device object. When used, <code class="prettyprint">custom_match</code> will return <code class="prettyprint">true</code> for a matching device, and <code class="prettyprint">false</code> for a non-matching device. You can combine <code class="prettyprint">custom_match</code> with device fields to create more more searches.  The example to the right show how this can be used to find all printers from the vender <code class="prettyprint">0xfffe</code>.</p>
+<div name="reading-device-attributes" data-unique="reading-device-attributes"></div><h2 id="reading-device-attributes">Reading Device Attributes</h2>
+<p>After you have found your USB device, you will next want to query it to understand its configurations, interfaces, endpoints, transfer types, and other attributes.</p>
+
+<p>The <code class="prettyprint">find</code> will return a <em>device</em> object that you can directly read its descriptor fields as object properties.  For example, if your <code class="prettyprint">find</code> returned the <em>device</em> object <code class="prettyprint">dev</code> you can read the attributes of:</p>
+
+<ul>
+<li><code class="prettyprint">dev.bLength</code></li>
+<li><code class="prettyprint">dev.bNumConfigurations</code></li>
+<li><code class="prettyprint">dev.bDeviceClass</code></li>
+</ul>
+<div name="read-all-of-the-device-configuration" data-unique="read-all-of-the-device-configuration"></div><h3 id="read-all-of-the-device-configuration">Read All of the Device Configuration</h3>
+<blockquote>
+<p>Iterate Over the Device Configuration</p>
+</blockquote>
+<pre class="highlight python"><span class="k">for</span> <span class="n">cfg</span> <span class="ow">in</span> <span class="n">dev</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">bConfigurationValue</span><span class="p">)</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">intf</span> <span class="ow">in</span> <span class="n">cfg</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span> <span class="o">+</span> \
+                         <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">bInterfaceNumber</span><span class="p">)</span> <span class="o">+</span> \
+                         <span class="s">','</span> <span class="o">+</span> \
+                         <span class="nb">str</span><span class="p">(</span><span class="n">intf</span><span class="o">.</span><span class="n">bAlternateSetting</span><span class="p">)</span> <span class="o">+</span> \
+                         <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ep</span> <span class="ow">in</span> <span class="n">intf</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\t\t</span><span class="s">'</span> <span class="o">+</span> \
+                             <span class="nb">str</span><span class="p">(</span><span class="n">ep</span><span class="o">.</span><span class="n">bEndpointAddress</span><span class="p">)</span> <span class="o">+</span> \
+                             <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+</pre>
+
+<p>The code to the right shows how you would iterate over all of the fields in the device descriptor (<code class="prettyprint">cfg</code>) that are in the device object (<code class="prettyprint">dev</code>). The code writes each value found in the iteration to <em>stdout</em>.  The code continues by iterating over a configuration (<code class="prettyprint">cfg</code>) to access all of the interfaces (<code class="prettyprint">intf</code>) and  subsequently iterates over the interfaces (<code class="prettyprint">intf</code>) to access their endpoints (<code class="prettyprint">ep</code>) again writing all of the information discovered to <em>stdout</em>. </p>
+<div name="random-access-of-device-descriptors" data-unique="random-access-of-device-descriptors"></div><h3 id="random-access-of-device-descriptors">Random Access of Device Descriptors</h3>
+<blockquote>
+<p>Random Access of Device Descriptors</p>
+</blockquote>
+<pre class="highlight python"><span class="c"># access the second configuration</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">dev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c"># access the first interface</span>
+<span class="n">intf</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+<span class="c"># third endpoint</span>
+<span class="n">ep</span> <span class="o">=</span> <span class="n">intf</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre>
+
+<p>You can also use the subscript operator to access the descriptors randomly such as in the example to the right.</p>
+
+<p>As expected in Python, the index is zero-based. But you should note, that the subscript operator in the Configuration accepts a sequence of two items (i.e., it is two dimensional). The first dimension is the index of the <em>interface</em>; the second dimension will access the <em>alternate setting</em>. Thus, to access the first <em>interface’s</em> second <em>alternate setting</em>, you would use <code class="prettyprint">cfg[(0,1)]</code>.</p>
+<div name="the-find_descriptor-function" data-unique="the-find_descriptor-function"></div><h2 id="the-find_descriptor-function">The <code class="prettyprint">find_descriptor</code> Function</h2>
+<blockquote>
+<p>The <code class="prettyprint">find_descriptor</code> Function</p>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.util</span>
+<span class="n">alt</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_descriptor</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">find_all</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bInterfaceNumber</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>    
+</pre>
+
+<p>PyUSB has a powerful way to find descriptors called the <code class="prettyprint">find_descriptor</code> function.  The <code class="prettyprint">find_descriptor</code>function is similar to the <code class="prettyprint">find</code> function but with two exceptions:</p>
+
+<ul>
+<li><code class="prettyprint">find_descriptor</code> receives as its first parameter the parent descriptor that will be searched</li>
+<li><code class="prettyprint">find_descriptor</code> has no <code class="prettyprint">backend</code> parameter</li>
+</ul>
+
+<p>In the example to the right, the configuration descriptor <code class="prettyprint">cfg</code> is searched using the <code class="prettyprint">find_descriptor</code> to find all alternate settings of the interface <code class="prettyprint">1</code>. The <code class="prettyprint">find_descriptor</code> is in the <code class="prettyprint">usb.util</code> module and will work with the <code class="prettyprint">custom_match</code> parameter.</p>
+<div name="dealing-with-multiple-identical-devices" data-unique="dealing-with-multiple-identical-devices"></div><h2 id="dealing-with-multiple-identical-devices">Dealing with multiple identical devices</h2>
+<p>When two or more identical USB devices are connected to your system, to help you differentiate them, PyUSB <code class="prettyprint">device</code> objects come with two additional attributes which are not part of the USB Spec; the <code class="prettyprint">bus</code> and <code class="prettyprint">address</code> attributes.  These attributes are populated from the PyUSB backend and if the backend does not support them, they are set to <code class="prettyprint">None</code>. The attributes represent the bus number and bus address of each device respectively and can be used to differentiate two devices with the same <code class="prettyprint">idVendor</code> and <code class="prettyprint">idProduct</code> attributes.</p>
+<div name="usb-device-configuration" data-unique="usb-device-configuration"></div><h2 id="usb-device-configuration">USB Device Configuration</h2>
+<blockquote>
+<p>Set Device Configuration</p>
+</blockquote>
+<pre class="highlight python"><span class="n">dev</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">()</span> <span class="c"># we assume the configuration 5 is the first one</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">find_descriptor</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span> <span class="n">bConfiguration</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cfg</span><span class="o">.</span><span class="nb">set</span><span class="p">()</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+</pre>
+
+<p>USB devices must have their configuration set before they can be used and after they are connected.  Thus, after getting your device object and before you can communicate with the device, you must issue a <code class="prettyprint">set_configuration</code> request. The parameter for this request is the <code class="prettyprint">bConfigurationValue</code> for the configuration you are interested in.  Most USB devices have no more than one configuration, and tracking the configuration value is a cryptic part of the specification. With PyUSB, you can just issue a <code class="prettyprint">set_configuration</code> call with no arguments and it will figure it out for you. What PyUSB does is to set the first configuration found (and thus, if your device has just one, you don’t need to worry about the configuration value at all). </p>
+
+<p>The code to the right shows how you can set a device configuration through standard PyUSB <code class="prettyprint">set_configuration</code> functions.  In the example, the code to the right sets the <code class="prettyprint">bConfigurationValue</code> field equals to <code class="prettyprint">5</code>. In this example the <code class="prettyprint">Configuration</code> object is used as a parameter to <code class="prettyprint">set_configuration</code> in which it has a <code class="prettyprint">set</code> method to configure itself as the current configuration.</p>
+<div name="usb-interface-alternative-settings" data-unique="usb-interface-alternative-settings"></div><h2 id="usb-interface-alternative-settings">USB Interface Alternative Settings</h2>
+<blockquote>
+<p><code class="prettyprint">set_interface_altsetting</code> Function</p>
+</blockquote>
+<pre class="highlight python"><span class="k">try</span><span class="p">:</span>    
+    <span class="n">dev</span><span class="o">.</span><span class="n">set_interface_altsetting</span><span class="p">(</span><span class="n">interface</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">alternate_setting</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">USBError</span><span class="p">:</span>
+            <span class="k">pass</span>
+</pre>
+
+<p>The USB devices also have a concept of <em>alternate settings</em> for an Interface. Each device can have only one active configuration at a time yet each configuration may have more than one interface.  Further, you can use all of the interfaces at the same time and thus it is best to think of an interface as a logical device. </p>
+
+<p>For example, a multi-function printer is simultaneously a printer and a scanner. Yet our multi-function printer is a single USB configuration with two interfaces; one interface for the printer and one interface for the scanner. A device with more than one interface is called a composite device in the USB Specification. When you connect your multifunction printer via USB, the Operating System loads two different drivers: one for each “logical” peripheral or interface in the USB configuration.</p>
+
+<p>An interface can have one or more alternate settings. Although you can have multiple, alternative settings for an interface only one alternate setting is active at a time. For example, USB spec says that a device cannot have an isochronous endpoint in its primary alternate setting, so a streaming device must have at least two alternate settings, with the second one having the isochronous endpoints. An interface with just one alternate setting does not need to be explicitly set since it is the only one.  You can select an interface alternate setting through the <code class="prettyprint">set_interface_altsetting</code> function.</p>
+
+<p></p><aside class="warning">The USB spec says that a device is allowed to return an error if it receives a SET_INTERFACE request for an interface that has no additional alternate settings. Thus, if you are not sure if the interface has more than one alternate setting or if it will accept a SET_INTERFACE request, it is best to call <code class="prettyprint">set_interface_altsetting</code> inside a Python try-except block as shown in the example.</aside><p></p>
+<div name="using-an-interface-object-as-a-parameter" data-unique="using-an-interface-object-as-a-parameter"></div><h2 id="using-an-interface-object-as-a-parameter">Using an <code class="prettyprint">Interface</code> Object as a Parameter</h2>
+<blockquote>
+</blockquote>
+<pre class="highlight python"><span class="n">intf</span> <span class="o">=</span> <span class="n">find_descriptor</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">set_interface_altsetting</span><span class="p">(</span><span class="n">intf</span><span class="p">)</span>
+<span class="n">intf</span><span class="o">.</span><span class="n">set_altsetting</span><span class="p">()</span> <span class="c"># wow! Interface also has a method for it</span>
+</pre>
+
+<p>An <code class="prettyprint">Interface</code> object can also be used as parameter to the <code class="prettyprint">set_interface_altsetting</code> function and when you do so, the <code class="prettyprint">interface</code> and <code class="prettyprint">alternate_setting</code> parameters will be automatically inferred from <code class="prettyprint">bInterfaceNumber</code> and <code class="prettyprint">bAlternateSetting</code> fields. The code to the right shows an example of this.</p>
+
+<p></p><aside class="warning">The <code class="prettyprint">Interface</code> object must belong to the active configuration descriptor when used as a parameter.</aside><p></p>
+<div name="communicating-with-usb-devices" data-unique="communicating-with-usb-devices"></div><h2 id="communicating-with-usb-devices">Communicating With USB Devices</h2>
+<p>After you have found and configured your USB device, you will want to communicate with it. </p>
+
+<p>USB communication is done in one of four transfer modes:</p>
+
+<ul>
+<li>bulk</li>
+<li>interrupt</li>
+<li>isochronous and </li>
+<li>control transfer </li>
+</ul>
+
+<p></p><aside class="notice">This document will assume that you know the basics of the USB transfers modes and will not explain the purpose and the differences between them.</aside><p></p>
+
+<p>Control transfer is the only transfer mode that sends and receives structured data, the others just send and receive raw data to/from the USB device.  Because of this difference, control transfer mode has its own function to deal with control transfer communications while the other three modes share a common function.</p>
+<div name="control-transfer-communications" data-unique="control-transfer-communications"></div><h3 id="control-transfer-communications">Control Transfer Communications</h3><pre class="highlight python"><span class="n">msg</span> <span class="o">=</span> <span class="s">'test'</span>
+<span class="k">assert</span> <span class="n">dev</span><span class="o">.</span><span class="n">ctrl_transfer</span><span class="p">(</span><span class="mh">0x40</span><span class="p">,</span> <span class="n">CTRL_LOOPBACK_WRITE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">ctrl_transfer</span><span class="p">(</span><span class="mh">0xC0</span><span class="p">,</span> <span class="n">CTRL_LOOPBACK_READ</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+<span class="n">sret</span> <span class="o">=</span> <span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ret</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">sret</span> <span class="o">==</span> <span class="n">msg</span>
+</pre>
+
+<p>Control transfer communication is done via the <code class="prettyprint">ctrl_transfer</code> method. It is used for data transfer in both directions with the device; the direction of the transfer will be determined from the <code class="prettyprint">bmRequestType</code> parameter.</p>
+
+<p>The example to the right show how you would issue a <code class="prettyprint">control_transfer</code>.</p>
+
+<p>In the example, it is assumed that your device implements two custom control requests that act as a loopback pipe. What is written with the <code class="prettyprint">CTRL_LOOPBACK_WRITE</code> message can also be read with the <code class="prettyprint">CTRL_LOOPBACK_READ</code>
+message.</p>
+
+<p>The first four parameters in the <code class="prettyprint">ctrl_transfer</code> parameters are:</p>
+
+<ul>
+<li><code class="prettyprint">bmRequestType</code>, </li>
+<li><code class="prettyprint">bmRequest</code>, </li>
+<li><code class="prettyprint">wValue</code>, and </li>
+<li><code class="prettyprint">wIndex</code> </li>
+</ul>
+
+<p>These parameters are fields of the standard control transfer structure in the USB specification. The fifth parameter is either the data payload for an OUT transfer or the number of bytes to read in an IN transfer.  </p>
+
+<p>The data payload can be any sequence type that can be used as a parameter for the array <code class="prettyprint">__init__</code> method in Python.  If there is no data payload, the parameter should be <code class="prettyprint">None</code> (or 0 in case of an IN transfer). There is a six, optional <code class="prettyprint">timeout</code> parameter for the transfer. If you don’t supply a <code class="prettyprint">timeout</code> value, then the default timeout for the device will be used. In an OUT transfer, the return value is the number of bytes really sent to the device. In an IN transfer, the return value is an array_ object with the data
+read.</p>
+<div name="bulk-interrupt-and-isochronous-communications" data-unique="bulk-interrupt-and-isochronous-communications"></div><h3 id="bulk-interrupt-and-isochronous-communications">Bulk, Interrupt, and Isochronous Communications</h3><pre class="highlight python"><span class="n">msg</span> <span class="o">=</span> <span class="s">'test'</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="n">ret</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mh">0x81</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">sret</span> <span class="o">=</span> <span class="s">''</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ret</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">sret</span> <span class="o">==</span> <span class="n">msg</span>    
+</pre>
+
+<p>For bulk, interrupt, and isochronous transfer modes, you simply use the <code class="prettyprint">write</code> and <code class="prettyprint">read</code> methods.  There is no need to worry about the transfer type, it is automatically determined from the endpoint address.  The code to the right is a loopback example assuming the we have a loopback pipe in the endpoint.</p>
+
+<p>In the <code class="prettyprint">write</code> and <code class="prettyprint">read</code> functions, the first and third parameters are the endpoint address and timeout, respectively. The second parameter is the data payload for the <code class="prettyprint">write</code> function and the number of bytes to <code class="prettyprint">read</code> for the read function.  The returned data is either an instance of the array_ object for the <code class="prettyprint">read</code> method or the number of bytes written for the <code class="prettyprint">write</code> method.</p>
+
+<p>Instead of the number of bytes to be read, the <code class="prettyprint">read</code> and <code class="prettyprint">ctrl_transfer</code> read method can be passed an array_ object into which the data will stored upon read. When used this way, the number of bytes to read will be the length of the array times the <code class="prettyprint">array.itemsize</code> value.</p>
+
+<p>As in <code class="prettyprint">ctrl_transfer</code>, the <code class="prettyprint">timeout</code> parameter is optional. When the <code class="prettyprint">timeout</code> is omitted, the <code class="prettyprint">Device.default_timeout</code> property is used.</p>
+<div name="additional-topics" data-unique="additional-topics"></div><h2 id="additional-topics">Additional Topics</h2><div name="additional-modules" data-unique="additional-modules"></div><h3 id="additional-modules">Additional Modules</h3>
+<p>In addition to the transfers functions, the module <code class="prettyprint">usb.control</code> also includes functions that implement the standard USB control requests.  </p>
+
+<p>The <code class="prettyprint">usb.util</code> module has the <code class="prettyprint">get_string</code> function that can be used to return string descriptors instead of values.</p>
+<div name="backend-parameter-for-find-function" data-unique="backend-parameter-for-find-function"></div><h3 id="backend-parameter-for-find-function">Backend Parameter for <code class="prettyprint">find</code> Function</h3>
+<p>The <code class="prettyprint">find</code> function has one more parameter that has not yet covered. It is the <code class="prettyprint">backend</code> parameter. If you don’t supply the <code class="prettyprint">backend</code> parameter, the system will automatically used one of the built-in backends. </p>
+
+<p>Each backend is an object inherited from <code class="prettyprint">usb.backend.IBackend</code> and the backend is responsible for implementing the operating system specific USB stuff. PyUSB has the built-ins of libusb 0.1, libusb 1.0 and OpenUSB. For the Cisco PyUSB, a backend has been written specifically to support the USB access of devices over an IP network that have been connected with the Cisco PoE to USB adapter. </p>
+<div name="python-memory-management" data-unique="python-memory-management"></div><h3 id="python-memory-management">Python Memory Management</h3>
+<p>Python provides <em>automatic memory management</em>. This means that the Python virtual machine automatically decides when to release objects from the memory. Under the hood, PyUSB automatically manages all the low level resources it needs (<em>e.g.</em>, interface claiming, device handles, etc.) and thus most users do not need to worry about memory management. </p>
+
+<p>However, because of the nondeterministic nature of automatic object destruction of Python objects, a developer cannot predict when unused, allocated resources will be released and thus, you might want to allocate and free the resources deterministically.  The <code class="prettyprint">usb.util</code> module provides you with a set of functions if you want to take control of your own resource management.</p>
+
+<p>To claim and release interface objects manually, you can use the <code class="prettyprint">claim_interface</code> and <code class="prettyprint">release_interface</code> functions respectively. </p>
+
+<ul>
+<li><p>The <code class="prettyprint">claim_interface</code> will claim the specified interface if the device has not yet done it. If the device has already claimed the interface, then a call to the <code class="prettyprint">claim_interface</code> function will do nothing.  </p></li>
+<li><p>The <code class="prettyprint">release_interface</code> will explicitly release the specified interface if it is claimed. If the interface is not claimed, it does nothing. </p></li>
+</ul>
+
+<p>To free all resources allocated by the device object (including interfaces claimed), you can use the <code class="prettyprint">dispose_resources</code> function which will release all resources allocated to a device and restores the device object (but not the device hardware itself) to the state it was at the time when the  device was discovered by the <code class="prettyprint">find</code> function.</p>
+<div name="specifying-python-libraries-by-hand" data-unique="specifying-python-libraries-by-hand"></div><h3 id="specifying-python-libraries-by-hand">Specifying Python Libraries by Hand</h3>
+<blockquote>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="kn">import</span> <span class="nn">usb.backend.libusb1</span>
+
+<span class="n">backend</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">libusb1</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="n">find_library</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">/</span>
+    <span class="s">"/usr/lib/libusb-1.0.so"</span><span class="p">)</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">)</span>
+
+</pre>
+
+<p>A backend, such as Cisco’s USBIP, is a wrapper in a shared library which implements the USB access API.  By default, the backends use the <a href="http://docs.python.org/3/library/ctypes.html#finding-shared-libraries"><code class="prettyprint">find_library()</code></a> ctypes function. On Linux and other Unix-like Operating Systems, the <code class="prettyprint">find_library</code> function will run external programs (<em>e.g.</em>,  <code class="prettyprint">/sbin/ldconfig</code>, <code class="prettyprint">gcc</code> and <code class="prettyprint">objdump</code>) to find the library file.</p>
+
+<p>On some systems that have the external programs missing or disabled, the required external functions may not be available for use and thus the system is not able to find the Python Libraries.  To overcome this limitation, PyUSB allows you to supply a custom <code class="prettyprint">find_library()</code> function.</p>
+
+<p>The code to the right shows how this is done.  Notice that the <code class="prettyprint">find_library</code> argument for the <code class="prettyprint">get_backend()</code> function, supplies a function that is responsible to find the correct library for the backend; in this case it provides an explicit path to the module.</p>
+<div name="cisco-extensions-to-pyusb" data-unique="cisco-extensions-to-pyusb"></div><h2 id="cisco-extensions-to-pyusb">Cisco Extensions to PyUSB</h2>
+<p>Using the <code class="prettyprint">backend</code> module capabilities of PyUSB, Cisco created the <code class="prettyprint">USBIP</code> backend which allows a program written using PyUSB to find, configure, and communicate with a USB device connected via a Cisco switch running the EIoT USBIP server.</p>
+
+<p>For the PyUSB library to connect to a remote USB device using PoE to USB DevKit, your Python program needs to know the hostname or IP address of the Cisco switch that the device is connected through. You specify the host Switch using the Python environment variable <code class="prettyprint">USBIP_SERVER</code>. For example, the following line of code will point the PyUSB library to the Cisco switch at IP address <code class="prettyprint">10.1.2.3</code>:</p>
+
+<p><code class="prettyprint">os.environ["USBIP_SERVER"] = “10.1.2.3”</code></p>
+
+<p>Cisco PyUSB also allows the <code class="prettyprint">find</code> function to find a USB device by using the MAC address of the PoE to USB DevKit adapter.  This can be useful for attaching to a specific USB device when the normal PyUSB <code class="prettyprint">find()</code> mechanism is ambiguous.  For example, the following code will attach to the USB device connected to the PoE to USB adapter with MAC address <code class="prettyprint">00-22-bd-cf-36-00</code>:</p>
+
+<p><code class="prettyprint">dev = usb.core.find(address=int("0022bdcf3600", 16)</code></p>
+<div name="cisco-pyusb-hello-world-program" data-unique="cisco-pyusb-hello-world-program"></div><h2 id="cisco-pyusb-hello-world-program">Cisco PyUSB Hello World Program</h2>
+<blockquote>
+<p>Cisco PyUSB Hello World</p>
+</blockquote>
+<pre class="highlight python"><span class="kn">import</span> <span class="nn">usb.core</span>
+<span class="kn">import</span> <span class="nn">usb.util</span>
+
+<span class="c"># find device with Mac address of the PoE to USB adapter</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">address</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="s">"0022bdcf3600"</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+
+<span class="c"># old code that used idVendor and idProduct to locate the device</span>
+<span class="c"># dev = usb.core.find(idVendor=0xfffe, idProduct=0x0001)</span>
+
+<span class="c"># was it found?</span>
+<span class="k">if</span> <span class="n">dev</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'Device not found'</span><span class="p">)</span>
+
+<span class="c"># set the active configuration. With no arguments, the first</span>
+<span class="c"># configuration will be the active one</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">set_configuration</span><span class="p">()</span>
+
+<span class="c"># get an endpoint instance</span>
+<span class="n">cfg</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">get_active_configuration</span><span class="p">()</span>
+<span class="n">intf</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+
+<span class="n">ep</span> <span class="o">=</span> <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_descriptor</span><span class="p">(</span>
+    <span class="n">intf</span><span class="p">,</span>
+    <span class="c"># match the first OUT endpoint</span>
+    <span class="n">custom_match</span> <span class="o">=</span> \
+    <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> \
+        <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">endpoint_direction</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">bEndpointAddress</span><span class="p">)</span> <span class="o">==</span> \
+        <span class="n">usb</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">ENDPOINT_OUT</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">ep</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>
+
+<span class="c"># write the data</span>
+<span class="n">ep</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span> 
+</pre>
+
+<p>At the beginning of the document, we showed you a standard PyUSB <em>Hello World</em> program.  To the right is the same program modified to work with a device that is connected via the PoE to USB adapter.  Notice that the program now uses a different <code class="prettyprint">find()</code> function to find the device using the MAC address of the adapter.  The program then continues unaltered in configuring the device, opening it with <code class="prettyprint">find_descriptor</code> and writing to the device using the <code class="prettyprint">write()</code> function.  </p>           
+          
+          
+      <!-- InstanceEndEditable -->
+  
+  </div>
+
+  
+  <div class="dark-box">
+    <div class="lang-selector stick-top">
+  
+      <!-- InstanceBeginEditable name="language" -->
+          <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" data-language-name="shell" class="">cURL</a>
+          <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" data-language-name="java" class="">Java</a>
+          <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" data-language-name="php" class="">PHP</a>
+          <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" data-language-name="python" class="active">Python</a>
+          <a href="https://developer.cisco.com/site/eiot/documents/pyusb-dev-guide/?python#" data-language-name="ruby">Ruby</a>
+      <!-- InstanceEndEditable -->        
+  
+  </div>
+</div>  
+  
+          </div>
+    
+    
+    <div style="clear:both;"> </div>  
+<!-- /main-container --> 
+<div class="footer-container sticky_footer" style="height:auto;"> 
+    <div class="footer container_14">        
+        <div class="bottomNav grid_14 alpha omega">
+        
+        	<div class="grid_3">
+             
+             
+             <div class="footerGroup">                
+                <div class="fGroupTitle">
+                    FOLLOW DEVNET
+                </div>
+                
+                <div class="fGroupLinks">
+                    <a target="_blank" href="https://twitter.com/ciscodevnet">
+                        Twitter
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UChRmUH4H5hiYzPiFhvNoCIg">
+                        YourTube
+                    </a>
+                     <a target="_blank" href="https://github.com/CiscoDevNet">
+                        GitHub
+                    </a>       
+                </div>
+              </div>
+              
+              <div class="footerGroup">                
+                <div class="fGroupTitle">
+                   DEVNET TOOLS
+                </div>
+                
+                <div class="fGroupLinks">
+                    <a href="https://developer.cisco.com/site/devnet/sandbox/">
+                	Sandbox
+                    </a>   
+                     <a href="https://developer.cisco.com/site/devnet/support/">
+                        Developer Support
+                    </a>  
+                </div>
+              </div>
+              
+              <div class="footerGroup">                
+                <div class="fGroupTitle">
+                  LEARNING LABS
+                </div>
+                
+                <div class="fGroupLinks">
+                    <a target="_blank" href="http://learninglabs.cisco.com/">
+                	Online Tutorials
+                    </a>   
+                    
+                </div>
+              </div>
+             
+                
+            </div>
+            
+            <div class="grid_3">
+            
+             <div class="footerGroup">                
+                	<div class="fGroupTitle">
+                    	DEV CENTERS
+                    </div>
+                    
+                    <div class="fGroupLinks">
+                        <a href="https://developer.cisco.com/collaboration">
+                        	Collaboration
+                        </a>
+                         <a href="https://developer.cisco.com/cloud">
+                            Cloud	
+                        </a>
+                         <a href="https://developer.cisco.com/data-center">
+                            Data Center
+                        </a>
+                        
+                        <a href="https://developer.cisco.com/iot">
+                            IoT
+                        </a>
+                        
+                        <a href="https://developer.cisco.com/networking">
+                            Networking
+                        </a>
+                        
+                        <a href="https://developer.cisco.com/security">
+                            Security
+                        </a>  
+                        
+                        <a href="https://developer.cisco.com/site/spg/index.gsp">
+                            Services
+                        </a>                 
+                    </div>
+                </div>
+                
+                
+				<div class="footerGroup">                
+                	<div class="fGroupTitle">
+                    	COMMUNITY
+                    </div>
+                    
+                    <div class="fGroupLinks">
+                        <a target="_blank" href="https://communities.cisco.com/community/developer/content?filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bblogpost%5D">
+                        	Blog
+                        </a>
+                         <a target="_blank" href="https://communities.cisco.com/community/developer">
+                            Forums
+                        </a>
+                         <a href="https://developer.cisco.com/site/devnet/events-contests/events/">
+                            Events
+                        </a> 
+                    </div>
+                </div>
+            
+             
+            </div>
+            
+            <div class="grid_3">
+            
+                <div class="footerGroup">                
+                	<div class="fGroupTitle">
+                    	  
+                         JOIN DEVNET
+                           
+                          
+                    </div>
+                    
+                    <div class="fGroupLinks">
+                    
+                    	 
+                    	<a href="https://developer.cisco.com/SSO/login">
+                           Register
+                        </a>
+                        
+                        
+                        
+                                           
+                    </div>
+                </div>
+                
+                 <div class="footerGroup">                
+                	<div class="fGroupTitle">
+                    	CISCO RESOURCES
+                    </div>
+                    
+                    <div class="fGroupLinks">
+                    	<a target="_blank" href="http://www.cisco.com/">
+                           Cisco.com
+                        </a>
+                        <a target="_blank" href="https://solutionpartner.cisco.com/">
+                           Solution Partner Program
+                        </a> 
+                         <a target="_blank" href="https://marketplace.cisco.com/catalog">
+                           Marketplace
+                        </a> 
+                        <a target="_blank" href="https://supportforums.cisco.com/">
+                           Cisco Support Community
+                        </a>                      
+                    </div>
+                </div>
+                
+                 
+            
+             
+            </div>
+            
+            
+            
+             <div class="grid_3">
+            
+               
+                
+                 <div class="footerGroup">                
+                	<div class="fGroupTitle">
+                    	ABOUT DEVNET
+                    </div>
+                    
+                    <div class="fGroupLinks">
+                    	<a href="https://developer.cisco.com/contactUs">
+                           Contact Us
+                        </a>
+                        <a href="https://developer.cisco.com/site/legal/terms-conditions.gsp">
+                            Terms and Conditions
+                        </a> 
+                         <a target="_blank" href="http://www.cisco.com/web/siteassets/legal/privacy.html">
+                            Privacy Statement
+                        </a>  
+                         <a target="_blank" href="http://www.cisco.com/web/siteassets/legal/privacy.html#cookies">
+                            Cookie Statement
+                        </a>  
+                        
+                         <a target="_blank" href="http://www.cisco.com/web/siteassets/legal/trademark.html">
+                           Trademark
+                        </a> 
+                        
+                          <a href="https://developer.cisco.com/site/devnet/faqs/">
+                           General FAQs
+                          </a> 
+                        
+                            
+                                            
+                    </div>
+                </div>
+            
+             
+            </div>
+        	
+        </div>
+    </div><!-- /footer -->
+</div>
+
+
+<style>
+.footer-container div.fGroupTitle{
+	font-size: 12px; 
+	font-weight:bold;
+	display:block;
+	 color:#868686;
+	 clear:both;
+	 margin-bottom:1px;
+	
+}
+
+.footer-container div.footerGroup:not(:first-child){
+	padding-top:17px;
+	clear:both;
+}
+
+.footer-container h3{
+	font-size: 12px; 
+	font-weight:bold;
+	display:block;
+	 color:#868686;
+	 clear:both;
+	 margin-bottom:1px;
+	  
+}
+.notPrime{
+		margin-top:20px;
+}
+
+.footer-container {
+clear: both;
+margin-top: 0px;
+margin-bottom:0;
+/* padding: 15px; */
+padding-bottom: 30px;
+ 
+background: #333;
+text-shadow:none;
+overflow: hidden;
+width:auto;
+}
+
+.bottomNav{margin-top:5px;}
+.bottomNav a {
+padding-right: 10px;
+margin-right: 10px;
+border-right: none;
+font-size: 12px;
+text-decoration: none;
+display:block; 
+clear:both;
+}
+
+.bottomNav a:link{ color:#868686 }
+.bottomNav a:visited{  color:#868686}
+.bottomNav a:hover{  color: #c6c6c6 }
+.bottomNav a:anchor{  color:#868686}
+
+
+ 
+
+.bottomNav .grid_3{margin-right:40px;}
+
+.stick-bottom {
+margin-bottom: 290px;
+}
+</style>
+
+<style>
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape)
+	and (-webkit-min-device-pixel-ratio: 1)  {.social-floater {display: none;}}
+	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait)
+	and (-webkit-min-device-pixel-ratio: 1)  {.social-floater {display: none;}}
+</style>
+
+<div class="social-floater">
+	<ul class="social-icons">
+    	<li><a id="twitter" href="https://twitter.com/ciscodevnet" target="_blank">Twiiter</a></li>
+        <li><a id="github" href="https://github.com/CiscoDevNet" target="_blank">GitHub</a></li>
+        <li><a id="youtube" href="https://www.youtube.com/channel/UChRmUH4H5hiYzPiFhvNoCIg" target="_blank">YouTube</a></li>
+    </ul>
+</div>
+ 
+
+
+ 
+
+
+
+ 
+
+
+
+  
+    <script type="text/javascript">
+
+$('ul.menu').superfish();
+$('ul.menu-header').superfish();
+
+ 
+        //for follow menu.
+        (function(){
+            
+         
+        var $myStalker = $("#stalk");
+		
+		if($("#stalk").length){
+			var $window = $(window);
+			 
+			var myStalkFn =  function() {
+				
+				 var myTop = $window.scrollTop();
+				 
+				 if(myTop > 76){
+					 $myStalker.css({
+						position: "fixed"
+							 
+					 });  
+					 
+				 }else{
+					 $myStalker.css({
+						position: "relative"
+							 
+					 }); 		 
+				 }
+				 
+			};
+			
+			window.addEventListener('scroll', myStalkFn);
+		}
+        }());
+        
+        
+        
+
+
+/*Add/Remove Class Variables*/
+$(document).ready(function() {
+function addMega(){
+if ($(".primaryActiveStick")[0]){
+    // Do something if class exists	
+	    $(".megamenu-trigger").parent().removeClass("primaryActive");
+	    $("#mega-m").removeClass("mega-m-hover"); 
+	} else {
+    // Do something if class does not exist
+	    $(".megamenu-trigger").parent().addClass("primaryActive");
+	    $("#mega-m").addClass("mega-m-hover");	
+		
+		if(!$(".mega-m-stick").length){ 
+			$(".arrow-down").removeClass("arrow-down").addClass("arrow-up");		
+		}
+	}	
+}
+function removeMega(){
+    $(".megamenu-trigger").parent().removeClass("primaryActive");
+    $("#mega-m").removeClass("mega-m-hover"); 
+	if(!$(".mega-m-stick").length){
+		$(".arrow-up").removeClass("arrow-up").addClass("arrow-down");  
+	}
+}
+
+/*hoverintent config for megamenu*/
+var hoverConfig = {
+    interval: 220,
+    sensitivity: 4,
+    over: addMega,
+    timeout: 520,
+    out: removeMega
+};
+$("#mega-m-wrapper").hoverIntent(hoverConfig);
+
+/*Tabbed hoverintent*/
+$('#mega-m-tabs li span:not(:first)').addClass('inactive');
+$('.mega-m-container').hide();
+$('.mega-m-container:first').show();
+
+function hoverTab(){
+    var t = $(this).attr('id');
+    if($(this).hasClass('inactive')){ //this is the start of our condition 
+        $('#mega-m-tabs li span').addClass('inactive');           
+        $(this).removeClass('inactive');
+        $('.mega-m-container').hide();
+        $('#'+ t + '-' + 'content').fadeIn('slow');
+    }
+}     
+
+/*click to open tabs faster*/  
+$('#mega-m-tabs li span').on("click", function() {
+    var t = $(this).attr('id');
+    if($(this).hasClass('inactive')){ //this is the start of our condition 
+        $('#mega-m-tabs li span').addClass('inactive');           
+        $(this).removeClass('inactive');
+        $('.mega-m-container').hide();
+        $('#'+ t + '-' + 'content').fadeIn('slow');
+    }
+});
+
+
+/*hoverintent config for megamenu tabs*/
+var tabConfig = {
+    interval: 175,
+    sensitivity: 1,
+    over: hoverTab,
+    timeout: 175,
+    out: hoverTab
+};
+$("#mega-m-tabs li span").hoverIntent(tabConfig);});
+
+/* if href contains # add a class */
+(function(){
+	$('#mega-m a[href="#"]').each(function() {
+			$(this).parent().addClass("mega-m-no-link");
+	});
+})();
+
+/*click to open megamenu faster*/  
+$( ".megamenu-trigger" ).on("click", function() {
+    $(".megamenu-trigger").parent().toggleClass("primaryActiveStick");
+    $(".megamenu-trigger").parent().removeClass("primaryActive");    
+    $("#mega-m").toggleClass("mega-m-stick");
+    $("#mega-m").removeClass("mega-m-hover");
+	if ($(".arrow-up")[0]){ 
+		$(".arrow-up").removeClass("arrow-up").addClass("arrow-down");
+	} else {
+		$(".arrow-down").removeClass("arrow-down").addClass("arrow-up");
+	}
+});
+
+/*click outside of mContainer to close */
+$(document).on("click", function (e) {
+    var mContainer = $("#mega-m-wrapper");
+
+    if (!mContainer.is(e.target)
+        && mContainer.has(e.target).length === 0) {
+        $(".megamenu-trigger").parent().removeClass("primaryActive");
+        $("#mega-m").removeClass("mega-m-hover");
+
+        $(".megamenu-trigger").parent().removeClass("primaryActiveStick");
+        $("#mega-m").removeClass("mega-m-stick");
+		$(".arrow-up").removeClass("arrow-up").addClass("arrow-down");  
+    }
+});
+
+</script>
+
+
+
+
+
+<script type="text/javascript" src="./Cisco DevNet_files/jquery.bxSlider.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="./Cisco DevNet_files/bx_styles.css">
+
+
+<script type="text/javascript">
+	
+	
+	 
+	$(".video-sidebar img").click(function(){
+		 
+	    var $containerDiv = $(this).parent();
+		//create a colorbox
+		var $myHiddenVideoDiv = $(this).next().next().children(); 
+		var myTitle =  $(this).closest('.hiddenVideo a').text();
+		var myWidth =  $containerDiv.find("div:first-child").width()  + 30; 
+		var myHeight = $containerDiv.find("div:first-child").height() + 65;
+				
+		$.colorbox({
+			inline:true, 
+			href:$myHiddenVideoDiv,	
+			height: myHeight,
+			width: myWidth,		
+			onClosed:function(){
+				//$myHiddenVideoDiv.hide();
+			},
+			title: myTitle
+		});
+		
+		//fill colorbox in with flowplayer item.
+		 
+		return false;
+	});
+	
+	$(".video-ui-dark-thumb").click(function(){
+		 
+		//create a colorbox
+		var $myVideoInnerDiv = $(this).find(".video-inner");
+		var myTitle =  $myVideoInnerDiv.find('.hiddenVideo a').text();
+		var myWidth =  $myVideoInnerDiv.width()  + 30; 
+		var myHeight = $myVideoInnerDiv.height() + 65;
+				
+		$.colorbox({
+			inline:true, 
+			href:$myVideoInnerDiv,	
+			height: myHeight,
+			width: myWidth,		
+			onClosed:function(){
+				//$myHiddenVideoDiv.hide();
+			},
+			title: myTitle
+		});
+		
+		//fill colorbox in with flowplayer item.
+		 
+		return false;
+	});	
+	
+	if($(".videoTrigger").length){
+		$(".videoTrigger").css("cursor","pointer");
+		$(".videoTrigger").click(function(){
+			 
+			var $containerDiv = $(this).parent();
+			var myWidth =  $containerDiv.find("div:first-child").width()  + 30; 
+		    var myHeight = $containerDiv.find("div:first-child").height() + 65;
+			//create a colorbox
+			
+			var $myHiddenVideoDiv = $(".videoTrigger").next().children(); 
+			 
+			var myTitle =  $myHiddenVideoDiv.find('a').attr('title');
+			
+			$.colorbox({
+				inline:true, 
+				href:$myHiddenVideoDiv,
+				height: myHeight,
+				width: myWidth,		
+				onClosed:function(){
+					//$myHiddenVideoDiv.hide();
+				},
+				title: myTitle
+			});
+			
+			//fill colorbox in with flowplayer item.
+			 
+			return false;
+		});
+	}
+	
+	
+	
+	$f("a.flowplayer", "/site/js/flowplayer/3.2.16/flowplayer.commercial-3.2.16.swf",{	    
+		key: keys[location.host] || '' ,		 
+		 clip: {
+                    url: $(this).attr("href"),
+                    autoPlay: true,
+					autoBuffering: true  
+					
+                },
+                plugins: {
+					 
+                    controls: {
+                        url: '/site/js/flowplayer/3.2.16/flowplayer.controls-3.2.15.swf',
+                        height: '22px',
+                        background: '#ffffff',
+                        backgroundGradient: 'high',
+                        timeColor: '#ffffff',
+                        progressColor: '#452469',
+                        bufferColor: '#4c7fae',
+                        bufferGradient: 'none',
+                        play:true,
+                        volume:true,
+                        mute:true,
+                        time:true,
+                        stop:true,
+                        playlist:false,
+                        fullscreen:true,
+                        sliderColor: '#ffffff',
+                        sliderGradient: 'high',
+                        volumeSliderColor: '#e17500',
+                        buttonColor: '#000000',
+                        playHeadClass: 'playhead',
+                        playClass: 'play',
+                        timeBgHeightRatio: 0.5,
+                        volumeBarHeightRatio: 0.8,
+                        tooltips: {
+                            buttons: true
+                        }
+                    } 
+                }
+            }).ipad({ controls: true }); 
+			
+			
+			$f("a.flowplayer-no-controls", {
+				src: "/site/js/flowplayer/3.2.16/flowplayer.commercial-3.2.16.swf", 
+				wmode: "opaque"
+				},
+		 		{	    
+		 			key: keys[location.host] || '' ,			   
+		 			clip: {
+                    	url: $(this).attr("href"),
+                    	autoPlay: true
+					
+                	},
+					plugins: {
+						 controls:null
+					}, 
+					onBeforeFinish: function() {
+						 return false;
+				   }
+            }).ipad({ controls: true });
+		
+			$f("a.flowplayer-no-controls-no-loop", 
+				{
+					src: "/site/js/flowplayer/3.2.16/flowplayer.commercial-3.2.16.swf", 
+					wmode: "opaque"
+				},
+				{	    
+					key: keys[location.host] || '' ,			   
+					clip: {
+						url: $(this).attr("href"),
+						autoPlay: true		
+					},
+					plugins: {
+						 controls:null
+					}, 
+					onBeforeFinish: function() {			  
+					
+					},
+					play:{
+						opacity: 0.0,
+						label: null, // label text; by default there is no text
+						replayLabel: null
+					}
+					
+				}).ipad({ controls: true });
+	 	
+		
+		var $layerOverVideo = $(".videoOverlay");
+		$layerOverVideo.hover(
+			 function() { document.body.style.cursor = "pointer" },
+			 function() { document.body.style.cursor = "default" }
+		);
+		
+		$layerOverVideo.click(function(){
+			if($(this).siblings().find("a.flowplayer-no-controls").length){
+				window.location = $(this).siblings().find("a.flowplayer-no-controls").data("src");	
+			}
+			if($(this).siblings().find("a.flowplayer-no-controls-no-loop").length){
+				window.location = $(this).siblings().find("a.flowplayer-no-controls-no-loop").data("src");		
+			}	
+			if($(this).siblings().find("a.flowplayer-no-controls-no-loop-external").length){
+				window.open($(this).siblings().find("a.flowplayer-no-controls-no-loop-external").data("src"));		
+			}				
+		});
+		
+		if($("#slider1").length){
+			$("#slider1").bxSlider({auto:true,autoControls:false,autoHover:true,pager:true,controls:false,autoDelay:1000,pause:8000});	
+		}
+		
+		if($("#slider1a").length){
+			$("#slider1a").bxSlider({auto:false,autoControls:false,autoHover:true,pager:true,controls:false});	
+		}
+		
+		if($("#slider2").length){
+			$("#slider2").bxSlider({auto:true,autoControls:false,autoHover:true,pager:true,controls:false,autoDelay:1300,pause:8000});
+		}
+		
+		if($("#slider2a").length){
+			$("#slider2a").bxSlider({auto:false,autoControls:false,autoHover:true,pager:true,controls:false});
+		}
+		
+		if($("#slider3").length){
+			$("#slider3").bxSlider({auto:true,autoControls:false,autoHover:true,pager:true,controls:false,autoDelay:1600,pause:8000});
+		}
+		
+		if($("#slider4").length){
+			$("#slider4").bxSlider({auto:true,autoControls:false,autoHover:true,pager:true,controls:false,autoDelay:1900,pause:8000});
+		}
+		
+		
+		if($("#slider1NoPagination").length){
+			$("#slider1NoPagination").bxSlider({auto:true,autoControls:false,autoHover:true,pager:false,controls:true,autoDelay:1000,pause:8000});	
+		}
+		
+		if($("#slider2NoPagination").length){
+			$("#slider2NoPagination").bxSlider({auto:true,autoControls:false,autoHover:true,pager:false,controls:true,autoDelay:1300,pause:8000});
+		}
+		
+		if($("#slider3NoPagination").length){
+			$("#slider3NoPagination").bxSlider({auto:true,autoControls:false,autoHover:true,pager:false,controls:true,autoDelay:1600,pause:8000});
+		}
+		
+		if($("#slider4NoPagination").length){
+			$("#slider4NoPagination").bxSlider({auto:true,autoControls:false,autoHover:true,pager:false,controls:true,autoDelay:1900,pause:8000});
+		}
+		
+		
+		
+		
+		$("div.nav-container a[href='#'], div.nav-container  a[href='#nogo']").click(function(){return false;}).css("cursor", "default");
+	
+	/*dp form styling*/
+	$(document).ready(function() {
+		
+		$(".contentFieldsets ul").each( function() { 
+		
+		 /* Move helptext in the DOM */	
+		 	if($('#helptext-2008, #helptext-2009').length) {
+				$('#helptext-2008, #helptext-2009').children().unwrap().unwrap().detach().insertBefore('#checkbox1-1994, #checkbox1-1993').parent().addClass("iterator").children("label").hide();		
+		 	} 		
+			$('ul.edit > li:visible:odd').addClass("odd-row");
+			$('ul.edit > li:visible:even').addClass("even-row");
+	
+		});
+
+		$(".contentFieldsets ul li label, .contentFieldsets ul li div").each( function() { 
+			var $that = $(this);
+			var myText = $.trim($that.html());
+			if(myText === "&nbsp;"){ 
+				$that.parent().addClass("empty-label");
+			} 
+		});
+		
+	});
+	
+	$("table#labTableOut tbody tr").click(function(event) {
+		var aRef = $(event.target).parent("tr").find("a").attr("href");
+		window.location.assign(aRef);
+	});
+	
+	
+	
+	
+
+	$('li.menu-item a[href^="https://learninglabs.cisco.com/#/login?token="], li.menu-item a[href^="https://learninglabs.cisco.com/#/labs/cmx/step/1?token="]').click(function() {
+         
+		var $this = $(this);
+		$.ajax({
+			url: "/site/includes/structure/crankset/widgets/ajax/_learningLab.gsp",
+			type: "POST",
+			cache: false
+		}).done(function(data){
+			 var myObj = data;
+			 var url=$this.attr("href")+myObj;
+			 window.location = url;
+		});
+		
+		return false;
+		 
+		
+	});
+
+	
+	
+	
+</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['altocloud-sdk.js']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//altocloud-sdk.com/ac.js','ac');
+	ac('init', 'AA9C2CD8');
+	
+
+
+  //oldSite = false
+  //relatedPages = [node /site/navs/megamenu/networking/internet-of-things/eiot]
+  ac('pageview'
+     ,{ 
+    
+       level1: 'Documents',
+       level1url: '#',
+    
+       level2: 'Cisco PyUSB Developer Guide',
+       level2url: '/site/eiot/documents/pyusb-dev-guide/'
+    
+  }); 
+ 
+	ac('identify', '',{ email: '' });
+</script>
+ 
+  
+      <!-- InstanceBeginEditable name="footer_region" -->
+          <script>
+  
+          $(function() {
+            setupLanguages(["shell","javascript","html","xml"]);
+          });			
+  
+          </script>
+      <!-- InstanceEndEditable -->
+  
+  
+
+
+
+<!-- InstanceEnd --><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

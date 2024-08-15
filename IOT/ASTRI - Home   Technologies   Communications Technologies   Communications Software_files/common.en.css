@@ -1,0 +1,51 @@
+/* common */
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+div, a, td, p, body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #363636;
+	line-height: 17px;
+}
+/*p { margin-top: 5px; margin-bottom: 10px }*/
+
+td p { margin : 0 0 0 0; padding: 0 0 0 0 ; }
+
+
+div#body {
+	width: 960px;
+}
+div#main {
+}
+
+div#footer {
+	width: 960px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+div#footer div#copyright {
+	font-size: 9pt;
+	color:#555555;
+	float: left;
+	margin-top: 2px;
+	text-align: left;
+}
+div#footer div#links {
+	font-size: 9pt;
+	color:#555555;
+	float: right;
+	margin-top: 2px;
+}
+
+div#footer div#links a:link    { margin-left: 10px; font-size: 9pt; color:#555555; text-decoration: none; }
+div#footer div#links a:visited { margin-left: 10px; font-size: 9pt; color:#555555; text-decoration: none; }
+div#footer div#links a:hover   { margin-left: 10px; font-size: 9pt; color:#555555; text-decoration: underline; }

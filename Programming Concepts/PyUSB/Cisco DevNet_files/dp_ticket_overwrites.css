@@ -1,0 +1,1318 @@
+/*.contentFieldsets ticket header*/
+/*.contentFieldsets fieldset.submit:first-child {
+	display: none;
+}*/
+
+form fieldset a:hover,
+.contentFieldsets a:hover {
+	text-decoration: none;
+}
+	
+	.toolbar {
+	margin: 10px 0 20px;
+}
+	.toolbar h2 {
+	background: none;
+	border: none;
+	
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0;
+	}
+
+#linkBar {
+	display: none;
+	padding: 10px 20px;
+}
+
+
+
+#formError.error,
+#formErrors .error {
+	overflow: hidden;
+}
+
+#formMessages ul,
+#formMessages ul li,
+#formError ul,
+#formError ul li,
+#formErrors ul,
+#formErrors ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: auto !important;
+}
+
+#formMessages,
+#formError,
+#formErrors {
+	margin-bottom: 20px;	
+}
+#formMessages ul li,
+#formError ul li,
+#formErrors ul li {
+	margin-left: 20px !important;
+}
+#formMessages ul li,
+#formError ul li,
+#formErrors ul li {
+	margin-bottom: 5px;
+}
+
+#formError .error,
+#formErrors .error {
+	min-height: 30px;
+	padding: 8px 10px 10px 65px;
+	background: url("/images/base/ico-error.png") #fdd7dc no-repeat 0 0;
+	border: none;
+	color: #b62727;
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);
+
+	-webkit-border-radius: 0;
+	border-radius: 0;	
+}
+#formMessages .message {
+	min-height: 30px;
+	padding: 8px 10px 10px 65px;
+	background: url("/images/base/ico-success.png") #ddf0e3 no-repeat 0 0;
+	border: none;
+	color: #1c8f18;
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);
+
+	-webkit-border-radius: 0;
+	border-radius: 0;		
+}
+
+/*error bubble*/
+.formError .formErrorContent {
+	background: #fdd7dc;
+	color: #b62727;	
+
+	border: 1px solid #b62727;
+
+	border-radius: 3px;
+	-webkit-border-radius: 3px;	
+
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);	
+}
+.formError .formErrorArrow  {
+	margin-top: -3px;
+}
+.formError .formErrorArrow div {
+	background: #fdd7dc;	
+	border-left: 1px solid #b62727;
+	border-right: 1px solid #b62727;	
+
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0);	
+
+}
+.formError .formErrorArrow .line9 {
+	width: 15px;
+}
+.formError .formErrorArrow .line8 {
+	width: 13px;
+	border: 0;
+}
+.formError .formErrorArrow .line7 {
+	width: 11px;
+}
+.formError .formErrorArrow .line6 {
+	width: 9px;
+}
+.formError .formErrorArrow .line5 {
+	width: 7px;
+}
+.formError .formErrorArrow .line4 {
+	width: 5px;
+}
+.formError .formErrorArrow .line3 {
+	background: #fdd7dc;
+	width: 3px;
+	border-left: 1px solid #b62727;
+	border-right: 1px solid #b62727;		
+}
+.formError .formErrorArrow .line2 {
+	background: #fdd7dc;
+	width: 1px;
+	border-left: 1px solid #b62727;
+	border-right: 1px solid #b62727;		
+}
+.formError .formErrorArrow .line1 {
+	background: #b62727;
+}
+
+/*ticket log sort by*/
+.contentFieldsets #sortControl {
+	float: right !important;
+	margin-right: 15px !important;
+
+}
+.contentFieldsets #typeControl {
+	margin-left: 15px !important;	
+	float: left;
+	}
+	.contentFieldsets #typeControl .dpTroubleTicketPublicWebComment,
+	.contentFieldsets #typeControl .dpLogStatus,
+	.contentFieldsets #typeControl .dpTroubleTicketAssigneeChange,
+	.contentFieldsets #typeControl .dpTroubleTicketDescription,
+	.contentFieldsets #typeControl .dpTroubleTicketFieldChanged,
+	.contentFieldsets #typeControl .dpTroubleTicketHoursWorked,
+	.contentFieldsets #typeControl .dpLogDaysEstimated,
+	.contentFieldsets #typeControl .dpTroubleTicketPriorityChange,
+	.contentFieldsets #typeControl .dpTroubleTicketFork,
+	.contentFieldsets #typeControl .dpTroubleTicketHoursUnBilled,
+	.contentFieldsets #typeControl .dpTroubleTicketFieldChanged,
+	.contentFieldsets #typeControl .dpLogCreation,	
+	.contentFieldsets #typeControl .dpTroubleTicketPrivateWebComment,
+	.contentFieldsets #typeControl .dpTroubleTicketPublicEmailComment,
+	.contentFieldsets #typeControl .dpTroubleTicketPrivateEmailComment {
+	cursor: pointer;
+	line-height: 18px !important;
+	border: 1px solid #999 !important;
+	color: #000;
+	color: rgba(0, 0, 0, .85);
+	text-shadow: 0 -1px 0 rgba(255, 255, 255, .40);
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px!important;	
+	
+	}
+	.contentFieldsets #typeControl .dpTroubleTicketPublicWebComment:hover,
+	.contentFieldsets #typeControl .dpLogStatus:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketAssigneeChange:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketDescription:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketFieldChanged:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketHoursWorked:hover,
+	.contentFieldsets #typeControl .dpLogDaysEstimated:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketPriorityChange:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketFork:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketHoursUnBilled:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketFieldChanged:hover,
+	.contentFieldsets #typeControl .dpLogCreation:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketPrivateWebComment:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketPublicEmailComment:hover,
+	.contentFieldsets #typeControl .dpTroubleTicketPrivateEmailComment:hover {
+	opacity: .65
+	}
+
+.contentFieldsets #sortControl,
+.contentFieldsets #typeControl {
+	clear: none !important;
+	padding: 0 !important;
+	margin: 10px 0;		
+}
+
+
+
+
+
+/* T&C Agree checkbox */
+#TCsection {
+	padding: 5px 0 !important;
+	margin: 0 !important;
+	width: auto !important;
+	border: none !important;
+	background: none !important;
+
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;			
+}
+#tcAgree.contentFieldsets fieldset {
+	padding-top: 0 !important;
+}
+#tc {
+	border: 1px solid #ccc !important;
+}
+
+/*.contentFieldsets submit buttons*/
+form fieldset.submit,
+.contentFieldsets fieldset.submit {
+	float: none !important;
+	padding: 0 !important;
+	margin-left: 185px;
+	
+	border: 0;
+	background: none !important;
+	
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;		
+}
+
+/*.contentFieldsets attach button*/
+.qq-upload-button {
+	background: #294e89 !important;
+	border: 0 !important;
+	line-height: 20px;
+}
+.qq-upload-button:hover {
+	background-color: #39669b !important;
+}
+/*.contentFieldsets fieldset overwrites*/
+.contentFieldsets .formintro {
+	
+}
+form fieldset,
+.contentFieldsets fieldset {
+	background: #f5f5f5 !important;
+	padding: 0;
+	margin: 0 0 15px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dcdcdc;
+	
+	
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);	
+	}
+
+
+/*.contentFieldsets .toolbar h2,*/	
+form fieldset legend,
+.contentFieldsets legend {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block !important;	
+	margin: -1px -1px 0 !important;
+	width: 100% !important;
+	border: 1px solid #d1d1d1;
+	
+	font-family: arial,helvetica,clean,sans-serif;
+	font-size: 14px !important;
+	text-transform: none;
+	text-decoration: none;
+	letter-spacing: normal;
+	word-spacing: 0;
+	line-height: 18px;
+	text-align: left;
+	text-indent: 16px;
+	vertical-align: baseline;
+	
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	
+	background: #dcdcdc;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#dcdcdc),to(#dcdcdc));
+	background-image: -webkit-linear-gradient(top,#dcdcdc,#dcdcdc);
+	background-image: -moz-linear-gradient(top,#dcdcdc,#dcdcdc);
+	background-image: -ms-linear-gradient(top,#dcdcdc,#dcdcdc);
+	background-image: -o-linear-gradient(top,#dcdcdc,#dcdcdc);
+	background-image: linear-gradient(top,#dcdcdc,#dcdcdc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dcdcdc',EndColorStr='#dcdcdc');
+	
+	background: #e2e2e2;
+	border-bottom: 1px solid #d1d1d1;
+	
+-webkit-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+	
+	clear: both;
+	color: #555;
+	font-weight: bold;
+	margin: 5px -1px 0;
+	padding: 5px 0;	
+}
+
+form fieldset ul,
+.contentFieldsets fieldset ul {
+	float: left;
+	width: 100%;
+	padding: 0 !important;
+	margin: 0;
+
+-webkit-border-radius: 0 0 4px 4px;
+border-radius: 0 0 4px 4px;	
+}
+#ul_tab_list {
+	width: auto;
+	float: none;
+	margin: 0;	
+}
+form fieldset ul.qq-upload-list,
+.contentFieldsets fieldset ul.qq-upload-list {
+	padding: 0;
+	margin: 0;
+}
+form fieldset ul li,
+.contentFieldsets fieldset ul li {
+	font-size: 12px;
+	line-height: 14px;
+	float: none;
+	width: auto !important;
+	height: auto !important;
+	padding: 4px 15px !important;
+	margin: 0;
+}
+
+form fieldset ul > li,
+.contentFieldsets fieldset ul > li {
+/*	margin-top: -1px;
+	margin-bottom: -1px;
+*/	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+form fieldset ul > li:first-child,
+.contentFieldsets fieldset ul > li:first-child {
+-webkit-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;	
+}
+
+form fieldset ul > li:last-child,
+.contentFieldsets fieldset ul > li:last-child {
+-webkit-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;	
+}
+
+form fieldset ul li.odd-row:hover,
+.contentFieldsets fieldset ul li.odd-row:hover {
+	background-color: #f0fafd !important;
+	border-color: #D2E2E7 !important;
+}
+form fieldset ul li.even-row:hover,
+.contentFieldsets fieldset ul li.even-row:hover {
+	background-color: #e9f5fa !important;
+	border-color: #D2E2E7 !important;
+}
+
+form fieldset ul li table td {
+	border-bottom: 0;
+}
+
+form fieldset ul ul,
+.contentFieldsets fieldset ul ul {
+	margin-left: 172px;
+	width: auto !important;
+	padding-left: 0;
+	padding-right: 0;
+	}
+form fieldset ul ul li,
+.contentFieldsets fieldset ul ul li {
+	padding-left: 0 !important;
+	list-style: none !important;	
+}
+form fieldset ul li:last-child,
+.contentFieldsets fieldset ul li:last-child {
+	-webkit-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;	
+}
+.contentFieldsets fieldset ul li:nth-child(even):last-child {
+	border-bottom: none;
+}
+form fieldset ul li:after,
+.contentFieldsets fieldset ul li:after {
+	content: "";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+
+form fieldset ul li .helptext,
+.contentFieldsets fieldset ul li .helptext,
+.contentFieldsets fieldset ul li .helptextCheckbox {
+	font-size: .80em;
+	display: block;
+	color: #3a3a3a;
+	line-height: 12px;
+	width: 410px !important;
+	padding-left: 172px !important;
+	height: auto !important;	
+}
+.contentFieldsets fieldset ul li .helptextCheckbox  {
+	padding-left: 0 !important;
+}
+form fieldset ul li,
+form fieldset ul li label,
+.contentFieldsets fieldset ul li label {
+	width: 142px;
+	font-size: 12px;
+	line-height: 14px;
+	color: #3a3a3a !important;
+	margin: 0 0 0;
+	margin-right: 30px;
+	padding-bottom: 0;
+}
+.firstCol span em img {
+	float: left;
+}
+form fieldset ul li label em img {
+	margin: 0 !important;
+}
+form fieldset ul li select,
+.contentFieldsets fieldset ul li select {
+	width: auto !important;
+}
+form fieldset ul li label div,
+.contentFieldsets fieldset ul li label div {
+	display: inline;
+}
+
+fieldset a.form_link {
+	margin-left: 183px !important;
+}
+form fieldset ul li.iterator,
+.contentFieldsets fieldset ul li.iterator {
+	margin-left: 0 !important;
+	padding-left: 187px !important;
+	}
+	form fieldset ul li .iterator label,
+	.contentFieldsets fieldset ul li.iterator label {
+	font-weight: normal;
+	}
+	form fieldset ul li .qq-upload-button,
+	form fieldset ul li .checkbox_label,
+	.contentFieldsets fieldset ul li .qq-upload-button,
+	.contentFieldsets fieldset ul li .checkbox_label {
+	cursor: pointer;
+	}
+	form fieldset ul li .checkbox_label,
+	.contentFieldsets fieldset ul li .checkbox_label {
+	color: #3a3a3a;
+	}
+	form fieldset ul li .checkbox_label:hover, 
+	.contentFieldsets fieldset ul li .checkbox_label:hover {
+	text-decoration: none;
+	}
+	form fieldset ul li .hasDatepicker,
+	.contentFieldsets fieldset ul li .hasDatepicker {
+		width: auto !important;
+	}
+	form fieldset ul li #hoursInput,
+	.contentFieldsets fieldset ul li #hoursInput {
+		width: 55px;;
+	}
+/*.contentFieldsets input styles*/
+form fieldset ul li input[type="text"],
+.contentFieldsets fieldset ul li input[type="text"],
+.contentFieldsets fieldset ul li textarea,
+form fieldset ul li textarea,
+.chzn-container-multi .chzn-choices,
+html>body fieldset select[multiple],
+#savedSearchForm input[type="text"] {
+	margin: 0 !important;
+	padding: 4px;
+
+
+	border: 1px solid #d0d0d0;
+	background-color: #fff;
+	
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+	
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, .07);
+	box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, .07); 	
+}
+
+form fieldset ul li select,
+.contentFieldsets fieldset ul li select {
+	width: 410px !important;
+}
+
+form fieldset ul li textarea {
+	width: 400px !important;
+}
+
+html>body fieldset select[multiple] {
+	height: 80px;
+}
+form fieldset ul li input[type="checkbox"],
+form fieldset ul li input[type="radio"],
+.contentFieldsets fieldset ul li input[type="checkbox"],
+.contentFieldsets fieldset ul li input[type="radio"] {
+	margin: 0 5px !important;	
+}
+
+#savedSearchForm input[type="text"]:hover,
+form fieldset ul li input[type="text"]:hover,
+form fieldset ul li textarea:hover,
+form fieldset ul li select[multiple]:hover,
+.contentFieldsets fieldset ul li input[type="text"]:hover,
+.contentFieldsets fieldset ul li textarea:hover {
+	border-color: #98bae2;
+
+}
+#savedSearchForm input[type="text"]:focus,
+form fieldset ul li input[type="text"]:focus,
+form fieldset ul li textarea:focus,
+.contentFieldsets fieldset ul li input[type="text"]:focus,
+.contentFieldsets fieldset ul li textarea:focus {
+	border-color: #98bae2;
+	background-color: #fff;
+	
+	-webkit-box-shadow: 0 0 8px 0 rgba(35,185,255,.25);
+	box-shadow: 0 0 8px 0 rgba(35,185,255,.25);	
+}
+
+
+
+
+/*ticket sticky items*/
+.contentFieldsets #companyLog ul li table,
+.contentFieldsets #ticketLog ul li table {
+	border-color: #ccc;
+}
+.contentFieldsets #companyLog ul li label,
+.contentFieldsets #ticketLog ul li label {
+	padding: 5px 10px !important;
+	width: 10em !important;
+	float: left !important;
+	font-weight: normal;
+	
+/*	-webkit-border-radius: 4px 4px 0  0 !important;
+	border-radius: 4px 4px 0 0 !important;		
+*/	}
+	.contentFieldsets #companyLog ul li table a,
+	.contentFieldsets #ticketLog ul li table a {
+	font-weight: bold;
+	}
+	.contentFieldsets #companyLog ul li table,
+	.contentFieldsets #ticketLog ul li table {
+	background: #fff;
+	border: 1px solid #D1D1D1;
+	border-width: 0 1px 1px;
+	padding: 0 !important;
+/*	-webkit-border-radius: 0 0 4px 4px !important;
+	border-radius: 0 0 4px 4px !important;	
+*/	}
+.contentFieldsets .logTextAreaFormat {
+	width: 660px !important;
+	padding-right: 0;
+}
+.textAreaFormat {
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0 !important;
+	width: 410px !important;
+}
+/*color tags*/
+/*dpTroubleTicket */
+
+.contentFieldsets li.dpTroubleTicketLogEntry label {
+    border: 1px solid #999 !important;
+    margin-bottom: 15px;
+}
+.contentFieldsets li.dpTroubleTicketDescription label {
+    background-color: #FFFFCC !important
+}
+.contentFieldsets li.dpTroubleTicketAssigneeChange label {
+    background-color: #E9D4FF !important
+}
+.contentFieldsets li.dpTroubleTicketPublicWebComment label {
+    background-color: #FFF !important
+}
+.contentFieldsets li.dpTroubleTicketPublicEmailComment label {
+    background-color: #FFF !important
+}
+.contentFieldsets li.dpTroubleTicketPrivateEmailComment label {
+    background-color: #FFB2B2 !important;
+	border:1px solid #999;
+}
+.contentFieldsets li.dpTroubleTicketPrivateWebComment label {
+    background-color: #FFB2B2 !important
+}
+.contentFieldsets li.dpTroubleTicketStatusChange label {
+    background-color: #CDE6FF !important
+}
+.contentFieldsets li.dpTroubleTicketHoursWorked label {
+    background-color: #FFD8C0 !important
+}
+.contentFieldsets li.dpTestRequestPrivateEmailComment label {
+    background-color: #FFB2B2 !important
+}
+.contentFieldsets li.dpTroubleTicketFork label {
+    background-color: #BFE3E3
+}
+.contentFieldsets li.dpTroubleTicketFieldChanged  label {
+    background-color: #B4EDA1
+}
+.contentFieldsets li.dpTroubleTicketHoursUnBilled  label {
+    background-color: #F5D549
+}
+.contentFieldsets li.dpLogCreation  label {
+    background-color: #FFFFCC
+}
+.contentFieldsets li.dpLogFields  label {
+    background-color: #B4EDA1
+}
+.contentFieldsets li.dpLogDaysBilled  label {
+    background-color: #f9d391
+}
+.contentFieldsets li.dpLogDaysEstimated  label {
+    background-color: #f9d391
+}
+.contentFieldsets li.dpLogDaysUnbilled  label {
+    background-color: #f9d391
+}
+.contentFieldsets li.dpLogPrivateComment  label {
+    background-color: #FFB2B2;
+    border:1px solid #999;
+}
+.contentFieldsets li.dpLogPublicComment  label {
+    background-color: #FFF
+}
+.contentFieldsets li.dpLogStatus  label {
+    background-color: #CDE6FF
+}
+.contentFieldsets li.dpLogClone  label {
+    background-color: #a0dae0
+}
+.contentFieldsets li.dpSubmissionAssociation  label {
+    background-color: #E3EFFA
+}
+.contentFieldsets li.dpSubmissionDisAssociation  label {
+    background-color: #FFD8C0
+}
+.contentFieldsets li.dpInvoicePayment  label {
+   background-color: #F5D549
+}
+
+
+.contentFieldsets li.even-row {
+	background-color: #F5F5F5 !important;	
+}
+
+.contentFieldsets li.ignore-row,
+.contentFieldsets li.odd-row {
+	background-color: #fcfcfc !important;	
+	background-color: #fcfcfc;
+}
+
+.contentFieldsets li.ignore-row {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: -4px;
+}
+
+
+
+
+.contentFieldsets li:first-child {
+	border-top: 0;
+/*	-webkit-border-radius: 4px 4px 0 0 !important;
+	border-radius: 4px 4px 0 0 !important;		*/
+}
+.contentFieldsets li:last-child {
+	border-bottom: 0;
+	-webkit-border-radius: 0 0 4px 4px !important;
+	border-radius: 0 0 4px 4px !important;		
+}
+
+.contentFieldsets li.empty-label label {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+.contentFieldsets li.empty-label div.helptext {
+	display: none;
+}
+
+
+/*color coding tags*/
+li.dpTroubleTicketPublicWebComment table,
+li.dpLogStatus table,
+li.dpTroubleTicketAssigneeChange table,
+li.dpTroubleTicketDescription table,
+li.dpTroubleTicketFieldChanged table,
+li.dpTroubleTicketHoursWorked table,
+li.dpLogDaysEstimated table,
+li.dpTroubleTicketPriorityChange table,
+li.dpTroubleTicketFork table,
+li.dpTroubleTicketHoursUnBilled table,
+li.dpLogCreation table,
+li.dpTroubleTicketPrivateWebComment table,
+li.dpTroubleTicketPublicEmailComment table,
+li.dpTroubleTicketPrivateEmailComment  table{
+	-webkit-border-radius: 0 0 4px 4px !important;
+	border-radius: 0 0 4px 4px !important;		
+}
+li.dpTroubleTicketPublicWebComment label,
+li.dpLogStatus label,
+li.dpTroubleTicketAssigneeChange label,
+li.dpTroubleTicketDescription label,
+li.dpTroubleTicketFieldChanged label,
+li.dpTroubleTicketHoursWorked label,
+li.dpLogDaysEstimated label,
+li.dpTroubleTicketPriorityChange label,
+li.dpTroubleTicketFork label,
+li.dpTroubleTicketHoursUnBilled label,
+li.dpLogCreation label,
+li.dpTroubleTicketPrivateWebComment label,
+li.dpTroubleTicketPublicEmailComment label,
+li.dpTroubleTicketPrivateEmailComment  label{
+	/*margin-bottom: 1px !important;*/
+}
+
+li.dpTroubleTicketPublicWebComment table {
+	background: #fff !important;
+	/*border-color: #DCDCDC !important;*/
+	/*border-bottom-color: #DCDCDC !important;*/
+}
+li.dpLogStatus table {
+	background-color: #ebf5ff !important;
+	/*border-color: #ebf5ff !important;*/
+}
+li.dpTroubleTicketAssigneeChange table {
+	background-color: #f8f1ff !important;
+	/*border-color: #f8f1ff !important;*/
+}
+li.dpTroubleTicketDescription table {
+	background-color: #ffffe7 !important;
+	/*border-color: #ffffe7 !important;*/
+}
+li.dpTroubleTicketFieldChanged table {
+	background-color: #e6f7e0 !important;
+	/*border-color: #e6f7e0 !important;*/
+}
+li.dpTroubleTicketHoursWorked table {
+	background-color: #fff0e7 !important;
+	/*border-color: #fff0e7 !important;*/
+}
+li.dpLogDaysEstimated table {
+	background-color: #ffedcd !important;
+	/*border-color: #ffedcd !important;*/
+}
+li.dpTroubleTicketPriorityChange table {
+	background-color: #e0ffe0 !important;
+	/*border-color: #e0ffe0 !important;*/
+}
+li.dpTroubleTicketFork table {
+	background-color: #e3ffff !important;
+	/*border-color: #e3ffff !important;*/
+}
+li.dpTroubleTicketHoursUnBilled table {
+	background-color: #fee893 !important;
+	/*border-color: #fee893 !important;*/
+}
+li.dpTroubleTicketPrivateWebComment table {
+	background-color: #ffd5d5 !important;
+	/*border-color: #ffd5d5 !important;*/
+}
+li.dpLogCreation table {
+	background-color: #ffd5d5 !important;
+	/*border-color: #ffd5d5 !important;*/
+}
+li.dpTroubleTicketPublicEmailComment table {
+	background-color: #fff !important;
+	/*border-color: #DCDCDC !important;*/
+}
+.dpTroubleTicketPrivateEmailComment,
+li.dpTroubleTicketPrivateEmailComment table {
+	background-color: #ffd7d7 !important;
+	/*border-color: #ffd7d7 !important;*/
+}
+ 
+
+/*#ticketLog ul li table,
+#ticketLog ul li label {
+	border-left: 3px solid #D1D1D1 !important;	
+	border-right: 3px solid #D1D1D1 !important;	
+}
+#ticketLog ul li label {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+#ticketLog ul li:nth-child(even),
+#ticketLog ul li:nth-child(even) label {
+	border-color: #ccc;
+	border-left-color: #666 !important;
+	border-right-color: #666 !important;
+}
+
+
+*/
+
+
+
+/*ticket log*/
+.contentFieldsets #companyLog ul li table,
+.contentFieldsets #ticketLog ul li table  {	
+	/*margin: 10px !important;*/
+	/*margin-bottom: 49px !important;*/
+	width: 100%;
+	}
+	.contentFieldsets #companyLog ul li:last-child,
+	.contentFieldsets #ticketLog ul li:last-child {
+	margin-bottom: 0 !important;
+	}
+.contentFieldsets #companyLog ul li label,	
+.contentFieldsets #ticketLog ul li label {
+	display: block;
+	float: none !important;
+	width: auto !important;
+	padding: 10px 10px 10px;
+	margin: 0;
+/*	background: #fff;
+*/	border: 1px solid #d1d1d1;
+}
+
+.contentFieldsets #companyLog ul li ,
+.contentFieldsets #ticketLog ul li {
+	-webkit-border-radius: 0;
+  	-moz-border-radius   : 0;
+  
+	padding: 10px !important;
+	margin: 0 !important;
+/*
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;*/
+	border-width: 1px 0;
+	border-color: transparent;
+	/*border: none;*/
+	/*margin: 0px -1px -1px !important;*/
+}
+
+
+/*sidebar sticky overwrites*/
+html #sticky1 fieldset,
+html #sticky2 fieldset,
+html #sticky3 fieldset,
+html #sticky4 fieldset,
+html #sticky5 fieldset,
+html #sticky6 fieldset {
+	width: 195px !important;
+	border-color: #ccc !important;
+	background-color: #efefef !important;
+	border-bottom: 3px solid #666666 !important;
+	padding: 10px !important;
+	padding-bottom: 0 !important;
+	margin-top: 10px !important;
+	margin-bottom: 0 !important;
+	color: #525252 !important;
+}
+  html #sticky1 fieldset legend,
+  html #sticky2 fieldset legend,
+  html #sticky3 fieldset legend,
+  html #sticky4 fieldset legend,
+  html #sticky5 fieldset legend,
+  html #sticky6 fieldset legend  {
+	padding-top: 10px;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	line-height: 18px !important;
+	font-size: 16px !important;
+	position: relative;
+	color: #2970a6 !important;
+	top: -10px;
+	left: 0 !important;
+	vertical-align: top !important;
+	margin-bottom: -4px !important;
+	float: left;
+	width: auto !important;
+}
+.sidebar fieldset legend span {
+	font-size: 14px;
+	display: block;
+	width: 195px !important;
+}
+.sidebar fieldset p {
+	clear: both !important;
+}
+
+.sidebar fieldset p {
+	font-size: 12px;
+	line-height: 14px !important;
+	color: #525252 !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	margin-bottom: 10px
+}
+.sidebar fieldset a {
+	color: #2970a6 !important;
+}
+.sidebar fieldset a:hover {
+	text-decoration: none !important;
+}
+.sidebar fieldset br {
+	height: 0 !important;
+	line-height: 1% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/*chosen plugin conflict fixes*/
+#roles_chzn,
+#roles_chzn ul,
+#roles_chznchzn-drop {
+	float: none !important;
+	z-index: 1;
+}
+.contentFieldsets fieldset ul.chzn-choices li {
+	float: left !important;
+}
+
+/*saved searches*/
+div#savedSearchForm table {
+	margin-bottom: 0 !important
+}
+#savedSearchForm table tr td {
+	border: 0 !important;
+	padding: 0;
+	margin: 0;
+}
+#savedSearchForm,
+#savedSearches {
+	position: relative;
+	background: #fff !important;
+	padding: 10px 15px 10px;
+	margin: 0 0 15px !important;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dcdcdc;
+	
+	
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);	
+	}	
+}
+#savedSearches br {
+	display: none;
+}
+
+div#deleteSavedSearch table {
+	margin-left: 408px;
+}
+#deleteSavedSearch .firstcol {
+	border: none;
+}
+
+
+/*T&C agreement styles*/
+div#tc {
+	margin-top: 5px;
+}
+.editable_textarea_helptext {
+/*	background: #d1e4f1;
+	border: 1px solid #b8c9d4;*/
+	color: #525252;
+	font-size: 12px;
+/*	line-height: 16px;*/
+	display: block;
+/*	padding: 5px;*/
+	margin: 0 -4px 2px;
+	margin-left: 172px;
+	font-size: 12px;
+	width: 398px;
+}
+#TCsection table {
+	margin-left: 171px !important;
+}
+#TCsection .firstCol,
+#TCsection .secondCol {
+	padding: 0;
+	border: 0;
+}
+/*
+.editable_textarea_helptext,
+.helptextCheckbox,
+.helptext {
+	padding: 0;
+}*/
+
+/*.contentFieldsets #fieldset-1948 li:first-child + li {
+	display: none;
+}*/
+
+
+/* table overwrites*/
+.tablesorter {
+	border-left: 1px solid #e3e3e3 !important;
+	border-right: 1px solid #e3e3e3 !important;
+	border-bottom: 1px solid #e3e3e3 !important;
+}
+.tablesorter th {
+	background: none !important; 
+	}
+.tablesorter th,
+.tablesorter td {
+	padding: 1px 10px !important;
+	position: relative;
+	border-bottom: 1px solid #e3e3e3 !important;
+	}	
+	.tablesorter th,
+	.tablesorter th a {
+	/*color: #fff !important;*/
+	/*text-shadow: 0 1px 0 #222 !important;*/
+	text-decoration: none; 
+	}
+.tablesorter thead {
+	background: transparent;
+}
+
+.tablesorter thead th,
+.tablesorter tbody td {
+	padding: 1px 10px !important;
+	border: 0 !important; 
+	border-bottom: 1px solid #e3e3e3 !important;
+}
+.tablesorter a:hover {
+	text-decoration: none;
+}
+.tablesorter .dpTroubleTicketSlaError td,
+.tablesorter .dpTroubleTicketSlaWarn td,
+.tablesorter .dpTroubleTicketSlaOk td {
+	border-color: #fff !important;
+}
+
+.tablesorter tbody tr td:first-child a:hover {
+	text-decoration: none;
+}
+
+/*sla legend*/
+#slaContainer {
+	clear: none; 
+	margin-top: -22px !important;
+}
+.slaLegend {
+	font-family: Arial;
+}
+.slaColorBox {
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px!important;	
+	border-color: #999;
+
+}
+/*export list*/
+.exportList {
+	float: left;
+	clear: none;
+}
+
+/*my tickets support remaining*/
+#myTicketsRemainingContainer {
+padding-left: 0;
+float: right;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0 5px 0 2px !important;
+}
+
+
+/*ecomerce submit button*/
+form .button, 
+form input.button {	
+/*	background: #e1e1e1;
+	background-image: url("/images/buttons/css_img_button_sprite.png");
+	background-position: 0 -248px;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#e1e1e1));
+	background: -webkit-linear-gradient(top, #ffffff, #e1e1e1);
+	background: -moz-linear-gradient(top, #ffffff, #e1e1e1);
+	background: -ms-linear-gradient(top, #ffffff, #e1e1e1);
+	background: -o-linear-gradient(top, #ffffff, #e1e1e1);
+	border: 1px solid #d7d7d7;
+	color: #333333;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px 0 #808080;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px 0 #808080;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 10px 5px 0;
+	padding: 4px 15px;
+	text-decoration: none;
+*/
+}
+
+form .button:active, 
+form .button:focus,
+form .button:hover,
+form input.button:active,
+form input.button:focus,
+form input.button:hover{
+/*	background-color: #d4d4d4;
+	background-image: url("/images/buttons/css_img_button_sprite.png"); 
+	background-position: 0 -307px; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d4d4d4), to(#f4f4f4));
+	background: -webkit-linear-gradient(top, #d4d4d4, #f4f4f4);
+	background: -moz-linear-gradient(top, #d4d4d4, #f4f4f4);
+	background: -ms-linear-gradient(top, #d4d4d4, #f4f4f4);
+	background: -o-linear-gradient(top, #d4d4d4, #f4f4f4);
+	border: 1px solid #d7d7d7;
+	color: #525252;
+*/}
+
+form a.button{line-height:16px;}
+
+form .button {
+/*margin-left: 200px !important;*/
+}
+
+/* ecomerce content module */
+.content_module {
+	padding: 0 !important;
+	width: auto !important;
+	border: 0 !important;
+}
+
+.instructions {
+	clear: both;
+	padding: 8px 10px;
+	overflow: hidden;
+	background: #d7eff8 !important;	
+	}
+
+.content_module #errors { 
+	clear: both;
+	padding: 8px 10px 0;
+	margin-bottom: 10px;
+	overflow: hidden;
+	background: #fdd7dc;
+}	
+.content_module #errorsHeading {
+	background-color: #d9001d;
+	color: #fff;
+	font-size: 14px !important;
+	line-height: 18px !important;
+	text-align: left;
+	padding: 8px 10px !important;
+	margin: -10px -10px 10px;
+}
+
+#featureCol .content_module {
+	width: 195px !important;
+	border-color: 1px solid #ccc !important;
+	background: #efefef !important;
+	border-bottom: 3px solid #666666 !important;
+	padding: 10px !important;
+	padding-bottom: 0 !important;
+	margin-top: 10px !important;
+	margin-bottom: 0 !important;
+	color: #525252 !important;
+}	
+
+/*ecomerce pagination*/
+td.genericData {
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+}
+
+/*jQuery Tabs*/
+#tabs {
+	margin-bottom: 20px;
+	border: 0;
+	padding: 0;
+}
+#tabs .ui-widget-header {
+	border: 0;
+	background: none;
+	padding: 0;
+	/*margin: 0 0 -4px !important; */
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active {
+	border-color: #dcdcdc;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+}
+#tabs .ui-widget-content {
+	position: relative;
+	background: #fff !important;
+	padding: 10px 15px 10px;
+	margin: 0 0 15px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dcdcdc;
+	
+	
+	-webkit-border-radius: 0px 4px 4px 4px;
+	border-radius: 0px 4px 4px 4px;
+
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);		
+}
+#tabs .ui-widget-content ul {
+	float: none;
+	margin-left: 0;
+	padding-left: 20px !important;
+}
+#tabs .ui-widget-content ul li { 
+	padding-left: 0 !important;
+}
+#chart3_container, #chart2_container, #chart1_container, #piechart1_container,
+.ui-tabs {
+	width: auto !important;
+}
+/*associate company member button*/
+.associateCompany {
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+/*hide troubleticketdashboard stuff*/
+#hours_worked,
+#avgHoursWorked {
+	display: none;
+}
+
+
+/*content Dashboard*/
+.contentDashboard #tabs div.ui-widget-content p:first-of-type {
+	text-indent: -999em;
+	overflow: hidden;
+	line-height: 15px;
+}
+.contentDashboard #tabs div.ui-widget-content p:first-of-type a {
+	text-indent: 0;	
+	float: left;
+	padding: 0 0 0 7px;
+	margin: 0 7px 0 0;
+	border-left: 1px solid #222;
+}
+.contentDashboard #tabs div.ui-widget-content p:first-of-type a:first-child {
+	border-left: 0;
+	padding-left: 0;
+}
+
+/*AJAX Loader*/
+.loading p {
+	font-size: 16px;
+	margin-bottom: 5px;
+	padding-bottom: 0;
+}
+#circleG{ width:37.333333333333336px; margin: auto;} .circleG{ background-color:#FFFFFF; float:left; height:8px; margin-left:4px; width:8px; -moz-animation-name:bounce_circleG; -moz-animation-duration:1.9500000000000002s; -moz-animation-iteration-count:infinite; -moz-animation-direction:linear; -moz-border-radius:5px; -webkit-animation-name:bounce_circleG; -webkit-animation-duration:1.9500000000000002s; -webkit-animation-iteration-count:infinite; -webkit-animation-direction:linear; -webkit-border-radius:5px; -ms-animation-name:bounce_circleG; -ms-animation-duration:1.9500000000000002s; -ms-animation-iteration-count:infinite; -ms-animation-direction:linear; -ms-border-radius:5px; -o-animation-name:bounce_circleG; -o-animation-duration:1.9500000000000002s; -o-animation-iteration-count:infinite; -o-animation-direction:linear; -o-border-radius:5px; animation-name:bounce_circleG; animation-duration:1.9500000000000002s; animation-iteration-count:infinite; animation-direction:linear; border-radius:5px; } #circleG_1{ -moz-animation-delay:0.39s; -webkit-animation-delay:0.39s; -ms-animation-delay:0.39s; -o-animation-delay:0.39s; animation-delay:0.39s; } #circleG_2{ -moz-animation-delay:0.9099999999999999s; -webkit-animation-delay:0.9099999999999999s; -ms-animation-delay:0.9099999999999999s; -o-animation-delay:0.9099999999999999s; animation-delay:0.9099999999999999s; } #circleG_3{ -moz-animation-delay:1.1700000000000002s; -webkit-animation-delay:1.1700000000000002s; -ms-animation-delay:1.1700000000000002s; -o-animation-delay:1.1700000000000002s; animation-delay:1.1700000000000002s; } @-moz-keyframes bounce_circleG{ 0%{ } 50%{ background-color:#3C6CA1} 100%{ } } @-webkit-keyframes bounce_circleG{ 0%{ } 50%{ background-color:#3C6CA1} 100%{ } } @-ms-keyframes bounce_circleG{ 0%{ } 50%{ background-color:#3C6CA1} 100%{ } } @-o-keyframes bounce_circleG{ 0%{ } 50%{ background-color:#3C6CA1} 100%{ } } @keyframes bounce_circleG{ 0%{ } 50%{ background-color:#3C6CA1} 100%{ } }
+
+
+
+/*tab content styles*/
+#tabs .ui-widget-content a.defaultBtn {
+	color: #fff;
+}
+
+#tabs .ui-widget-header {
+	margin-bottom: -3px !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+#tabs .ui-widget-content {
+	-webkit-border-radius: 0 0 5px 5px !important;
+	-moz-border-radius   : 0 0 5px 5px !important; 
+}
+
+#jqt #tabs .ui-widget-header {
+	font-size: 12px;
+}

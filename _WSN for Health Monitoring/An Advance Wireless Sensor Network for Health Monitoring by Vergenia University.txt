@@ -1,0 +1,74 @@
+An Advance Wireless Snesor Network for Health Monitoring by Verginia Univeristy
+[Abstract]
+-old people can take benifit from continous, remote health monitoring
+-It is a proposal with little development in this field with the following characteristics
+	.open new research perspectives for low cost
+	.ah hoc deployment of multimodal sensors
+[Introduction]
+-In-home and nursing home perspective networks to provide
+	.continous medical monitoring
+	.memory enhancement
+	.control of home appliances
+	.medical data access
+	.emergency communication
+-researchers in this area [1-8]
+	.for diseases like Alzheimer's Parkinson's (similarly continous disorder)-continous monitoring [6]
+	.CodeBlue-medical appliances in disasters [7]
+	.robustness and efficiency in healthcare wsns [2]
+ii-[Main Goals]
+-Continous monitoring for medical history[9,10]
+-ad-hoc and self-manageing networeks are used to reduce the high installation costs and retrofits
+-this system will extend the traditional clinical hospital setting to nursing and retirement homes
+-Hardware
+	.MicaZ device from Crossbow with an environmental sensor board on it
+	.1.Portability and unobstrusiveness
+	.2.Ease of deplyment nad scalability
+	.3.Realtime and allways on
+	.4.Reconfigureaable and self-organization
+		..no fixed installation
+		..we can add and remove sensors instantantly
+		..we can change the network target
+		..sensors can form their routing paths
+		..sensors can collaborate on data processing
+		..they can adopt further hierarcheis
+iii-[Highlevel System Architecture]
+-System untegrates both the wearable and in building installed sensor devices
+-These devices informs the healthcare service providers about the health of the patient
+-RFIT tages, floor, environmental and dust sensors
+-1-Body Network and Subsystems:
+	.in this system the devices may use kinetic recharges
+	.
+-2-Emplaced Sensor Network:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

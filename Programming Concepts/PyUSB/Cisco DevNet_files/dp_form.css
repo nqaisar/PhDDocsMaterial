@@ -1,0 +1,1409 @@
+/*DP.com standard Form CSS*/
+/*link colors*/
+/*general colors*/
+/*login panel color*/
+/*button colors*/
+/*form*/
+/*form: search results*/
+/*navigation*/
+/*vertical nav*/
+/*breadcrumbs*/
+/*content modules*/
+/*table sorters*/
+/*pagination*/
+/*content*/
+/*ui tabs style*/
+/*message colors*/
+/*catalog*/
+/*catalog: submission left side*/
+/*button @extends style*/
+.btn-extend, .liteoption,
+.icon_new_topic {
+  color: white !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background: #444444;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background: #444444;
+  background: -moz-linear-gradient(top, #444444 0%, #3a3a3a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #3a3a3a));
+  background: -webkit-linear-gradient(top, #444444 0%, #3a3a3a 100%);
+  background: -o-linear-gradient(top, #444444 0%, #3a3a3a 100%);
+  background: -ms-linear-gradient(top, #444444 0%, #3a3a3a 100%);
+  background: linear-gradient(to bottom, #444444 0%, #3a3a3a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#3a3a3a',GradientType=0 ); }
+  .btn-extend:hover, .liteoption:hover,
+  .icon_new_topic:hover {
+    text-decoration: none;
+    color: white !important;
+    background: #555555; }
+  .btn-extend:active, .liteoption:active,
+  .icon_new_topic:active {
+    padding: 7px 12px 5px; }
+
+/*generic input*/
+.input-generic, html > body fieldset input.field, .hasDatepicker,
+#name, html > body fieldset textarea.field, html > body fieldset select[multiple], html > body .login_form input.field, html > body #register_form input.text, html > body #register_form textarea.text, html > body fieldset textarea {
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #d0d0d0;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out; }
+  .input-generic:focus, html > body fieldset input.field:focus, .hasDatepicker:focus,
+  #name:focus, html > body fieldset select[multiple]:focus, html > body .login_form input.field:focus, html > body #register_form input.text:focus, html > body #register_form textarea.text:focus, html > body fieldset textarea:focus {
+    border-color: #b4b4b4;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px 0 rgba(35, 185, 255, 0.5);
+    box-shadow: 0 0 8px 0 rgba(35, 185, 255, 0.5); }
+
+/*message colors*/
+.message-call {
+  padding: 10px; }
+  .message-call:empty {
+    border: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important; }
+
+fieldset legend:empty {
+  border: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important; }
+
+/*pagination*/
+.paginationNew {
+  padding: 4px 0;
+  margin: 8px 0; }
+  .paginationNew a,
+  .paginationNew span {
+    border: 1px solid #e7e7e7;
+    padding: 5px 8px;
+    margin-left: -1px; }
+  .paginationNew span.step {
+    border-color: transparent; }
+  .paginationNew a.prevLink {
+    margin-right: 10px; }
+  .paginationNew a.nextLink {
+    margin-left: 10px; }
+  .paginationNew a:hover {
+    background-color: #f9f9f9;
+    text-decoration: none; }
+  .paginationNew a:active {
+    background-color: #f9f9f9;
+    text-decoration: none;
+    padding: 6px 8px 4px;
+    -webkit-box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.05); }
+  .paginationNew span.currentStep {
+    background-color: #eeeeee; }
+
+/*dp styles*/
+#tabs,
+#video_screenshots_tabs {
+  padding: 0;
+  background-color: white;
+  border: 1px solid #e7e7e7; }
+  #tabs ul.ui-widget-header,
+  #video_screenshots_tabs ul.ui-widget-header {
+    padding: 4px 0 0 4px;
+    margin: -1px -1px 0;
+    border: 0;
+    background: #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0; }
+  #tabs div a,
+  #video_screenshots_tabs div a {
+    color: #085777; }
+  #tabs div a:hover,
+  #video_screenshots_tabs div a:hover {
+    color: #222222; }
+  #tabs ul li,
+  #video_screenshots_tabs ul li {
+    border-color: #e7e7e7; }
+  #tabs ul li.ui-state-default,
+  #tabs ul li.ui-widget-content .ui-state-default,
+  #tabs ul li.ui-widget-header .ui-state-default,
+  #video_screenshots_tabs ul li.ui-state-default,
+  #video_screenshots_tabs ul li.ui-widget-content .ui-state-default,
+  #video_screenshots_tabs ul li.ui-widget-header .ui-state-default {
+    background: #f8f8f8; }
+    #tabs ul li.ui-state-default:hover,
+    #tabs ul li.ui-widget-content .ui-state-default:hover,
+    #tabs ul li.ui-widget-header .ui-state-default:hover,
+    #video_screenshots_tabs ul li.ui-state-default:hover,
+    #video_screenshots_tabs ul li.ui-widget-content .ui-state-default:hover,
+    #video_screenshots_tabs ul li.ui-widget-header .ui-state-default:hover {
+      background: #f1f1f1; }
+  #tabs ul li.ui-state-active,
+  #tabs ul li.ui-widget-content .ui-state-active,
+  #tabs ul li.ui-widget-header .ui-state-active,
+  #video_screenshots_tabs ul li.ui-state-active,
+  #video_screenshots_tabs ul li.ui-widget-content .ui-state-active,
+  #video_screenshots_tabs ul li.ui-widget-header .ui-state-active {
+    background: white; }
+    #tabs ul li.ui-state-active:hover,
+    #tabs ul li.ui-widget-content .ui-state-active:hover,
+    #tabs ul li.ui-widget-header .ui-state-active:hover,
+    #video_screenshots_tabs ul li.ui-state-active:hover,
+    #video_screenshots_tabs ul li.ui-widget-content .ui-state-active:hover,
+    #video_screenshots_tabs ul li.ui-widget-header .ui-state-active:hover {
+      background: white; }
+  #tabs form p,
+  #video_screenshots_tabs form p {
+    margin-bottom: 0; }
+  #tabs form .ui-state-default,
+  #tabs form .ui-widget-content
+  form .ui-state-default,
+  #tabs form .ui-widget-header,
+  #tabs form .ui-state-default,
+  #video_screenshots_tabs form .ui-state-default,
+  #video_screenshots_tabs form .ui-widget-content
+  form .ui-state-default,
+  #video_screenshots_tabs form .ui-widget-header,
+  #video_screenshots_tabs form .ui-state-default {
+    background: #e7e7e7 url("/images/dpcom/catalog/dd-arrow-down.png") no-repeat 97% 50%;
+    cursor: pointer;
+    padding: 0 4px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px; }
+    #tabs form .ui-state-default:hover,
+    #tabs form .ui-widget-content
+    form .ui-state-default:hover,
+    #tabs form .ui-widget-header:hover,
+    #tabs form .ui-state-default:hover,
+    #video_screenshots_tabs form .ui-state-default:hover,
+    #video_screenshots_tabs form .ui-widget-content
+    form .ui-state-default:hover,
+    #video_screenshots_tabs form .ui-widget-header:hover,
+    #video_screenshots_tabs form .ui-state-default:hover {
+      background-color: #e9e9e9; }
+  #tabs form .ui-dropdownchecklist,
+  #video_screenshots_tabs form .ui-dropdownchecklist {
+    font-size: 12px; }
+  #tabs form .ui-dropdownchecklist-dropcontainer-wrapper,
+  #video_screenshots_tabs form .ui-dropdownchecklist-dropcontainer-wrapper {
+    margin-top: -10px; }
+  #tabs form .ui-dropdownchecklist-item,
+  #video_screenshots_tabs form .ui-dropdownchecklist-item {
+    cursor: pointer;
+    background: none;
+    border: none; }
+    #tabs form .ui-dropdownchecklist-item input[type="checkbox"],
+    #video_screenshots_tabs form .ui-dropdownchecklist-item input[type="checkbox"] {
+      margin-right: 5px; }
+    #tabs form .ui-dropdownchecklist-item:hover,
+    #video_screenshots_tabs form .ui-dropdownchecklist-item:hover {
+      background: #ededed; }
+  #tabs fieldset,
+  #video_screenshots_tabs fieldset {
+    float: none;
+    width: auto; }
+  #tabs fieldset ul.edit,
+  #video_screenshots_tabs fieldset ul.edit {
+    float: none;
+    width: auto;
+    padding: 0 15px; }
+    #tabs fieldset ul.edit li,
+    #video_screenshots_tabs fieldset ul.edit li {
+      float: none;
+      width: auto; }
+      #tabs fieldset ul.edit li pre.textAreaFormat,
+      #video_screenshots_tabs fieldset ul.edit li pre.textAreaFormat {
+        width: auto; }
+
+fieldset {
+  margin: 1.5em 0 0 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  z-index: 1; }
+
+legend {
+  margin-left: 1em;
+  color: #444444;
+  font-weight: bold; }
+
+fieldset ul {
+  padding: 2em 2em 0 2em;
+  list-style: none; }
+
+fieldset li {
+  padding-bottom: 1em; }
+
+fieldset.submit {
+  position: static;
+  border-style: none; }
+
+/*In order to position the labels next to the form elements, we float the label elements to the left and give them an explicit width:*/
+fieldset label {
+  float: left;
+  width: 10em;
+  margin-right: 1em; }
+
+fieldset table {
+  width: auto;
+  margin-bottom: 0; }
+  fieldset table td, fieldset table th {
+    padding: 0; }
+fieldset input[type="checkbox"], fieldset input[type="radio"] {
+  margin: 0; }
+
+/* right aligned example
+label {    
+float: left;    
+width: 10em;    
+margin-right: 1em;    
+text-align: right;  
+}
+*/
+/*One markup-free solution to ensuring a parent contains any of its floated children is to also float the parent, so that's what we'll do*/
+fieldset li {
+  float: left;
+  clear: left;
+  width: 580px;
+  /*width: 100%; -- took this out because it was causing problems on registration form */
+  /*set width to 620px because a width must be set or input fields do not line up in ie 7*/
+  margin: 0;
+  padding: 4px 0; }
+
+fieldset.dialog600w {
+  width: 565px;
+  padding-left: 0; }
+
+fieldset.dialog600w ul li {
+  margin-left: 0;
+  width: 525px;
+  padding: 5px; }
+
+fieldset.dialog600w ul li label {
+  width: 11em; }
+
+fieldset.dialog600w textarea.field {
+  width: 355px; }
+
+#introMsgRequestRemoval {
+  padding-bottom: 8px; }
+
+fieldset.submit input.remove_item {
+  background: url("/images/dpcom/buttons/button_remove_item.gif") no-repeat;
+  height: 22px;
+  width: 90px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+#register_form fieldset li {
+  float: left;
+  clear: left;
+  width: 560px;
+  /*width: 100%; -- took this out because it was causing problems on registration form */
+  /*set width to 620px because a width must be set or input fields do not line up in ie 7*/
+  padding-bottom: 1em; }
+
+#register_form fieldset {
+  width: 620px; }
+
+#register_form fieldset.submit {
+  width: 400px; }
+
+#register_form fieldset fieldset {
+  width: 560px;
+  /*width: 100%; -- took this out because it was causing problems on registration form */
+  /*set width to 620px because a width must be set or input fields do not line up in ie 7*/ }
+
+fieldset {
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 0 0 1.5em 0;
+  padding: 0; }
+
+fieldset.submit {
+  float: none;
+  width: auto;
+  border: 0 none #FFF;
+  padding-left: 12em; }
+
+html legend {
+  position: relative;
+  left: -7px;
+  top: -0.75em; }
+
+form fieldset legend {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block !important;
+  width: 100% !important;
+  border: 1px solid #e7e7e7;
+  text-indent: 16px;
+  background: #e7e7e7;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  clear: both;
+  color: #555;
+  font-weight: bold;
+  margin: 5px -1px 0;
+  padding: 5px 0; }
+
+html fieldset ul.edit {
+  padding-top: 0.25em;
+  float: left; }
+
+*:first-child + html legend {
+  position: relative;
+  left: -7px;
+  top: -0.75em; }
+
+*:first-child + html fieldset ul {
+  padding-top: 0.25em;
+  float: left; }
+
+*:first-child + html fieldset {
+  position: relative; }
+
+*:first-child + html fieldset fieldset legend {
+  top: 0; }
+
+fieldset fieldset {
+  margin-bottom: -2.5em;
+  border-style: none;
+  background-color: transparent;
+  background-image: none;
+  width: 620px; }
+
+fieldset fieldset legend {
+  margin-left: 0;
+  font-weight: normal; }
+
+fieldset fieldset ul {
+  position: relative;
+  top: -1.5em;
+  margin: 0 0 2em 8.5em;
+  padding: 0; }
+
+fieldset fieldset li {
+  float: none;
+  height: 1.2em;
+  width: 410px; }
+
+#register_form fieldset fieldset li {
+  float: none;
+  height: 1.2em;
+  width: 400px; }
+
+fieldset fieldset label {
+  float: none;
+  width: auto;
+  margin-right: auto; }
+
+/*In all browsers, legends will have some padding by default. The amount of padding varies between browsers, so to have the legend lining up nicely with our labels we'll eliminate the padding in our main style sheet:*/
+legend {
+  margin-left: 1em;
+  padding: 0;
+  color: #000;
+  font-weight: bold; }
+
+/*The default border for fieldset  elements is normally an inset border -- which doesn't match some sites -- so here we're going to make it a flat, 1px border. In addition, we'll add in a background color that will make the fieldset elements stand out from the normal page background, marking them as special areas:*/
+fieldset {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+  border: 1px solid #e7e7e7;
+  background-color: #f7f7f7; }
+
+/*Generally speaking, we don't want any borders or background color behind the submit fieldset, so it's quite easy to turn those off: */
+fieldset.submit {
+  float: none;
+  width: auto;
+  border-style: none;
+  padding-left: 13.2em;
+  background-color: transparent; }
+
+.helptext {
+  padding-left: 15.75em;
+  font-size: .70em; }
+
+label .helptext {
+  padding-left: 0; }
+
+.helptextCheckbox {
+  font-size: .70em;
+  width: 55em; }
+
+fieldset fieldset div.helptext {
+  padding-left: .5em;
+  font-size: .70em;
+  width: 55em;
+  margin-top: -1em; }
+
+.iterator6 {
+  margin-top: -11em; }
+
+.iterator11 {
+  margin-top: -10.9em; }
+
+*:first-child + html .iterator6 {
+  margin-top: -11.3em; }
+
+*:first-child + html .iterator11 {
+  margin-top: -11.2em; }
+
+/* horizontal positioning: */
+.iterator {
+  margin-left: 142px;
+  width: 480px; }
+
+.iterator6, .iterator7, .iterator8, .iterator9, .iterator10 {
+  margin-left: 17em; }
+
+.iterator11, .iterator12, .iterator13, .iterator14, .iterator15, .iterator16 {
+  margin-left: 30em; }
+
+#fieldset4 li.iterator6, #fieldset4 li.iterator7, #fieldset4 li.iterator8, #fieldset4 li.iterator9, #fieldset4 li.iterator10 {
+  margin-left: 17em; }
+
+#fieldset4 li.iterator11, #fieldset4 li.iterator12, #fieldset4 li.iterator13, #fieldset4 li.iterator14, #fieldset4 li.iterator15, #fieldset4 li.iterator16 {
+  margin-left: 30em; }
+
+fieldset fieldset.multicolumn {
+  margin-bottom: -0.5em; }
+
+.error {
+  background: #ee0101;
+  color: #fff;
+  border: 2px solid #ddd;
+  box-shadow: 0px 0px 6px #000;
+  -moz-box-shadow: 0px 0px 6px #000;
+  -webkit-box-shadow: 0px 0px 6px #000;
+  padding: 4px 10px 4px 10px;
+  border-radius: 6px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 5px; }
+
+.message {
+  background: #D4E67A;
+  color: #000;
+  border: 2px solid #ddd;
+  box-shadow: 0px 0px 6px #000;
+  -moz-box-shadow: 0px 0px 6px #000;
+  -webkit-box-shadow: 0px 0px 6px #000;
+  padding: 4px 10px 4px 10px;
+  border-radius: 6px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 15px; }
+
+.checkbox_label {
+  float: none;
+  margin-right: auto;
+  width: auto; }
+
+/*these width settings do not work in ie7 */
+/*so we are selecting only modern browsers not including ie7*/
+html > body fieldset input.field {
+  width: 400px; }
+
+html > body fieldset textarea.field {
+  width: 400px; }
+
+html > body fieldset select {
+  width: auto;
+  max-width: 410px; }
+
+html > body fieldset select[multiple] {
+  width: 410px; }
+
+html > body .login_form input.field {
+  width: 200px; }
+
+html > body #register_form input.text {
+  width: 350px; }
+
+html > body #register_form textarea.text {
+  width: 355px; }
+
+html > body fieldset input.smallfield {
+  width: 55px; }
+
+fieldset.submit #create {
+  background: url("/images/dpcom/buttons/button_create.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #submit {
+  background: url("/images/dpcom/buttons/button_submit.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top; }
+
+fieldset.submit #associateToCompany {
+  background: url("/images/dpcom/buttons/button_company_existing.gif") no-repeat;
+  height: 22px;
+  width: 210px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit input.submit {
+  background: url("/images/dpcom/buttons/button_submit.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #registrationSubmit {
+  background: url("/images/dpcom/buttons/button_submit.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #edit {
+  background: url("/images/dpcom/buttons/button_edit.gif") no-repeat scroll 0px 0px transparent;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.extraspace {
+  margin-bottom: 10px;
+  margin-top: 12px; }
+
+div.buttons #back {
+  background: url("/images/dpcom/buttons/button_back.gif") no-repeat scroll 0px 0px transparent;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #delete {
+  background: url("/images/dpcom/buttons/button_delete.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #update {
+  background: url("/images/dpcom/buttons/button_update.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #fork {
+  background: url("/images/dpcom/buttons/button_fork.gif") no-repeat;
+  height: 22px;
+  width: 50px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit .reopen {
+  background: url("/images/dpcom/buttons/button_reopen.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #requestClose {
+  background: url("/images/dpcom/buttons/button_close.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #send {
+  background: url("/images/dpcom/buttons/button_send.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #cancel {
+  background: url("/images/dpcom/buttons/button_cancel.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #registrationCancel {
+  background: url("/images/dpcom/buttons/button_cancel.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  display: inline;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #search {
+  background: url("/images/dpcom/buttons/button_search.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer; }
+
+fieldset.submit #next {
+  background: url("/images/dpcom/buttons/button_next.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: bottom;
+  cursor: pointer; }
+
+fieldset.submit #attendee_list {
+  background: url("/images/dpcom/buttons/button_attendees.gif") no-repeat;
+  height: 22px;
+  width: 78px;
+  border: none;
+  font-size: 0;
+  vertical-align: bottom;
+  cursor: pointer; }
+
+fieldset.submit #cancel_event {
+  background: url("/images/dpcom/buttons/button_cancel_event.gif") no-repeat;
+  height: 22px;
+  width: 120px;
+  border: none;
+  font-size: 0;
+  vertical-align: bottom;
+  cursor: pointer; }
+
+input.noneditable, label.noneditable {
+  color: #666666; }
+
+fieldset a.form_link {
+  margin-left: 11em; }
+
+#email-form li {
+  float: left;
+  clear: left;
+  width: 560px;
+  /*width: 100%; -- took this out because it was causing problems on registration form */
+  /*set width to 620px because a width must be set or input fields do not line up in ie 7*/
+  padding-bottom: 1em; }
+
+#email-form fieldset {
+  width: 610px;
+  border: 0; }
+
+#email-form fieldset.submit {
+  width: 400px; }
+
+.list-form div.toolbar {
+  width: 567px; }
+
+.list-form fieldset {
+  width: 510px;
+  border: none; }
+
+.list-form fieldset li {
+  float: left;
+  clear: left;
+  width: 510px;
+  /*width: 100%; -- took this out because it was causing problems on registration form */
+  /*set width to 620px because a width must be set or input fields do not line up in ie 7*/
+  padding-bottom: 1em; }
+
+.list-form div#formErrors {
+  width: 562px; }
+
+.list-form fieldset.submit {
+  width: 400px; }
+
+fieldset ul li div.hideonload select.multiselect {
+  width: 590px; }
+
+fieldset ul li div.hideonload span.ava_inputs {
+  padding-left: 300px; }
+
+#tasklisttable {
+  width: 663px;
+  margin-left: 6px;
+  margin-top: 0;
+  padding-top: 0; }
+
+span.pastduehelp {
+  color: red;
+  padding-left: 10px; }
+
+#tasklistlabel {
+  clear: both;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 110%; }
+
+#bottom_buttons {
+  margin-top: 4px; }
+
+div.catalog_content_tabs_box ul {
+  list-style-type: none; }
+
+pre.textAreaFormat {
+  width: 368px;
+  overflow: auto;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 9pt;
+  text-align: left;
+  overflow-x: auto;
+  white-space: -moz-pre-wrap !important;
+  word-wrap: break-word;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 5px 3px 5px;
+  white-space: pre-wrap; }
+
+pre.logTextAreaFormat {
+  width: 490px;
+  overflow: auto;
+  font-family: Verdana,Arial,sans-serif;
+  font-size: 9pt;
+  text-align: left;
+  overflow-x: auto;
+  white-space: -moz-pre-wrap !important;
+  word-wrap: break-word;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 5px 3px 5px;
+  white-space: pre-wrap; }
+
+/*dpTroubleTicket */
+.dpTroubleTicketLogEntry {
+  border: 1px solid #999;
+  margin-bottom: 15px; }
+
+.dpTroubleTicketDescription {
+  background-color: #ffffcc; }
+
+.dpTroubleTicketAssigneeChange {
+  background-color: #e9d4ff; }
+
+.dpTroubleTicketPublicWebComment {
+  background-color: white; }
+
+.dpTroubleTicketPublicEmailComment {
+  background-color: white; }
+
+.dpTroubleTicketPrivateEmailComment {
+  background-color: #FFB2B2;
+  border: 1px solid #999; }
+
+.dpTroubleTicketPrivateWebComment {
+  background-color: #ffb2b2; }
+
+.dpTroubleTicketStatusChange {
+  background-color: #cde6ff; }
+
+.dpTroubleTicketHoursWorked {
+  background-color: #ffd8c0; }
+
+.dpTestRequestPrivateEmailComment {
+  background-color: #ffb2b2; }
+
+.dpTroubleTicketPublicWebServiceComment {
+  background-color: #c6d207; }
+
+.dpTroubleTicketPrivateWebServiceComment {
+  background-color: #76c049; }
+
+#ticket_submit {
+  float: left; }
+
+#ticketLog {
+  float: none; }
+
+#sortControl {
+  padding-left: 40px; }
+
+#unitsRemaining {
+  color: red; }
+
+#myTicketsRemainingContainer {
+  /*padding-left:320px;*/
+  float: right; }
+
+table.tablesorter tbody tr.dpTroubleTicketSlaWarn td {
+  background: #FFFFCC; }
+
+table.tablesorter tbody tr.dpTroubleTicketSlaError td {
+  background: #FFB2B2; }
+
+table.tablesorter tbody tr.dpTroubleTicketSlaOk td {
+  background: #B2F0B2; }
+
+.dpTroubleTicketPriorityChange {
+  background-color: #b2f0b2; }
+
+.slaLegend {
+  float: right;
+  font-size: 87%; }
+
+.keyvalue {
+  width: 15px;
+  border: 1px solid #ccc; }
+
+.greaterFourty {
+  background-color: #FFB2B2; }
+
+.lessFourtyGreaterTwentyFive {
+  background-color: #FFFFCC; }
+
+.lessTwentyFive {
+  background-color: #B2F0B2; }
+
+fieldset#ticketLog ul.rounded li {
+  margin-left: 0;
+  width: 650px;
+  padding: 5px; }
+
+fieldset#ticketLog pre.textAreaFormat {
+  width: 485px; }
+
+input#hoursWorked {
+  width: 50px; }
+
+div.export {
+  display: inline; }
+
+table#topForumPosters {
+  width: 800px; }
+
+table#topForumPosters td#topForumPostersHeadingSpace {
+  width: 24px; }
+
+table#topForumPosters td#topForumPostersHeadingOne {
+  width: 200px; }
+
+table#topForumPosters td#topForumPostersHeadingTwo {
+  width: 350px; }
+
+table#topForumPosters td#topForumPostersHeadingThree {
+  width: 114px; }
+
+table#topForumPostersSe {
+  width: 800px; }
+
+table#topForumPostersSe td#topForumPostersSeHeadingSpace {
+  width: 24px; }
+
+table#topForumPostersSe td#topForumPostersSeHeadingOne {
+  width: 200px; }
+
+table#topForumPostersSe td#topForumPostersSeHeadingTwo {
+  width: 350px; }
+
+table#topForumPostersSe td#topForumPostersSeHeadingThree {
+  width: 114px; }
+
+/* end dpTroubleTicket */
+/*testRequest Colors */
+.dpTestRequestGreaterFourty, table.tablesorter tr.dpTestRequestSlaError td, span.dpTroubleTicketSlaWarn {
+  background-color: #FFFFCC; }
+
+.dpTestRequestLessFourtyGreaterTwentyFive, table.tablesorter tr.dpTestRequestSlaWarn td, span.dpTroubleTicketSlaError {
+  background-color: #FFB2B2; }
+
+.dpTestRequestLessTwentyFive, table.tablesorter tr.dpTestRequestSlaOk td, span.dpTroubleTicketSlaOk {
+  background-color: #B2F0B2; }
+
+#slaContainer {
+  float: right;
+  clear: both;
+  padding: 5px 0; }
+
+.slaColorBox {
+  border: 1px solid #000;
+  display: inline-block;
+  line-height: 16px;
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px; }
+
+.exportList {
+  clear: both; }
+
+/* end testRequest Colors */
+fieldset#editAdminSubmit {
+  float: left; }
+
+fieldset#entryList {
+  float: none; }
+
+.noFloat {
+  float: none; }
+
+.noMarginBottom {
+  margin-bottom: 0; }
+
+td#inviteNewUser {
+  vertical-align: bottom; }
+
+#inviteNewUser a {
+  margin-left: 358px; }
+
+#pendingInvitationsTable, #companyMembersTable {
+  margin-top: 1px; }
+
+#inviteNewUserSubmit {
+  width: 400px; }
+
+div#invitePopup {
+  width: 700px;
+  padding: 10px; }
+
+#recaptuchaImageHolder {
+  height: 58px; }
+
+#recaptcha_image {
+  width: 100px;
+  height: 57px; }
+
+#recaptchaControls {
+  vertical-align: bottom; }
+
+#recaptchaInstructions {
+  padding-top: 4px; }
+
+.recaptcha_only_if_incorrect_sol {
+  color: red; }
+
+input#recaptcha_response_field {
+  width: 160px; }
+
+#pendingInvitations {
+  width: 630px; }
+
+#pendingInvitations td#firstCol {
+  width: 300px; }
+
+#pendingInvitations td#secondCol {
+  width: 330px;
+  text-align: right; }
+
+div#deleteSavedSearch table {
+  margin-left: 384px;
+  width: auto; }
+
+div#deleteSavedSearch table td.firstcol {
+  vertical-align: middle; }
+
+div#savedSearchForm {
+  padding: 10px;
+  margin: 10px -11px;
+  background-color: #e8e8e8;
+  border: 1px solid #e7e7e7; }
+  div#savedSearchForm input[type="text"] {
+    width: 170px;
+    margin-bottom: 0; }
+  div#savedSearchForm .secondcol,
+  div#savedSearchForm .firstcol {
+    line-height: 25px;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+#jqt #savedSearches {
+  text-align: center; }
+
+div#savedSearchForm table {
+  margin-left: 220px;
+  width: 471px; }
+
+div#savedSearchForm table td.firstcol {
+  text-align: right; }
+
+div#savedSearchForm table td.secondcol {
+  vertical-align: top;
+  width: 155px; }
+
+div#savedSearchForm table td.thirdCol {
+  vertical-align: bottom;
+  text-align: left; }
+
+span#myMsg {
+  color: red; }
+
+.dpTroubleTicketFork {
+  background-color: #bfe3e3; }
+
+.dpTroubleTicketFieldChanged {
+  background-color: #b4eda1; }
+
+.dpTroubleTicketHoursUnBilled {
+  background-color: #f5d549; }
+
+li input#hoursInput {
+  width: 55px; }
+
+#flaggedBdmSelect {
+  float: right;
+  margin-bottom: 10px;
+  clear: both; }
+
+/*log*/
+.dpLogCreation {
+  background-color: #ffffcc; }
+
+.dpLogFields {
+  background-color: #b4eda1; }
+
+.dpLogDaysBilled {
+  background-color: #f9d391; }
+
+.dpLogDaysEstimated {
+  background-color: #f9d391; }
+
+.dpLogDaysUnbilled {
+  background-color: #f9d391; }
+
+.dpLogPrivateComment {
+  background-color: #FFB2B2;
+  border: 1px solid #999; }
+
+.dpLogPublicComment {
+  background-color: white; }
+
+.dpLogStatus {
+  background-color: #cde6ff; }
+
+.dpLogClone {
+  background-color: #a0dae0; }
+
+.dpSubmissionAssociation {
+  background-color: #e3effa; }
+
+.dpSubmissionDisAssociation {
+  background-color: #ffd8c0; }
+
+.dpInvoicePayment {
+  background-color: #f5d549; }
+
+fieldset.defaultLogView ul.rounded li {
+  margin-left: 0;
+  width: 650px;
+  padding: 5px;
+  border: 1px solid #999;
+  margin-bottom: 15px; }
+
+.fileDownload {
+  margin-left: 116px; }
+
+#associatedSubmissionsHeader {
+  width: 100%; }
+
+#associatedSubmissionsHeader td.rowone {
+  width: 499px;
+  vertical-align: bottom; }
+
+#associatedSubmissionsHeader td.rowone h2 {
+  margin-bottom: 0;
+  font-size: 120%; }
+
+#associatedSubmissionsHeader td.rowtwo {
+  vertical-align: bottom;
+  text-align: right; }
+
+#associatedSubmissionsHeader td.rowtwo a.defaultBtn {
+  margin-right: 0; }
+
+#associatePortfolioHeader {
+  text-align: right; }
+
+h2#associateSubmissionsTitle {
+  margin-bottom: 0; }
+
+.textRight {
+  text-align: right; }
+
+p#associateSubmissionsIntro {
+  width: 570px; }
+
+/*titanium inputs*/
+.tableContainer {
+  border-bottom: 1px dashed #ccc; }
+
+.tableContainer table {
+  width: 100%; }
+
+.sectionLabel {
+  font-size: 80%;
+  font-style: italic; }
+
+.autoIncTriggerTarget {
+  display: none; }
+
+.autoIncTriggerTarget input {
+  width: 60px; }
+
+.seventhRow td {
+  vertical-align: top; }
+
+/*titanium inputs*/
+#choosePortfolio {
+  width: 800px; }
+
+.uiTab-text {
+  font-size: 82%; }
+
+div#tc {
+  height: 300px;
+  padding: 5px;
+  background-color: #fff;
+  overflow: auto;
+  border: 1px solid #999;
+  border-bottom: 3px solid #999; }
+
+.associateCompany {
+  float: right;
+  margin-right: 1px; }
+
+fieldset#TCsection table {
+  margin-left: 140px; }
+
+fieldset#TCsection table td.firstCol {
+  width: 35px;
+  vertical-align: top; }
+
+fieldset#TCsection table td.secondCol {
+  vertical-align: top; }
+
+fieldset#TCsection {
+  margin-bottom: -.5em; }
+
+#companyTestRestriction {
+  width: 212px; }
+
+#troubleTicketRestriction {
+  width: 212px; }
+
+#typeControl {
+  clear: both;
+  margin-left: 37px; }
+
+#typeControl div#intro {
+  width: auto;
+  border: none; }
+
+#typeControl div {
+  width: 15px;
+  font-weight: bold;
+  height: 15px;
+  margin: 2px;
+  float: left;
+  border: 1px solid #000; }
+
+#linkBar {
+  margin-bottom: 5px;
+  margin-top: -20px; }
+
+#partialPaymentWarning {
+  color: red; }
+
+#overPaymentWarning {
+  color: red; }
+
+#facilitatorPaymentWarning {
+  color: red; }
+
+#reconcileStatus {
+  height: 40px; }
+
+#tcPdfContainer {
+  width: 99%;
+  height: 99%; }
+
+div.topTableContainer {
+  width: 100%; }
+
+.topTableContainer span.leftside {
+  float: left; }
+
+.topTableContainer span.rightside {
+  float: right; }
+
+#results span {
+  float: right; }
+
+#results span a {
+  margin-left: 4px;
+  margin-right: 4px; }
+
+#results #totalsListing {
+  text-align: center;
+  margin-bottom: 15px; }
+
+#results #totalsListing span {
+  margin-left: 15px;
+  float: none; }
+
+table.reconcile {
+  width: 918px; }
+
+table.reconcile thead tr th.checkboxCol {
+  width: 15px; }
+
+table.reconcile thead tr th.companyCol {
+  width: 175px; }
+
+table.reconcile thead tr th.invoiceCol {
+  width: 49px; }
+
+table.reconcile thead tr th.commentsCol {
+  width: 250px; }
+
+table.reconcile thead tr th.countryCol {
+  width: 118px; }
+
+table.reconcile thead tr th.amountCol {
+  width: 70px; }
+
+table.reconcile thead tr th.netAmountCol {
+  width: 70px; }
+
+table.reconcile thead tr th.feesCol {
+  width: 40px; }
+
+table.reconcile thead tr th.adminCol {
+  width: 90px; }
+
+table.tablesorter tbody tr.noReconcile td {
+  color: #66ccff !important; }
+
+div.filterValues {
+  border: 1px dashed #000;
+  margin-bottom: 8px;
+  padding: 10px; }
+
+#assignToMeTestEngineer, #assignTicketToMe, #assignToMeTestManager {
+  text-decoration: underline;
+  cursor: pointer; }
+
+/*invoice margin fix*/
+#billFacilitatorForm ul.edit,
+#reconcileForm ul.edit {
+  margin-bottom: 0; }
+
+/*ticket sticky's*/
+html #sticky1 fieldset,
+html #sticky2 fieldset,
+html #sticky3 fieldset,
+html #sticky4 fieldset,
+html #sticky5 fieldset,
+html #sticky6 fieldset {
+  border-color: 1px solid #ccc;
+  background: #efefef;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  background-color: #f7f7f7; }
+  html #sticky1 fieldset legend,
+  html #sticky2 fieldset legend,
+  html #sticky3 fieldset legend,
+  html #sticky4 fieldset legend,
+  html #sticky5 fieldset legend,
+  html #sticky6 fieldset legend {
+    padding: 10px;
+    margin-left: 0;
+    line-height: 18px;
+    font-size: 16px;
+    position: relative;
+    color: #333333;
+    top: -10px;
+    left: -10px;
+    vertical-align: top;
+    margin-bottom: -14px;
+    float: left;
+    width: 100%; }
+  html #sticky1 fieldset p,
+  html #sticky2 fieldset p,
+  html #sticky3 fieldset p,
+  html #sticky4 fieldset p,
+  html #sticky5 fieldset p,
+  html #sticky6 fieldset p {
+    clear: both;
+    font-size: 12px;
+    line-height: 14px;
+    color: #525252;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 10px; }
+
+.dashboard-quick-tools #sticky1 legend {
+  padding: 0 10px;
+  margin: 10px 0 0; }
+  
+  
+#removeOwnersFieldset1{width:300px;}
+#addOwnerForm fieldset#fieldset1{width: 300px;}

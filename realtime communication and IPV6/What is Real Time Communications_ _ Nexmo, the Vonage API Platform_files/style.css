@@ -1,0 +1,32 @@
+/*!
+Theme Name: Nexmoblog
+Theme URI: https://nexmo.com/blog/
+Author: 99robots
+Author URI: https://99robots.com/
+Description: The next-generation communications blog from Nexmo.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: nexmoblog
+Tags: APIs for SMS, Voice, Chat App, Phone Verifications
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Nexmo is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.screen-reader-text,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter{
+    
+}

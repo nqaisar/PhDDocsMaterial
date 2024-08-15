@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://www.nexmo.com/blog/2017/07/05/real-time-communications/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="fa-events-icons-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>What is Real Time Communications? | Nexmo, the Vonage API Platform</title>
+
+<!-- Social Warfare v3.5.4 https://warfareplugins.com --><meta property="og:description" content="Real time communications is the near simultaneous exchange of information over any type of telecommunications service from the sender to the receiver in a connection with negligible latency, according to SearchUnified Communications. Examples of real time communications include: Voice over landlines and mobile phones VoIP Instant messaging (e.g., WhatsApp, WeChat), Video and teleconferencing Robotic telepresence However, real time communications does not include email, bulletin boards, blogs or other forms of internet communication where users read content without regard to the time the sender posts it, which can create a significant delay between data transmission and reception. In addition, real time communications"><meta property="og:title" content="What Is Real Time Communications?"><meta property="article_publisher" content="https://www.facebook.com/Nexmo/"><meta name="image" property="og:image" content="https://www.nexmo.com/wp-content/uploads/2017/07/UseCases_color_callcenter.jpg"><meta property="fb:app_id" content="529576650555031"><meta property="og:type" content="article"><meta property="og:url" content="https://www.nexmo.com/blog/2017/07/05/real-time-communications/"><meta property="og:site_name" content="Nexmo"><meta property="article:published_time" content="2017-07-05T06:00:33+00:00"><meta property="article:modified_time" content="2019-01-08T06:03:40+00:00"><meta property="og:updated_time" content="2019-01-08T06:03:40+00:00"><meta name="twitter:title" content=""><meta name="twitter:description" content=""><meta name="twitter:image" content=""><meta name="twitter:creator" content=""><meta name="twitter:card" content="summary"><style>@font-face {font-family: "sw-icon-font";src:url("https://www.nexmo.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.5.4");src:url("https://www.nexmo.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=3.5.4#iefix") format("embedded-opentype"),url("https://www.nexmo.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=3.5.4") format("woff"),
+	url("https://www.nexmo.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=3.5.4") format("truetype"),url("https://www.nexmo.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=3.5.4#1445203416") format("svg");font-weight: normal;font-style: normal;}</style>
+<!-- Social Warfare v3.5.4 https://warfareplugins.com -->
+
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="This blog defines real time communications, explains its importance and briefly covers the development and future of the technology, with use cases.">
+<link rel="canonical" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/">
+<link rel="publisher" href="https://plus.google.com/+NexmoInc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="This blog defines real time communications, explains its importance and briefly covers the development and future of the technology, with use cases.">
+<meta name="twitter:title" content="What is Real Time Communications? | Nexmo, the Vonage API Platform">
+<meta name="twitter:image" content="https://www.nexmo.com/wp-content/uploads/2017/07/UseCases_color_callcenter.jpg">
+<meta name="twitter:creator" content="@dereknexmo">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Nexmo » Feed" href="https://www.nexmo.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Nexmo » Comments Feed" href="https://www.nexmo.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Nexmo » What Is Real Time Communications? Comments Feed" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/feed/">
+		<script async="" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/gtm.js.download"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.nexmo.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="tweeetshare_custome_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="tweeetshare_notice_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/notice.css" type="text/css" media="all">
+<link rel="stylesheet" id="tweeetshare_theme_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/tweetsharestyle.css" type="text/css" media="all">
+<link rel="stylesheet" id="tweeetshare_tweet_box_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/tweetbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="tweeetshare_statistics_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/statistics.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/crayon.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="geotarget-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/geotarget-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="tweetshare_style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/styles(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/wpp.css" type="text/css" media="all">
+<link rel="stylesheet" id="social_warfare-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/style.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-bootstrap-min-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-fonts-style-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-font-awesome-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-slick-carousel-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/slick.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-lity-plugin-styles-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/lity.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nexmo-main-css" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/main.css" type="text/css" media="all">
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/font.js.download"></script><link rel="stylesheet" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/bf6ebec9a4.css" media="all">
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/jquery-3.1.1.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/jquery-ui.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/custom.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/jquery.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/www.nexmo.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/crayon.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/geotarget-public.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/ddslick.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/font.js.download"></script><link rel="stylesheet" href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/bf6ebec9a4.css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.nexmo.com\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"13663","token":"123d51b9cd","debug":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/wpp-4.2.0.min.js.download"></script>
+<link rel="https://api.w.org/" href="https://www.nexmo.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.nexmo.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.nexmo.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.1.1">
+<link rel="shortlink" href="https://www.nexmo.com/?p=13663">
+<link rel="alternate" type="application/json+oembed" href="https://www.nexmo.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.nexmo.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F&amp;format=xml">
+<!-- HFCM by 99 Robots - Snippet # 1: GTM Head Snippet -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K2VBPR');</script>
+<!-- End Google Tag Manager -->
+<!-- /end HFCM by 99 Robots -->
+<style>.post-thumbnail img[src$='.svg'] { width: 100%; height: auto; }</style>
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="icon" href="https://www.nexmo.com/wp-content/uploads/2019/01/favicon.png" sizes="32x32">
+<link rel="icon" href="https://www.nexmo.com/wp-content/uploads/2019/01/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.nexmo.com/wp-content/uploads/2019/01/favicon.png">
+<meta name="msapplication-TileImage" content="https://www.nexmo.com/wp-content/uploads/2019/01/favicon.png">
+
+<style type="text/css">
+:root #header + #content > #left > #rlblock_left,
+:root #content > #center > .dose > .dosesingle,
+:root #content > #right > .dose > .dosesingle
+{ display: none !important; }</style></head>
+<body class="post-template-default single single-post postid-13663 single-format-standard wp-custom-logo subpage blog-page hide-dropdown" style="padding-top: 215px; padding-bottom: 0px;">
+<div class="wrapper">
+	<div class="header-main affix header-lite" style="background: url(https://www.nexmo.com/wp-content/uploads/2019/02/header.jpg) no-repeat;">
+    <div class="top-menu">
+        <div class="container"><ul id="menu-top-bar-menu" class=""><li id="menu-item-27166" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27166"><a href="https://help.nexmo.com/hc/en-us">Support</a></li>
+<li id="menu-item-26947" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26947"><a href="https://dashboard.nexmo.com/sign-in">Login</a></li>
+</ul></div>    </div>
+    <header id="header">
+    	<div class="container">
+    		<div class="nav-trigger">
+    			<span></span>
+    			<span></span>
+    			<span></span>
+    		</div>
+    		
+    		<div class="nav-close"></div>
+            
+            <div class="dual-cta">
+                <a class="btn-main" href="https://dashboard.nexmo.com/sign-up">Try it Free</a><a class="btn-secondary" href="https://dashboard.nexmo.com/sign-up">Talk to Our Experts</a>	
+    		</div>
+    		
+            <a class="logo light-logo dark" href="https://www.nexmo.com/" title="Nexmo"><img width="230" height="37" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/logo-768x124.png" class="img-responsive" alt=""></a><a class="logo dark-logo dark" href="https://www.nexmo.com/" title="Nexmo"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/logo-dark.png" alt="" class="img-responsive"></a><div class="main-nav"><ul id="menu-main-menu-new" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-dropdown megadrop"><a title="" rel="" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">Products<span class="mob-head"><i class="fa fa-angle-left" aria-hidden="true"></i>Products</span><span></span></a>
+<ul class="dropmenu" role="menu"><li>
+	<div class="left"><h5><a href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">COMMUNICATION APIs</a></h5> <p> Cloud communications building blocks with global reach.</p>
+	<div class="row">
+<div class="col-md-6">
+<div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/voice"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Voice.svg" alt=""><span>Voice</span> Build modern, high-quality voice applications in the cloud.</a></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/sms"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/SMS.svg" alt=""><span>SMS</span>Programmatically send and receive SMS in practically every country.</a></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/messages"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Messages.svg" alt=""><span>Messages <label>New</label></span>Communicate with <b></b></a><b><a href="https://www.nexmo.com/products/messages/whatsapp">WhatsApp</a></b>, <b><a href="https://www.nexmo.com/products/messages/facebook">Facebook Messenger</a></b>, <b><a href="https://www.nexmo.com/products/messages/mms">MMS</a></b>, and <b><a href="https://www.nexmo.com/products/messages/viber">Viber</a></b>.</div></div>
+<div class="col-md-6">
+<div class="nav-item"><a title="" rel="" href="https://tokbox.com/"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/TokBox.svg" alt=""><span>Video <label>New</label></span>Build live interactive video into your web and mobile apps with our <b></b></a><b><a href="https://tokbox.com/developer/">TokBox APIs <i class="fa fa-external-link" aria-hidden="true"></i></a></b></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/sip-trunking"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/SIP-Trunking.svg" alt=""><span>SIP Trunking</span>Make and receive calls from the cloud with your existing VoIP infrastructure.</a></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/number-insight"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Numbers-Insight.svg" alt=""><span>Number Insight</span>Get real-time intelligence on any phone number in the world.</a></div></div>
+<div class="col-md-12">
+<p class="lead hidden-xs">Learn about <a title="" rel="" href="https://www.nexmo.com/platform">The Nexmo Platform →</a></p></div>
+
+	</div>
+</div>
+	<div class="right"><h5><a href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">USE CASE APIs</a></h5> <p>Common use cases prebuilt with a simple API.</p><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/verify"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Verify.svg" alt=""><span>Verify</span>Robust mobile authentication and 2FA.</a></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/dispatch"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Dispatch.svg" alt=""><span>Dispatch <label>NEW</label></span>Multichannel message delivery with failover.</a></div><h4><a title="" rel="" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">PROGRAMMABLE PHONE NUMBERS</a></h4><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/products/phone-numbers"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/vpn.svg" alt=""><span>Virtual Phone Numbers</span>Local numbers available at global scale.</a></div><div class="nav-item"><a title="" rel="" href="https://www.nexmo.com/platform/short-codes"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Shortcodes.svg" alt=""><span>Shortcodes</span>Distinguish and brand your messages.</a></div></div>
+</li></ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/enterprise"><span>Enterprise</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-dropdown submenu"><a title="" rel="" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">Partners<span class="mob-head"><i class="fa fa-angle-left" aria-hidden="true"></i>Partners</span><span></span></a>
+<ul class="dropmenu" role="menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/partners/become-a-partner"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Become-Partner.svg" alt=""><span>Become a Partner</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/partners/showcase"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Find-Partner.svg" alt=""><span>Find a Partner</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-dropdown submenu"><a title="" rel="" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">Resources<span class="mob-head"><i class="fa fa-angle-left" aria-hidden="true"></i>Resources</span><span></span></a>
+<ul class="dropmenu" role="menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/use-cases"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Use-Cases.svg" alt=""><span>Use Cases</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/customers/"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/css.svg" alt=""><span>Customer Success Stories</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/blog"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Blog.svg" alt=""><span>Blog</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-dropdown submenu"><a title="" rel="" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#">Developer<span class="mob-head"><i class="fa fa-angle-left" aria-hidden="true"></i>Developer</span><span></span></a>
+<ul class="dropmenu" role="menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Documentation.svg" alt=""><span>Nexmo Developer</span>Build modern, high-quality voice applications in the cloud.</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/documentation"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Documentation.svg" alt=""><span>Documentation</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/tutorials"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Tutorials.svg" alt=""><span>Tutorials</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/api"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/API-Reference.svg" alt=""><span>API Reference</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/tools"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/SDKs-Tools.svg" alt=""><span>SDKs &amp; Tools</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://developer.nexmo.com/community"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Community.svg" alt=""><span>Community</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a title="" rel="" href="https://www.nexmo.com/pricing"><span>Pricing</span></a></li>
+</ul></div><a class="btn-main pull-right" href="https://dashboard.nexmo.com/sign-up">Try it Free</a>		
+    	</div>		
+    </header>
+</div>	<div id="content" class="site-content"><div class="blog-nav visible hidden-xs active">
+
+	<div class="container">
+
+		<div class="inner">
+
+			<div class="row">
+
+				<div class="col-md-7">
+
+					<ul class="blog-nav__category">
+
+						<li class="active"><a href="https://www.nexmo.com/blog" class="all">All Content</a></li>
+
+                        <li class="active"><a href="https://www.nexmo.com/blog/category/business/" class="business"><img width="14" height="11" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="img-responsive" alt=""> Business</a></li><li><a href="https://www.nexmo.com/blog/category/developer/" class="developer"><img width="14" height="14" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/developer.png" class="img-responsive" alt=""> Developer</a></li><li><a href="https://www.nexmo.com/blog/category/product/" class="product"><img width="14" height="14" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/product.png" class="img-responsive" alt=""> Product</a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-md-5">
+
+					<div class="pull-right">
+
+						<form method="get" class="blog-nav__search pull-right" action="https://www.nexmo.com/">
+
+							<input type="text" name="s" placeholder="Search" value="">
+
+						</form>
+
+						<div class="blog-nav_catlist pull-right">
+
+							<span>Categories <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+
+							<div class="cat-list">
+
+								<div class="row">
+
+                                    <div class="col-xs-6"><ul><li><a href="https://www.nexmo.com/blog/category/business/carriers/">Carriers</a></li><li><a href="https://www.nexmo.com/blog/category/business/cloud-communications/">Cloud Communications</a></li><li><a href="https://www.nexmo.com/blog/category/business/compliance/">Compliance</a></li><li><a href="https://www.nexmo.com/blog/category/business/contact-centers/">Contact Centers</a></li><li><a href="https://www.nexmo.com/blog/category/business/customer-support/">Customer Support</a></li><li><a href="https://www.nexmo.com/blog/category/business/customers/">Customers</a></li><li><a href="https://www.nexmo.com/blog/category/business/enterprise/">Enterprise</a></li><li><a href="https://www.nexmo.com/blog/category/business/events/">Events</a></li><li><a href="https://www.nexmo.com/blog/category/business/giving-back/">Giving Back</a></li><li><a href="https://www.nexmo.com/blog/category/business/partners/">Partners</a></li><li><a href="https://www.nexmo.com/blog/category/business/security/">Security</a></li><li><a href="https://www.nexmo.com/blog/category/business/user-acquisition/">User Acquisition</a></li></ul></div><div class="col-xs-6"><ul><li><a href="https://www.nexmo.com/blog/category/developer/developer-challenge/">Developer Challenge</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developer-spotlight/">Developer Spotlight</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developers/">Developers</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developers-corner/">Developers Corner</a></li><li><a href="https://www.nexmo.com/blog/category/developer/hack-worthy/">Hack-Worthy</a></li><li><a href="https://www.nexmo.com/blog/category/developer/real-time-communications/">Real-time Communications</a></li><li><a href="https://www.nexmo.com/blog/category/developer/tutorial/">Tutorial</a></li></ul></div><div class="col-xs-6"><ul><li><a href="https://www.nexmo.com/blog/category/product/award/">Award</a></li><li><a href="https://www.nexmo.com/blog/category/product/chat-app/">Chat App</a></li><li><a href="https://www.nexmo.com/blog/category/product/dashboard/">Dashboard</a></li><li><a href="https://www.nexmo.com/blog/category/product/disruption-discussion/">Disruption Discussion</a></li><li><a href="https://www.nexmo.com/blog/category/product/messaging/">Messaging</a></li><li><a href="https://www.nexmo.com/blog/category/product/nexmo-news/">Nexmo News</a></li><li><a href="https://www.nexmo.com/blog/category/product/number-insight/">Number Insight</a></li><li><a href="https://www.nexmo.com/blog/category/product/omnichannel/">Omnichannel</a></li><li><a href="https://www.nexmo.com/blog/category/product/sms/">SMS</a></li><li><a href="https://www.nexmo.com/blog/category/product/verify/">Verify</a></li><li><a href="https://www.nexmo.com/blog/category/product/video/">Video</a></li><li><a href="https://www.nexmo.com/blog/category/product/voice/">Voice</a></li></ul></div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<div class="blog-nav-mobile active">
+
+	<div class="blog-nav-popup">
+
+		<div class="popup-close">CLOSE X</div>
+
+		<ul class="blog-nav__category">
+
+			<li class="active"><a href="https://www.nexmo.com/blog" class="all">All Content</a></li>
+
+            <li class="active"><a href="https://www.nexmo.com/blog/category/business/" class="business"><img width="14" height="11" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="img-responsive" alt=""> Business</a></li><li><a href="https://www.nexmo.com/blog/category/developer/" class="developer"><img width="14" height="14" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/developer.png" class="img-responsive" alt=""> Developer</a></li><li><a href="https://www.nexmo.com/blog/category/product/" class="product"><img width="14" height="14" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/product.png" class="img-responsive" alt=""> Product</a></li>
+		</ul>
+
+		<div class="clearfix"></div>
+
+        <div class="cat-list"><span>Categories:</span><ul><li><a href="https://www.nexmo.com/blog/category/business/carriers/">Carriers</a></li><li><a href="https://www.nexmo.com/blog/category/business/cloud-communications/">Cloud Communications</a></li><li><a href="https://www.nexmo.com/blog/category/business/compliance/">Compliance</a></li><li><a href="https://www.nexmo.com/blog/category/business/contact-centers/">Contact Centers</a></li><li><a href="https://www.nexmo.com/blog/category/business/customer-support/">Customer Support</a></li><li><a href="https://www.nexmo.com/blog/category/business/customers/">Customers</a></li><li><a href="https://www.nexmo.com/blog/category/business/enterprise/">Enterprise</a></li><li><a href="https://www.nexmo.com/blog/category/business/events/">Events</a></li><li><a href="https://www.nexmo.com/blog/category/business/giving-back/">Giving Back</a></li><li><a href="https://www.nexmo.com/blog/category/business/partners/">Partners</a></li><li><a href="https://www.nexmo.com/blog/category/business/security/">Security</a></li><li><a href="https://www.nexmo.com/blog/category/business/user-acquisition/">User Acquisition</a></li></ul><ul><li><a href="https://www.nexmo.com/blog/category/developer/developer-challenge/">Developer Challenge</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developer-spotlight/">Developer Spotlight</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developers/">Developers</a></li><li><a href="https://www.nexmo.com/blog/category/developer/developers-corner/">Developers Corner</a></li><li><a href="https://www.nexmo.com/blog/category/developer/hack-worthy/">Hack-Worthy</a></li><li><a href="https://www.nexmo.com/blog/category/developer/real-time-communications/">Real-time Communications</a></li><li><a href="https://www.nexmo.com/blog/category/developer/tutorial/">Tutorial</a></li></ul><ul><li><a href="https://www.nexmo.com/blog/category/product/award/">Award</a></li><li><a href="https://www.nexmo.com/blog/category/product/chat-app/">Chat App</a></li><li><a href="https://www.nexmo.com/blog/category/product/dashboard/">Dashboard</a></li><li><a href="https://www.nexmo.com/blog/category/product/disruption-discussion/">Disruption Discussion</a></li><li><a href="https://www.nexmo.com/blog/category/product/messaging/">Messaging</a></li><li><a href="https://www.nexmo.com/blog/category/product/nexmo-news/">Nexmo News</a></li><li><a href="https://www.nexmo.com/blog/category/product/number-insight/">Number Insight</a></li><li><a href="https://www.nexmo.com/blog/category/product/omnichannel/">Omnichannel</a></li><li><a href="https://www.nexmo.com/blog/category/product/sms/">SMS</a></li><li><a href="https://www.nexmo.com/blog/category/product/verify/">Verify</a></li><li><a href="https://www.nexmo.com/blog/category/product/video/">Video</a></li><li><a href="https://www.nexmo.com/blog/category/product/voice/">Voice</a></li></ul></div>
+	</div>
+
+	<div class="container">
+
+		<div class="inner">
+
+			<div class="row">
+
+				<div class="col-xs-7">
+
+					<div class="blog-nav-trigger active">All Content <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+
+				</div>
+
+				<div class="col-xs-5">
+
+					<div class="pull-right">
+
+                        <form method="get" class="blog-nav__search pull-right" action="https://www.nexmo.com/">
+
+							<input type="text" name="s" placeholder="Search" value="">
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="bcrumbs">
+
+	<div class="container">
+
+		<ul>
+
+            <!-- Breadcrumb NavXT 6.2.1 -->
+<li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Nexmo." href="https://www.nexmo.com/" class="home"><span property="name">Nexmo</span></a><meta property="position" content="1"></span></li>
+<li class="post-root post post-post"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Blog." href="https://www.nexmo.com/blog/" class="post-root post post-post"><span property="name">Blog</span></a><meta property="position" content="2"></span></li>
+<li class="taxonomy category"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Developer category archives." href="https://www.nexmo.com/blog/category/developer/" class="taxonomy category"><span property="name">Developer</span></a><meta property="position" content="3"></span></li>
+<li class="taxonomy category"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Real-time Communications category archives." href="https://www.nexmo.com/blog/category/developer/real-time-communications/" class="taxonomy category"><span property="name">Real-time Communications</span></a><meta property="position" content="4"></span></li>
+<li class="post post-post current-item"><span property="itemListElement" typeof="ListItem"><span property="name">What Is Real Time Communications?</span><meta property="position" content="5"></span></li>
+
+		</ul>
+
+	</div>
+
+</div>             <div class="main-inner">
+            	<div class="container">
+                    <div class="blog-single">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8 col-md-offset-2">
+                    				<div class="blog-thumb">
+    					<img width="640" height="401" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/UseCases_color_callcenter.jpg" class="img-full wp-post-image" alt="Real time communications use case in-app messaging to contact center.">    				</div>
+                                                <div class="post-header">
+					<label class="text-violet"><img width="21" height="17" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="attachment-21x21 size-21x21" alt=""> Business</label><h1 class="h2">What Is Real Time Communications?</h1><div class="blog-single__meta">
+            						Published July 05, 2017 by <a href="https://www.nexmo.com/blog/author/derek-handova/">Derek Handova</a>
+            					</div><div class="blog-single__cat"><span>Categories:</span><a href="https://www.nexmo.com/blog/category/business/" rel="tag">Business</a> <a href="https://www.nexmo.com/blog/category/developer/real-time-communications/" rel="tag">Real-time Communications</a></div><div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide"><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span><span class="swp_count">101</span></a></div><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span><span class="swp_count">62</span></a></div><div class="nc_tweetContainer swp_share_button swp_pocket" data-network="pocket"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://getpocket.com/save?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dpocket%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://getpocket.com/save?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dpocket%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pocket_icon"></i><span class="swp_share">Pocket</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_reddit" data-network="reddit"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_reddit_icon"></i><span class="swp_share">Reddit</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://twitter.com/intent/tweet?text=What+Is+Real+Time+Communications%3F&amp;url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://twitter.com/intent/tweet?text=What+Is+Real+Time+Communications%3F&amp;url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_buffer" data-network="buffer"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://bufferapp.com/add?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dbuffer%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog&amp;text=What+Is+Real+Time+Communications%3F" data-link="https://bufferapp.com/add?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dbuffer%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog&amp;text=What+Is+Real+Time+Communications%3F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_buffer_icon"></i><span class="swp_share">Buffer</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button total_shares total_sharesalt"><span class="swp_count ">163 <span class="swp_label">Shares</span></span></div></div>		
+                    	
+					<div class="sep bg-violet"></div>
+                  </div>  
+                  <div class="post-text" id="post-violet">
+                     <p><b>Real time communications</b><span style="font-weight: 400;">&nbsp;is the near simultaneous exchange of information over any type of telecommunications service from the sender to the receiver in a connection with negligible latency, according to </span><a href="http://searchunifiedcommunications.techtarget.com/definition/real-time-communications"><span style="font-weight: 400;">SearchUnified Communications</span></a><span style="font-weight: 400;">. Examples of real time communications include:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Voice over landlines and mobile phones </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">VoIP </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Instant messaging (e.g., WhatsApp, WeChat), </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Video and teleconferencing </span></li>
+<li style="font-weight: 400;"><a href="http://www.economist.com/news/technology-quarterly/21572916-robotics-remotely-controlled-telepresence-robots-let-people-be-two-places"><span style="font-weight: 400;">Robotic telepresence</span></a></li>
+</ul>
+<p><span style="font-weight: 400;">However, real time communications does not include email, bulletin boards, blogs or other forms of internet communication where users read content without regard to the time the sender posts it, which can create a significant delay between data transmission and reception. </span></p>
+<p><span style="font-weight: 400;">In addition, real time communications is never stored in an interim state anywhere between the transmitter and the receiver, as defined by </span><a href="https://www.techopedia.com/definition/24426/real-time-communications-rtc"><span style="font-weight: 400;">Techopedia</span></a><span style="font-weight: 400;">. Within that context, think of “real time communications” as a synonym for “live communications.”</span></p>
+<p><span style="font-weight: 400;">In a communication of this type, there is a return path where the receiver can also communicate with the sender in real time. Real time communications can take place in half duplex or full duplex:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Half duplex—communications in one channel in one direction at a time. Sender or receiver can send but not receive at the same time (think of an old-style walkie-talkie where the user has to say “over” to tell the person on the other end that she can speak)</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Full duplex—sender and receiver can send and receive messages simultaneously in two parallel communication pathways</span></li>
+</ul>
+<p><a href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/duplex.jpg"><img class="alignnone wp-image-14518 size-full" title="Real-time Communications" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/duplex.jpg" alt="Real-time communications occur-in-half-duplex-and-full-duplex" width="1009" height="317"></a></p>
+<h2><span style="font-weight: 400;">Why is Real Time Communications Important?</span></h2>
+<p><span style="font-weight: 400;">Real time communications is important to consumers and business customers because in the wake of widespread adoption of smartphones they have come to expect immediacy in customer service and information exchange. For example, a passenger who has missed a connecting flight may contact the reservations center via the airline’s app while stranded at the intervening hub. </span></p>
+<p><span style="font-weight: 400;">In this use case posed in </span><a href="http://www.nojitter.com/post/240170728/creating-contextrich-realtime-communications"><i><span style="font-weight: 400;">No Jitter</span></i></a><span style="font-weight: 400;">, the customer will get the best service if the reservations center understands the context of the passenger’s problem at the </span><i><span style="font-weight: 400;">exact time</span></i><span style="font-weight: 400;"> of the contact. Its agents should have already received the relevant flight update. Saving the passenger from having to detail the situation one or more times will decrease time to resolution as well as improve the customer experience.</span></p>
+<p><a href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/UseCases_airlineapp.jpg"><img class="alignnone wp-image-14515 size-full" title="Real-time communications" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/UseCases_airlineapp.jpg" alt="Real-time communications use-case-app-to-airline-reservation-center-rebook-flight" width="1200" height="618"></a></p>
+<p><span style="font-weight: 400;">“That agent should have that and other passenger profile information at his or her disposal, as well as where exactly in the world that traveler might be, down to the terminal and gate, and to where he wants to get,” said Dean Bubley, founder of </span><a href="http://disruptivewireless.blogspot.com/"><span style="font-weight: 400;">Disruptive Analysis</span></a><span style="font-weight: 400;">, a tech/telecom analyst firm, to </span><i><span style="font-weight: 400;">No Jitter</span></i><span style="font-weight: 400;">. “In other words, when time is of the essence, the traveler needn’t waste any of it providing the context for his call.”</span></p>
+<h2><span style="font-weight: 400;">Real Time Communications for Business</span></h2>
+<p><span style="font-weight: 400;">While real time communications may seem relatively new to consumers, businesses have used the functionality for somewhat longer. For example, real time communications has been available for years to companies in cloud communications messaging applications like HipChat, Skype, Slack and others for enterprise collaboration, according to </span><a href="http://searchunifiedcommunications.techtarget.com/tip/Messaging-platforms-flout-traditional-real-time-telephony"><span style="font-weight: 400;">SearchUnified Communications</span></a><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">“Web-based flexibility is part of the appeal of messaging platforms,” said Jon Arnold, principal, </span><a href="https://www.jarnoldassociates.com/"><span style="font-weight: 400;">J Arnold &amp; Associates</span></a><span style="font-weight: 400;">, an independent technology research and analyst firm, in SearchUnified Communications. “So users can have both real-time and near-real-time options. Slack and other similar providers can provide both modes of collaboration.”</span></p>
+<p><span style="font-weight: 400;">And now voice communications have come into more common usage in real time communications apps, bypassing traditional telephony providers. For example, in Southeast Asia </span><a href="https://www.nexmo.com/blog/2016/12/08/grab-drives-southeast-asia-forward-international-sms-voice/"><span style="font-weight: 400;">real-time ride-hailing app and platform Grab</span></a><span style="font-weight: 400;"> goes over the top of unreliable local carrier infrastructure to communicate directly with customers through voice messages delivered via </span><a href="https://www.nexmo.com/products/voice"><span style="font-weight: 400;">Voice API</span></a><span style="font-weight: 400;"> through a worldwide, low latency cloud communications network. Communicating in a </span><a href="https://www.vonage.com/business/what-we-do/unified-communications/"><span style="font-weight: 400;">unified communications</span></a><span style="font-weight: 400;"> app with this enhanced capability can save businesses and their workers time and money.</span></p>
+<p><a href="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/car_hail.jpg"><img class="alignnone wp-image-14512 size-full" title="Real-time communications" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/car_hail.jpg" alt="Real-time communications use-voice-messaging-for-car-hail" width="1200" height="751"></a></p>
+<p><span style="font-weight: 400;">Furthermore, business use cases for real time communications have now expanded into other commercial fields. For example, in workplaces without an office proper (e.g., restaurants, retail stores) where the job description of the employees includes being “on their feet” and “on the go” constantly, they can now use real time communications for task coordination, employee scheduling, work news and more. </span></p>
+<p><span style="font-weight: 400;">In one use case, real-time messaging on an app can replace blanket emails to employees about internal announcements, which increases engagement and elicits questions from employees in a way that asynchronous email never could, as one manager related in a recent </span><em><a href="https://www.forbes.com/sites/miguelhelft/2017/05/04/with-25-million-from-sequoia-greylock-crew-wants-to-be-the-slack-for-truly-mobile-workers/#6533797d1bf3"><span style="font-weight: 400;">Forbes</span></a></em><span style="font-weight: 400;"> article. This kind of real time communications can optimally benefit personnel who generally work in shifts for groups as diverse as nurses, landscapers, emergency first responders, waiters, sales associates and even baggage handlers.</span></p>
+<h2><span style="font-weight: 400;">Effort to Make Real Time Communications a Reality</span></h2>
+<p><span style="font-weight: 400;">Since the early </span><a href="http://www.livinginternet.com/i/ii_arpanet.htm"><span style="font-weight: 400;">ARPANET</span></a><span style="font-weight: 400;">, every effort has been made to make the internet faster and faster. This led independent developers and research labs to innovate better and better technology. But because not everyone knew what others in the field were doing, incompatible solutions resulted. For real time communications, they have sought to avoid conflicting technologies through standardization. </span></p>
+<p><span style="font-weight: 400;">In 2011, a joint effort got underway by the the Internet Engineering Task Force (IETF) and the World Wide Web Consortium (W3C) to standardize real time communications across the internet, according to <em><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7823348">IEEE&nbsp;Standards Communications&nbsp;Magazine</a></em></span><span style="font-weight: 400;">. This effort includes support for protocols, API requirements, interworking with legacy VoIP and advancements in congestion and flow control as well as the overall communications infrastructure. </span></p>
+<p><span style="font-weight: 400;">This standardization drive intends to enable all interested parties to reach consensus on a well-defined set of protocols and APIs for widespread deployment of the real time communications experience, in the words of IEEE. That way web developers, browser vendors and application and telecommunications providers can leverage the market in order to offer end users interoperable, media-rich, web-enabled products.</span></p>
+<h2><span style="font-weight: 400;">Future of Real Time Communications</span></h2>
+<p><span style="font-weight: 400;">With </span><a href="http://www.gartner.com/newsroom/id/3165317"><span style="font-weight: 400;">Gartner</span></a><span style="font-weight: 400;"> predicting more than 20.8 billion </span><a href="http://www.iotevolutionworld.com/m2m/articles/229487-what-a-connected-device-why-does-it-matter.htm"><span style="font-weight: 400;">connected things</span></a><span style="font-weight: 400;"> (e.g., phones, tablets, PCs, remote sensors, routers) by 2020, the internet of everything must become a real time communications network. A glimmer of this future can already be seen in the utility and disruption in the case of the Uber car-sharing app/service. A customer needs a ride </span><i><span style="font-weight: 400;">now</span></i><span style="font-weight: 400;"> and a driver is available for hire </span><i><span style="font-weight: 400;">now</span></i><span style="font-weight: 400;">. While a simple transactional relationship of money for transportation that has occurred for thousands of years, the real revolution enabled by real time communications happens on the </span><a href="https://www.techopedia.com/definition/1405/back-end-system"><span style="font-weight: 400;">back-end systems</span></a><span style="font-weight: 400;">, notes </span><a href="http://telecoms.com/opinion/the-ultimate-exchange-when-real-time-communications-meets-the-internet-of-things/"><i><span style="font-weight: 400;">Telecoms.com</span></i></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The industry news site reports that </span><a href="http://www.webopedia.com/TERM/A/API.html"><span style="font-weight: 400;">APIs</span></a><span style="font-weight: 400;"> and </span><a href="https://www.nexmo.com/platform"><span style="font-weight: 400;">communications platform as a service</span></a><span style="font-weight: 400;"> have enabled the “online consumption model” by connecting devices, machines and humans for mass exchange of data, information and ideas. In this model, APIs serve as a kind of “digital currency.” And by </span><a href="https://zapier.com/learn/apis/chapter-7-real-time-communication/"><span style="font-weight: 400;">integrating real time communications</span></a><span style="font-weight: 400;">&nbsp;directly into their applications and business processes, companies can leverage them for efficient, reliable and secure transactions, according to </span><i><span style="font-weight: 400;">Telecoms.com</span></i><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">Furthermore, </span><a href="https://www.idc.com/getdoc.jsp?containerId=IDC_P34731"><span style="font-weight: 400;">IDC</span></a><span style="font-weight: 400;"> forecasts that by embedding voice, video and messaging via APIs, real time communications will ease solution creation. And the potential for real time communications remains strong with a forecasted compounded annual growth rate of 50.9 percent from 2015 to 2020 with a total projected market value of $4.45 billion by 2020, as a </span><a href="http://www.marketwatch.com/story/web-real-time-communication-market-worth-445-billion-usd-by-2020-2016-03-23-102033115"><i><span style="font-weight: 400;">MarketWatch</span></i></a><span style="font-weight: 400;"> research report states. </span></p>
+<p><span style="font-weight: 400;">In addition, service integration into mobile apps, web sites and business processes will become simpler. As IDC sees it, API-powered real time communications will enable underpricing and outperformance of traditional communication solutions. </span></p>
+<h2><span style="font-weight: 400;">‘Blue Ocean’ Opportunity for Real Time Communications Developers</span></h2>
+<p><span style="font-weight: 400;">Overall, real-time communications has strong appeal among developers, entrepreneurs, product managers and IT managers, in the opinions of some <a href="https://www.nexmo.com/blog/2017/04/04/top-3-communication-industry-trends/">communication industry</a> experts. That could be because they consider the real time communications market to be a “blue ocean” opportunity, which means it’s uncontested and holds tremendous potential for even the smaller enterprises, as forecast by some market researchers. As an example, they envisage real time communications providing an easy way for SMBs to shift from traditional communication solutions to user-centric business communication, enabling attraction of new customers through click-to-call services, in one use case.</span></p>
+<p><span style="font-weight: 400;">Whatever the future holds, real time communications will only grow in importance as enterprises consider it more vital for day-to-day operations with each sunrise. Because instant and secure communications are a basic requirement for enterprises today, whether its real-time voice, video or instant messaging, as one senior communications sector executive writes in </span><em><a href="http://www.itproportal.com/features/real-time-communications-in-the-cloud-separating-myth-from-reality/"><span style="font-weight: 400;">ITProPortal</span></a></em><span style="font-weight: 400;">.</span></p>
+<div class="swp-hidden-panel-wrap" style="display: none; visibility: collapse; opacity: 0"></div><div class="swp-content-locator"></div>                  </div>
+                    
+                  <div class="post-footer">
+                        
+                        <!--Call to action -->
+                        <div class="swp_social_panel swp_horizontal_panel swp_flat_fresh  swp_default_full_color swp_other_full_color swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide"><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span><span class="swp_count">101</span></a></div><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span><span class="swp_count">62</span></a></div><div class="nc_tweetContainer swp_share_button swp_pocket" data-network="pocket"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://getpocket.com/save?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dpocket%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://getpocket.com/save?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dpocket%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pocket_icon"></i><span class="swp_share">Pocket</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_reddit" data-network="reddit"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_reddit_icon"></i><span class="swp_share">Reddit</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://twitter.com/intent/tweet?text=What+Is+Real+Time+Communications%3F&amp;url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog" data-link="https://twitter.com/intent/tweet?text=What+Is+Real+Time+Communications%3F&amp;url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_buffer" data-network="buffer"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://bufferapp.com/add?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dbuffer%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog&amp;text=What+Is+Real+Time+Communications%3F" data-link="https://bufferapp.com/add?url=https%3A%2F%2Fwww.nexmo.com%2Fblog%2F2017%2F07%2F05%2Freal-time-communications%2F%3Futm_source%3Dbuffer%26utm_medium%3Dsocial%26utm_campaign%3DNexmoBlog&amp;text=What+Is+Real+Time+Communications%3F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_buffer_icon"></i><span class="swp_share">Buffer</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button total_shares total_sharesalt"><span class="swp_count ">163 <span class="swp_label">Shares</span></span></div></div><div class="post-tags"><span>Tags: </span><a href="https://www.nexmo.com/blog/tag/real-time-communications/" rel="tag">real-time communications</a>, <a href="https://www.nexmo.com/blog/tag/unified-communications/" rel="tag">unified communications</a>, <a href="https://www.nexmo.com/blog/tag/voip/" rel="tag">VoIP</a></div>                        <div class="author-info__big">
+                    		<div class="row">
+                    			<div class="col-md-12">
+                                    <img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/Derek-Handova.jpg" class="img-circle"><h4><a href="https://www.nexmo.com/blog/author/derek-handova/">Derek Handova</a></h4><cite> <b>·</b> Content Writer</cite><p>Derek Handova is an enthusiastic white paper writer and brand journalist in the B2B and technology spaces. In the past, he has led content creation efforts at prominent companies such as Altera, Solectron Corporation, BearingPoint Inc. and other Silicon Valley icons. He currently works in content at Nexmo, the Vonage API platform.</p>                                    <a href="https://www.nexmo.com/blog/author/derek-handova/" class="more">See All Posts by Derek Handova  <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+                                    <div class="social">
+                    
+                                        
+                                                            
+                                            <a target="_blank" href="http://dereknexmo/" class="tweet" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    
+                                                            
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
+                    
+<div id="comments" class="comments-area comments">
+
+	<div class="leave-a-reply">	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.nexmo.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes">Your email address will not be published.</p><textarea id="comment" name="comment" rows="6" placeholder="Comment*"></textarea><input id="author" name="author" type="text" placeholder="Name*" value="" aria-required="true">
+<input id="email" name="email" type="text" placeholder="Email*" value="" aria-required="true">
+<input id="url" name="url" type="text" placeholder="Website*" value="">
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="btn-main" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="13663" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="89afd9ee93"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1554874390858"></form>
+			</div><!-- #respond -->
+	</div>
+</div><!-- #comments -->
+				</div>
+            </div>
+        </div>
+    </div>    <div class="main-inner related-p">
+        <div class="container">
+            <h3 class="heading">Related</h3>
+            <div class="row">
+                                        <div class="col-sm-4 mob-30">
+                                    <a href="https://www.nexmo.com/blog/2019/04/09/ar-vr-mr-xr-demystified/">   
+                            <div class="article business-post no-margin"><div class="blog-thumb">
+                                                    				
+                                        <img width="400" height="200" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/AR-VR-MR-Demystified-600x300.jpg" class="img-full wp-post-image" alt="" srcset="https://www.nexmo.com/wp-content/uploads/2019/04/AR-VR-MR-Demystified-600x300.jpg 600w, https://www.nexmo.com/wp-content/uploads/2019/04/AR-VR-MR-Demystified-1200x600.jpg 1200w" sizes="(max-width: 400px) 100vw, 400px">                    				
+                                                    			</div><div class="blog-excerpt">
+                    				<small class="text-violet"><img width="14" height="11" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="attachment-14x14 size-14x14" alt=""> Business</small><h3>AR, VR, MR, XR Demystified</h3><div class="blog-excerpt__meta">Published April 09, 2019 by Alyssa Mazzina</div><p>2019 is the year of automation in customer communication. But what’s coming next?
+
+While you’re developing your strategy around chatbots, ...</p>                    			</div>
+                                	    </div>
+                                    </a>
+                                </div>
+                                                <div class="col-sm-4 mob-30">
+                                    <a href="https://www.nexmo.com/blog/2019/04/04/whatsapp-business-api-revisited/">   
+                            <div class="article business-post no-margin"><div class="blog-thumb">
+                                                    				
+                                        <img width="400" height="200" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/WA-Delivery-600x300.jpg" class="img-full wp-post-image" alt="" srcset="https://www.nexmo.com/wp-content/uploads/2019/04/WA-Delivery-600x300.jpg 600w, https://www.nexmo.com/wp-content/uploads/2019/04/WA-Delivery-1200x600.jpg 1200w" sizes="(max-width: 400px) 100vw, 400px">                    				
+                                                    			</div><div class="blog-excerpt">
+                    				<small class="text-violet"><img width="14" height="11" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="attachment-14x14 size-14x14" alt=""> Business</small><h3>WhatsApp Business API Revisited</h3><div class="blog-excerpt__meta">Published April 04, 2019 by Hugh Hopkins</div><p>WhatsApp has 1.5 billion users. That’s one fifth of the world’s population. In fact, WhatsApp is so widespread that, ...</p>                    			</div>
+                                	    </div>
+                                    </a>
+                                </div>
+                                                <div class="col-sm-4 mob-30">
+                                    <a href="https://www.nexmo.com/blog/2019/03/28/mortgage-buddy-ai-finance/">   
+                            <div class="article business-post no-margin"><div class="blog-thumb">
+                                                    				
+                                        <img width="400" height="200" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/unnamed-3-600x300.jpg" class="img-full wp-post-image" alt="" srcset="https://www.nexmo.com/wp-content/uploads/2019/03/unnamed-3-600x300.jpg 600w, https://www.nexmo.com/wp-content/uploads/2019/03/unnamed-3-1200x600.jpg 1200w" sizes="(max-width: 400px) 100vw, 400px">                    				
+                                                    			</div><div class="blog-excerpt">
+                    				<small class="text-violet"><img width="14" height="11" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/business.png" class="attachment-14x14 size-14x14" alt=""> Business</small><h3>Mortgage Buddy: AI in Finance</h3><div class="blog-excerpt__meta">Published March 28, 2019 by Alyssa Mazzina</div><p>Filling out forms can be stressful. There’s even a social media term for it: formophobia.
+
+But, for most people, it’s ...</p>                    			</div>
+                                	    </div>
+                                    </a>
+                                </div>
+                                    </div>
+        </div>
+    </div>
+                    
+                </div>
+            </div>
+                            <div class="cta-footer">
+            		<div class="container">
+            			<div class="row">
+                            <!-- Widget Shortcode -->        <div class="cta_footer_widget">
+		<div class="col-sm-8">
+			<div class="cta-subscribe2">
+                <h4>Get the latest posts from Nexmo’s next-generation communications blog delivered to your inbox.</h4>    
+				
+				<small>Select Your Subscription Edition</small>                <div class="cta-subscribe2__tabs">
+					<ul class="nav nav-tabs nav-justified">
+												   <li class="active"><a href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#developer-form2" data-toggle="tab"><span>Developer</span></a></li>
+                        						   <li><a href="https://www.nexmo.com/blog/2017/07/05/real-time-communications/#business-form2" data-toggle="tab"><span>Business</span></a></li>
+                        					</ul>
+					<div class="tab-content">
+						    						<div class="tab-pane active in" id="developer-form2">
+    							
+                <div class="gf_browser_chrome gform_wrapper subscribe-footer_wrapper" id="gform_wrapper_25"><form method="post" enctype="multipart/form-data" target="gform_ajax_frame_25" id="gform_25" class="subscribe-footer" action="https://www.nexmo.com/blog/2017/07/05/real-time-communications/">
+                        <div class="gform_body"><ul id="gform_fields_25" class="gform_fields top_label form_sublabel_below description_below"><li id="field_25_1" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible"><label class="gfield_label" for="input_25_1">Email<span class="gfield_required">*</span></label><div class="ginput_container ginput_container_email">
+                            <input name="input_1" id="input_25_1" type="email" value="" class="medium" placeholder="Email Address" aria-required="true" aria-invalid="false">
+                        </div></li>
+                            </ul></div>
+        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_25" class="gform_button button" value="Subscribe" onclick="if(window[&quot;gf_submitting_25&quot;]){return false;}  if( !jQuery(&quot;#gform_25&quot;)[0].checkValidity || jQuery(&quot;#gform_25&quot;)[0].checkValidity()){window[&quot;gf_submitting_25&quot;]=true;}  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_25&quot;]){return false;} if( !jQuery(&quot;#gform_25&quot;)[0].checkValidity || jQuery(&quot;#gform_25&quot;)[0].checkValidity()){window[&quot;gf_submitting_25&quot;]=true;}  jQuery(&quot;#gform_25&quot;).trigger(&quot;submit&quot;,[true]); }"> <input type="hidden" name="gform_ajax" value="form_id=25&amp;title=&amp;description=&amp;tabindex=0">
+            <input type="hidden" class="gform_hidden" name="is_submit_25" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="25">
+            
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_25" value="WyJbXSIsIjVhNmY4ZjY1NTE3ZjM1YzVkYThmYTk4YWNiZDc2YTNmIl0=">
+            <input type="hidden" class="gform_hidden" name="gform_target_page_number_25" id="gform_target_page_number_25" value="0">
+            <input type="hidden" class="gform_hidden" name="gform_source_page_number_25" id="gform_source_page_number_25" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                        </form>
+                        </div>
+                <iframe style="display:none;width:0px;height:0px;" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/saved_resource.html" name="gform_ajax_frame_25" id="gform_ajax_frame_25" title="Ajax Frame">This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                <script type="text/javascript">jQuery(document).ready(function($){gformInitSpinner( 25, 'https://www.nexmo.com/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_25').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_25');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_25').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;if(is_form){jQuery('#gform_wrapper_25').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_25').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_25').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_25').val();gformInitSpinner( 25, 'https://www.nexmo.com/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [25, current_page]);window['gf_submitting_25'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_25').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [25]);window['gf_submitting_25'] = false;}, 50);}else{jQuery('#gform_25').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [25, current_page]);} );} );</script><script type="text/javascript"> if(typeof gf_global == 'undefined') var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.nexmo.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.nexmo.com\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 25) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [25, 1]) } ); </script>								
+								<small class="disc">
+								By signing up to our communications blog, you accept our <a href="https://www.nexmo.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a> , which sets out how we use your data and the rights you have in respect of your data.  You can opt out of receiving our updates by clicking the unsubscribe link in the email or by emailing us at <a href="mailto:privacy@nexmo.com">privacy@nexmo.com</a>.</small>
+												
+    						</div>
+                            						<div class="tab-pane" id="business-form2">
+    							
+                <div class="gf_browser_chrome gform_wrapper subscribe-footer_wrapper" id="gform_wrapper_28"><form method="post" enctype="multipart/form-data" target="gform_ajax_frame_28" id="gform_28" class="subscribe-footer" action="https://www.nexmo.com/blog/2017/07/05/real-time-communications/">
+                        <div class="gform_body"><ul id="gform_fields_28" class="gform_fields top_label form_sublabel_below description_below"><li id="field_28_1" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible"><label class="gfield_label" for="input_28_1">Email<span class="gfield_required">*</span></label><div class="ginput_container ginput_container_email">
+                            <input name="input_1" id="input_28_1" type="email" value="" class="medium" placeholder="Email Address" aria-required="true" aria-invalid="false">
+                        </div></li>
+                            </ul></div>
+        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_28" class="gform_button button" value="Subscribe" onclick="if(window[&quot;gf_submitting_28&quot;]){return false;}  if( !jQuery(&quot;#gform_28&quot;)[0].checkValidity || jQuery(&quot;#gform_28&quot;)[0].checkValidity()){window[&quot;gf_submitting_28&quot;]=true;}  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_28&quot;]){return false;} if( !jQuery(&quot;#gform_28&quot;)[0].checkValidity || jQuery(&quot;#gform_28&quot;)[0].checkValidity()){window[&quot;gf_submitting_28&quot;]=true;}  jQuery(&quot;#gform_28&quot;).trigger(&quot;submit&quot;,[true]); }"> <input type="hidden" name="gform_ajax" value="form_id=28&amp;title=&amp;description=&amp;tabindex=0">
+            <input type="hidden" class="gform_hidden" name="is_submit_28" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="28">
+            
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_28" value="WyJbXSIsIjVhNmY4ZjY1NTE3ZjM1YzVkYThmYTk4YWNiZDc2YTNmIl0=">
+            <input type="hidden" class="gform_hidden" name="gform_target_page_number_28" id="gform_target_page_number_28" value="0">
+            <input type="hidden" class="gform_hidden" name="gform_source_page_number_28" id="gform_source_page_number_28" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                        </form>
+                        </div>
+                <iframe style="display:none;width:0px;height:0px;" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/saved_resource(1).html" name="gform_ajax_frame_28" id="gform_ajax_frame_28" title="Ajax Frame">This iframe contains the logic required to handle Ajax powered Gravity Forms.</iframe>
+                <script type="text/javascript">jQuery(document).ready(function($){gformInitSpinner( 28, 'https://www.nexmo.com/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_28').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_28');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_28').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;if(is_form){jQuery('#gform_wrapper_28').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_28').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_28').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_28').val();gformInitSpinner( 28, 'https://www.nexmo.com/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [28, current_page]);window['gf_submitting_28'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_28').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [28]);window['gf_submitting_28'] = false;}, 50);}else{jQuery('#gform_28').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [28, current_page]);} );} );</script><script type="text/javascript"> if(typeof gf_global == 'undefined') var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/www.nexmo.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.nexmo.com\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 28) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [28, 1]) } ); </script>								
+								<small class="disc">
+								By signing up to our communications blog, you accept our <a href="https://www.nexmo.com/privacy-policy" target="_blank" rel="noopener">privacy policy</a> , which sets out how we use your data and the rights you have in respect of your data.  You can opt out of receiving our updates by clicking the unsubscribe link in the email or by emailing us at <a href="mailto:privacy@nexmo.com">privacy@nexmo.com</a>.</small>								
+    						</div>
+                        					</div>
+				</div>
+				
+			</div>
+		</div>
+        <!-- /Widget Shortcode --><!-- Widget Shortcode -->			<div class="col-sm-4">
+				<div class="cta-text">
+                    <h4>Let's build something great together.</h4><a target="_blank" href="https://dashboard.nexmo.com/sign-up" class="btn-main" rel="noopener">Try It Free</a><a target="_blank" href="https://nexmo.com/contact-sales" class="btn-secondary btn-two" rel="noopener">Contact Sales</a>				</div>
+		</div>
+        <!-- /Widget Shortcode -->                        </div>
+                    </div>
+                </div>
+            
+	</div><!-- #content -->
+
+	<div class="footer">
+		<div class="container">
+			<div class="content">
+                <div id="nav_menu-7" class="list widget_nav_menu"><h5 class="footer__title">Products</h5><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-27067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27067"><a href="https://www.nexmo.com/products/voice">Voice API</a></li>
+<li id="menu-item-26848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26848"><a href="https://www.nexmo.com/products/sms">SMS API</a></li>
+<li id="menu-item-26851" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26851"><a href="https://www.nexmo.com/products/verify">Chat App</a></li>
+<li id="menu-item-26854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26854"><a href="https://www.nexmo.com/products/verify">Verify</a></li>
+<li id="menu-item-26857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26857"><a href="https://www.nexmo.com/products/number-insight">Number Insight</a></li>
+<li id="menu-item-26860" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26860"><a href="https://www.nexmo.com/products/sip-trunking">SIP Trunking</a></li>
+<li id="menu-item-26863" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26863"><a href="https://www.nexmo.com/products/phone-numbers">Virtual Phone Numbers</a></li>
+<li id="menu-item-26866" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26866"><a href="https://www.nexmo.com/pricing">Pricing</a></li>
+</ul></div></div><div id="nav_menu-8" class="list widget_nav_menu"><h5 class="footer__title">Resources</h5><div class="menu-resources-container"><ul id="menu-resources" class="menu"><li id="menu-item-27151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27151"><a href="https://www.nexmo.com/use-cases">Use Cases</a></li>
+<li id="menu-item-26932" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26932"><a href="https://nexmo.com/blog">Blog</a></li>
+<li id="menu-item-26935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26935"><a href="https://developer.nexmo.com/">Docs</a></li>
+<li id="menu-item-27160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27160"><a href="https://help.nexmo.com/hc/en-us">Support</a></li>
+<li id="menu-item-26941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26941"><a href="https://www.nexmostatus.com/">API Status</a></li>
+</ul></div></div><div id="nav_menu-9" class="list widget_nav_menu"><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-27145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27145"><a href="https://docs.nexmo.com/">Docs</a></li>
+<li id="menu-item-27106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27106"><a href="https://docs.nexmo.com/messaging">Messaging</a></li>
+<li id="menu-item-27109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27109"><a href="https://docs.nexmo.com/voice/voice">Voice</a></li>
+<li id="menu-item-27112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27112"><a href="https://docs.nexmo.com/verify">Verify</a></li>
+<li id="menu-item-27115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27115"><a href="https://docs.nexmo.com/number-insight">Number Insight</a></li>
+<li id="menu-item-27118" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27118"><a href="https://docs.nexmo.com/tools">Tools</a></li>
+<li id="menu-item-27121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27121"><a href="https://docs.nexmo.com/tools/libraries">Libraries</a></li>
+<li id="menu-item-27124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27124"><a href="https://docs.nexmo.com/tutorials">Tutorials</a></li>
+</ul></div></div><div id="nav_menu-10" class="list widget_nav_menu"><div class="menu-footer-3-container"><ul id="menu-footer-3" class="menu"><li id="menu-item-26926" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26926"><a href="https://www.nexmo.com/use-cases">Use Cases</a></li>
+<li id="menu-item-27127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27127"><a href="https://www.nexmo.com/use-cases/private-sms-communication">Private SMS Communication</a></li>
+<li id="menu-item-27130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27130"><a href="https://www.nexmo.com/use-cases/sms-customer-support">SMS Customer Support</a></li>
+<li id="menu-item-27133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27133"><a href="https://www.nexmo.com/use-cases/spam-and-botnet-prevention">Spam and Botnet Prevention</a></li>
+<li id="menu-item-27136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27136"><a href="https://www.nexmo.com/use-cases/voice-enabled-contact-center">Voice Enabled Contact Center</a></li>
+<li id="menu-item-26917" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26917"><a href="https://www.nexmo.com/use-cases/real-time-sentiment-analysis">Real-time Sentiment Analysis</a></li>
+<li id="menu-item-26920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26920"><a href="https://www.nexmo.com/use-cases/passwordless-authentication">Passwordless Authentication</a></li>
+</ul></div></div>		<div id="recent-posts-4" class="list widget_recent_entries">		<h5 class="footer__title">Blog</h5>		<ul>
+											<li>
+					<a href="https://www.nexmo.com/blog/2019/04/09/ar-vr-mr-xr-demystified/">AR, VR, MR, XR Demystified</a>
+									</li>
+											<li>
+					<a href="https://www.nexmo.com/blog/2019/04/08/build-interactive-voice-response-node-express-javascritpt-dr/">Build an Interactive Voice Response Menu using Node.js and Express</a>
+									</li>
+											<li>
+					<a href="https://www.nexmo.com/blog/2019/04/05/how-to-build-a-voicemail-with-python-flask-dr/">How to Build a Voicemail Dead-Drop with Python &amp; Flask</a>
+									</li>
+					</ul>
+		</div><div id="nav_menu-11" class="list widget_nav_menu"><h5 class="footer__title">Get to Know Us</h5><div class="menu-footer-4-container"><ul id="menu-footer-4" class="menu"><li id="menu-item-27091" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27091"><a href="https://www.nexmo.com/platform">Nexmo Platform</a></li>
+<li id="menu-item-26872" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26872"><a href="https://www.nexmo.com/about-nexmo">About Nexmo</a></li>
+<li id="menu-item-26875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26875"><a href="https://www.nexmo.com/careers">Careers</a></li>
+<li id="menu-item-27100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27100"><a href="https://www.nexmo.com/leadership">Leadership</a></li>
+<li id="menu-item-27103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27103"><a href="https://www.nexmo.com/press">Press</a></li>
+</ul></div></div>			</div>
+		</div>
+		
+		<div class="container mobile-separator">
+			<div class="content-right">
+                <a class="footer__link visible hidden-xs" href="https://help.nexmo.com/hc/en-us">Support</a><a class="footer__link visible  hidden-xs" href="https://nexmostatus.com/">API Status</a>
+                                        	                    
+                    						
+                    		
+                    	                    	
+                    
+					<div class="phone-number phone-icon right-auto"><a href="tel:+1 855 830 8862">+1 855 830 8862</a></div>	
+					
+                    <a class="btn-secondary right-auto" aria-label="Contact Sales" href="https://www.nexmo.com/contact-sales">Contact Sales</a>			</div>
+		</div>
+		
+		<div class="container">
+			<div class="content content-bottom">
+				<div class="footer__logo-row">
+                    <a class="footer__link footer__link--bottom icon-logo" href="https://www.nexmo.com/" title="Nexmo" target="_blank" rel="noopener"><img src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/footer-logo.png" alt="" class="img-responsive"></a><ul id="menu-footer-menu" class="menu"><li><a title="" rel="" href="https://www.nexmo.com/terms-of-use" class="footer__link footer__link--bottom disappear">Terms of Use</a></li>
+<li><a title="" rel="" href="https://www.nexmo.com/privacy-policy" class="footer__link footer__link--bottom disappear">Privacy Policy</a></li>
+<li><a title="" rel="" href="https://www.nexmo.com/acceptable-use" class="footer__link footer__link--bottom disappear">Acceptable Use</a></li>
+<li><a title="" rel="" href="https://www.nexmo.com/cookie-policy" class="footer__link footer__link--bottom disappear">Cookie Policy</a></li>
+<li><a title="" rel="" href="https://www.nexmo.com/security-information" class="footer__link footer__link--bottom disappear">Security Information</a></li>
+<li><a title="" rel="" href="https://www.vonage.com/copyright-policy" class="footer__link footer__link--bottom disappear">Copyright Policy</a></li>
+</ul>				</div>
+				<div class="footer__icon-row disappear">
+                    <a class="footer__icon-link icon__linkedin" href="https://www.linkedin.com/company/Nexmo"></a><a class="footer__icon-link icon__twitter" href="https://twitter.com/Nexmo"></a><a class="footer__icon-link icon__stack-overflow" href="https://stackoverflow.com/questions/tagged/nexmo"></a><a class="footer__icon-link icon__github" href="https://github.com/Nexmo"></a><a class="footer__icon-link icon__rss" href="https://www.nexmo.com/blog/feed"></a>                </div>
+			</div>
+		</div>
+	</div>
+</div><!-- #page -->
+
+<!-- HFCM by 99 Robots - Snippet # 4: GTM Body Snippet -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2VBPR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- /end HFCM by 99 Robots -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"https:\/\/www.nexmo.com\/customers\/staples-easy-button\/":[1,0,"https:\/\/www.youtube.com\/watch?v=BpmvF8KPyag"]},"siteURL":"https:\/\/www.nexmo.com","siteURLq":"https:\/\/www.nexmo.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/qppr_frontend_script.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/blankshield.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/block-tabnapping.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var socialWarfare = {"addons":[{"name":"Social Warfare - Pro","key":"pro","core_required":"3.3.0","product_id":63157,"store_url":"https:\/\/warfareplugins.com","version":"3.5.4","filepath":"\/home\/www\/www\/wp-content\/plugins\/social-warfare-pro\/social-warfare-pro.php","license_key":"0d80e54de101902faf350590fef2a733","is_registered":true},"pro"],"post_id":"13663","floatBeforeContent":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/script.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/navigation.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/skip-link-focus-fix.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/lity.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/slick.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/main.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/wp-embed.min.js.download"></script>
+<script async="async" type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/form.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/jquery.json.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/gravityforms.min.js.download"></script>
+<script type="text/javascript" src="./What is Real Time Communications_ _ Nexmo, the Vonage API Platform_files/placeholders.jquery.min.js.download"></script>
+<script type="text/javascript"> var swp_nonce = "602cc1e468";
+function parentIsEvil() { var html = null; try { var doc = top.location.pathname; } catch(err){ }; if(typeof doc === "undefined") { return true } else { return false }; }; if (parentIsEvil()) { top.location = self.location.href; };var url = "https://www.nexmo.com/blog/2017/07/05/real-time-communications/";if(url.indexOf("stfi.re") != -1) { var canonical = ""; var links = document.getElementsByTagName("link"); for (var i = 0; i < links.length; i ++) { if (links[i].getAttribute("rel") === "canonical") { canonical = links[i].getAttribute("href")}}; canonical = canonical.replace("?sfr=1", "");top.location = canonical; console.log(canonical);};var swpFloatBeforeContent = false;var swpClickTracking = true; swpPinIt={"enabled":false};</script><!-- G2 Crowd script Start -->
+<script>(function (c, p, d, u, id, i)
+{ id = ''; // Optional Custom ID for user in your system u = 'https://tracking.g2crowd.com/attribution_tracking/conversions/' + c + '.js?p=' + encodeURI(p) + '&e=' + id; i = document.createElement('script'); i.type = 'application/javascript'; i.src = u; d.getElementsByTagName('head')[0].appendChild(i); }
+
+("1065", document.location.href, document));</script>
+<!-- G2 Crowd script End -->
+
+</div></body></html>

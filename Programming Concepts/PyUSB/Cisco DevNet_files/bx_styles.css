@@ -1,0 +1,153 @@
+/* @override http://localhost/bxslider_v3_plugin/css/styles.css */
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+
+/*next button*/
+.bx-next {
+	position:absolute;
+	top:40%;
+	right:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(bx_styles/gray_next.png) no-repeat 0 -30px;
+}
+
+li.pager a {display:inline; padding:0;}
+
+/*previous button*/
+.bx-prev {
+	position:absolute;
+	top:40%;
+	left:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(bx_styles/gray_prev.png) no-repeat 0 -30px;
+}
+
+/*pager links*/
+.bx-pager a {
+	margin-right: 5px;
+	color: #fff;
+	padding: 3px 8px 3px 6px;
+	font-size: 12px;
+	zoom:1;
+	background: url(bx_styles/gray_pager.png) no-repeat 0 -20px;
+	text-decoration:none;
+}
+
+#slider1 h3,#slider2 h3,#slider1a h3,#slider2a h3 {
+font-size:13px;
+}
+
+#slider .pager p,#slider2 .pager p,#slider1 .pager p,#slider2a .pager p,#slider1a .pager p {
+	padding-bottom: 15px;
+	padding-top: 0px;
+	margin-top:0px;
+	
+}
+
+
+
+#slider1 li,#slider2 li,#slider1a li,#slider2a li {
+
+	line-height: 16px;
+}
+
+
+/*auto start button*/
+
+.bx-auto .start {
+	background: url(bx_styles/gray_auto.png) no-repeat 0 2px;
+
+	padding-left: 13px;
+}
+/*auto stop button*/
+.bx-auto .stop {
+	background: url(bx_styles/gray_auto.png) no-repeat 0 -14px;
+	padding-left: 13px;
+}
+
+/*
+ * End color scheme styles
+ */
+
+
+/*next/prev button hover state*/
+.bx-next:hover,
+.bx-prev:hover {
+	background-position: 0 0;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	background-position: 0 0;
+}
+
+/*pager wrapper*/
+.bx-pager {
+	text-align:center;
+	color:#666;
+	font: 14px "Courier";
+	font-family: "Courier New"/9; /*silly ie fix*/
+}
+
+/*captions*/
+.bx-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+#slider1 li,#slider2 li,#slider1a li,#slider2a li {
+	padding: 0px;
+	margin: 0px;
+}
+
+#slider1 ul,#slider2 ul,#slider1a ul,#slider2a ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.slider_details {
+	font-size:.9em; 
+	color:#666666;
+}
+
+.quote_sig {
+	font-size:.9em;
+	color:#b50000;
+}
+
+.quote_text {
+	font-size:.9em;
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+

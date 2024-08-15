@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Numbers Insight</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Numbers-Insight" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(0.000000, 5.250000)">
+            <path d="M8.25,5.64079887 C8.65845638,3.39908491 10.8216225,1.91101027 13.0815904,2.3166359 C15.3415583,2.72226154 16.8417501,4.86795557 16.4328215,7.10920113 C16.0243651,9.35091509 13.8607268,10.8389897 11.6012311,10.4333641 C10.8178448,10.2928471 10.1260661,9.94342829 9.57311535,9.45302408" id="Stroke-1" stroke="#0075C8" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.24353235,4.44754213 C2.52345381,4.20358146 2.82562067,3.95203652 3.14817917,3.69733146 C5.41288586,1.90933989 8.68296166,0 12.3194689,0 C19.156226,0 23.25,6.75 23.25,6.75 C23.25,6.75 19.156226,13.5 12.3194689,13.5 C8.50144096,13.5 5.42252684,11.4611763 3.18289635,9.61710868 C2.46873711,9.02908404 1.83991659,8.4608623 1.29968262,7.98486328" id="Stroke-3" stroke="#0075C8" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Fill-5" fill="#0075C8" points="2.25 7.19442478 0 6.75 0.754848588 9"></polygon>
+            <path d="M15,6.375 C15,7.82480169 13.824656,9 12.3746746,9 C10.9246932,9 9.75,7.82480169 9.75,6.375 C9.75,4.92519831 10.9246932,3.75 12.3746746,3.75 C13.824656,3.75 15,4.92519831 15,6.375" id="Fill-7" fill="#0075C8"></path>
+        </g>
+    </g>
+</svg>

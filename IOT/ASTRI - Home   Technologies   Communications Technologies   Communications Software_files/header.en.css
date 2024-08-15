@@ -1,0 +1,17 @@
+
+		div#mainNav ul li a { width: 160px; height: 20px; display:block; }
+		div#mainNav ul li a#about   {  background-image: url(../images/en/header_nav_about.gif);   background-repeat: no-repeat; background-position: top; }
+		div#mainNav ul li a#achieve {  background-image: url(../images/en/header_nav_achieve.gif); background-repeat: no-repeat; background-position: top; }
+		div#mainNav ul li a#tech    {  background-image: url(../images/en/header_nav_tech.gif);    background-repeat: no-repeat; background-position: top; }
+		div#mainNav ul li a#app     {  background-image: url(../images/en/header_nav_app.gif);     background-repeat: no-repeat; background-position: top; }
+		div#mainNav ul li a#news    {  background-image: url(../images/en/header_nav_news.gif);    background-repeat: no-repeat; background-position: top; }
+		div#mainNav ul li a#careers {  background-image: url(../images/en/header_nav_careers.gif); background-repeat: no-repeat; background-position: top; }
+		
+		div#mainNav ul li a#about:hover   {  background-image: url(../images/en/header_nav_about.gif);   background-repeat: no-repeat; background-position: bottom; }
+		div#mainNav ul li a#achieve:hover {  background-image: url(../images/en/header_nav_achieve.gif); background-repeat: no-repeat; background-position: bottom; }
+		div#mainNav ul li a#tech:hover    {  background-image: url(../images/en/header_nav_tech.gif);    background-repeat: no-repeat; background-position: bottom; }
+		div#mainNav ul li a#app:hover     {  background-image: url(../images/en/header_nav_app.gif);     background-repeat: no-repeat; background-position: bottom; }
+		div#mainNav ul li a#news:hover    {  background-image: url(../images/en/header_nav_news.gif);    background-repeat: no-repeat; background-position: bottom; }
+		div#mainNav ul li a#careers:hover {  background-image: url(../images/en/header_nav_careers.gif); background-repeat: no-repeat; background-position: bottom; }
+
+		#k { font-size: 8pt; }

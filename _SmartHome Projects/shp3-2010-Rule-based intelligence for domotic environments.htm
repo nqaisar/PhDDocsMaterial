@@ -1,0 +1,1065 @@
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" Title="Default Styles" href="" type="text/css">
+
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="robots" content="NOARCHIVE">
+<meta name="robots" content="noodp" />
+<meta name="robots" content="noydir" />
+
+<link rel="canonical" href="http://www.sciencedirect.com/science/article/pii/S0926580509001599">
+
+
+<link rel="shortcut icon" href="http://cdn.els-cdn.com/sd/favSD.ico" type="image/x-icon">
+<title>
+ Rule-based intelligence for domotic environments
+ </title> 
+
+<link type="text/css" rel="StyleSheet" href="http://www.sciencedirect.com/gadgetservices/gadgets/v9/css/gadgets_ext,gadgets,toolbar,SDArticleGadgetOverRide,jquery-ui-1.8.4.custom.css">
+
+
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/article_1603R8.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/articleSprite_1603R8.css" type="text/css">
+<link rel="stylesheet" href="http://cdn.els-cdn.com/sd/css/jquery-ui_1603R8.css" type="text/css">
+
+
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" Title="Default Styles" href="http://cdn.els-cdn.com/sd/css/css_gen_ielt9_1603R8.css" type="text/css">
+<![endif]-->
+
+<script>
+var ab=new Object();
+ab.entitled = true;
+</script>
+<script>(function() {var scriptTag = document.createElement('script'); 
+scriptTag.type = 'text/javascript';scriptTag.async = true;
+scriptTag.src = '//cdn.optimizely.com/js/204774041.js';
+var head = document.getElementsByTagName('head')[0];
+head.parentNode.insertBefore(scriptTag, head);
+})();function optimizelyTimeout() {
+window.optimizely = window.optimizely|| []; 
+if(!window.optimizely.data) {
+window.optimizely.push("timeout"); } }
+setTimeout(optimizelyTimeout, 1000); </script>
+
+<script type='text/javascript'>
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+
+<script>
+var prs = new Object();prs.rt=function(label,ts){this[label]=(ts||ts==0?ts:new Date().getTime());};
+</script>
+
+
+
+<!--[if lte IE 7]>
+<script src="http://cdn.els-cdn.com/sd/ut/js/json2_1603R8.js.min"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="ua_btn" role="region" aria-label="screen reader compatability"><a role="button" rel="nofollow" href="http://www.sciencedirect.com/science/article/pii/S0926580509001599?np=y">Screen reader users, click here to load entire article</a>This page uses JavaScript to progressively load the article content as a user scrolls.  Screen reader users, click the load entire article button to bypass dynamically loaded article content.</div>
+
+
+
+<script>
+var refLinkURL = "http://www.sciencedirect.com/science/relLink/ajaxReq?_eid=1-s2.0-S0926580509001599";
+var updatedCitedBy = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+var refResolvePath = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_pii=S0926580509001599&_refCnt=23&_docType=article";
+
+// these variables handle the reference resolution. Please ignore the naming.
+// the first variable myMap will hold an associative array of links by bibID
+// the second variable myXabsCounts holds the scopus counts.
+var myMap = []; // html of links for references.
+var myXabsCounts = []; // scopus counts
+</script>
+<div id="header-area">
+  
+
+
+<!-- ************* For A/B testing FAST and SOLR Proxy ***************** -->
+
+<!-- *************End for A/B testing FAST and SOLR Proxy *****************-->
+
+
+
+<div id="ieWarningMsg">
+    <span class="infoIcon_ie spErrorIcon">
+        Please note that Internet Explorer version 8.x will not be supported as of January 1, 2016. Please refer to <a href="http://blog.sciencedirect.com/posts/have-you-heard-spread-the-word-about-upgrading-your-browser"> this blog post</a> for more information.
+    </span>
+    <a class="closeBt" title="Close Internet Explorer 7 warning">Close</a>
+</div>
+
+
+
+<div id="header">
+
+<div class="headerBlk">
+    <div class="headerInner" role="navigation" aria-label="ScienceDirect">
+        <div class="home">
+            
+            <!--INSERTS THE TEMPLATE VARIABLES POPULATED FROM DB for SCIVERSE and PRODUCT labels-->
+            
+                <a href="http://www.sciencedirect.com/" title="ScienceDirect -The world's leading full-text scientific database"> <span class="logoScienceDirectImg">&nbsp;</span></a>
+            
+        </div>
+
+        
+            <ul class="publication">
+                <!-- Journals link -->
+                
+                    
+                        <li>
+                            <a  href="http://www.sciencedirect.com/science/journals">Journals</a>
+                        </li>
+                     
+                
+
+                <!-- Books link -->
+                
+                    
+                        <li class="sep">
+                            <a  href="http://www.sciencedirect.com/science/bookbshsrw">Books</a>
+                        </li>
+                     
+                
+            </ul>
+        
+
+    </div>
+    
+         <!-- if not logged in -->
+         
+            
+            <div id="login" class="clearfix" aria-label="Help and Sign In" role="navigation" style="margin-right:230px;">
+            <ul class="userlinks">
+                
+                    <li>
+                        <a  href="http://www.sciencedirect.com/science?_ob=ShoppingCartURL&_method=display&_zone=TopNavBar&_origin=article&md5=98a3e89aa38c5044516e5e4ca8b64e74" target="_top" name="cart" title="Shopping Cart" >Shopping cart</a>
+                    </li>
+                
+                
+                
+            
+                <!--top right widget-->
+                <li  id="loginPlus">
+                    <h2><a id="loginPlusScript" href="javascript:LoginBox.flipLogin('loginBox',null);" title="Sign in to ScienceDirect" class="novisit plus nojs S_C_SignIn" aria-haspopup="true" aria-expanded="false" aria-controls="loginBox" role="button" >Sign in</a></h2>
+                    <noscript><a href="http://www.sciencedirect.com/science?_ob=HomePageURL&_method=userHomePage&_fl=y&md5=6dada1fb726164470bad9e40bbc4d7fa" title="Open the Sign in Box" class="plus S_C_SignIn" id="loginPlusNoScript" >Sign in</a></noscript>
+					
+                    <div id="loginBox" role="dialog" aria-labelledby="headingSignIn" class="bannerAvail" style="width:600px;display:none;"> 
+                        
+                        <div style="width:285px;float:right;border-left:1px solid #9B9B9B;padding-left:10px;min-height:180px;">
+                            
+                                <div class="openAthens"><a href="https://auth.elsevier.com/ShibAuth/institutionLogin?entityID=https%3A%2F%2Fidp.eduserv.org.uk%2Fopenathens&appReturnURL=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0926580509001599" title="Log in using OpenAthens">OpenAthens login</a></div>
+                            
+                            
+                            <div class="sampletext">
+                                <div style="font-weight:bold;padding-bottom:7px;"><h3><b>Login via your institution</b></h3></div>
+                                
+                                
+                                    <div class="fedLink"><a href="http://www.sciencedirect.com/science/externallogin" title="Other institution login">Other institution login</a></div>
+                                
+                            </div>
+                            
+                            
+                            
+                                
+                            
+                            
+                            
+                        </div>
+                        
+                        <div class="padding" style="width:285px;" >
+                            <form name="sdLogin" method="POST" action="https://www.sciencedirect.com/science/login" id="login-box-form" style="margin:0;">
+                            <b><h3 id="headingSignIn">Sign in using your ScienceDirect credentials</h3></b>
+                            <input type="hidden" name="login" value="login">
+                            <div style="margin-top:20px;">
+                            <label for="username"><span style="text-align:right;">Username:</span>
+                            <input id="username" type="text" name="userid" title="Please enter your username here" /></label>
+                            </div>
+                            
+                            <div style="margin-top:7px;">
+                            <label for="password"><span style="text-align:right;">Password:</span>
+                            <input id="password" type="password" name="password" maxlength="20" title="Please enter your password here" onkeypress="if(13==event.keyCode)this.form.submit();if (13==event.keyCode)return false;"/></label>
+                            </div>
+                                   
+                                       
+                            
+                            <div class="remember">
+                            <input type="checkbox" checked name="rememberid" id="rememberMe" value="Y" class="allCheck top2fix" title="Checking this option will log you in automatically next time you visit ScienceDirect"/>
+                            <label for="rememberMe" title="Checking this option will log you in automatically next time you visit ScienceDirect">Remember me</label>
+                            </div>
+                            
+                            <input type="hidden" name="_ob" value="MiamiLogonURL">
+                            <input type="hidden" name="targetURL" value="http://www.sciencedirect.com/science/article/pii/S0926580509001599" >
+                            <input type="hidden" name="returnURL" value="http://www.sciencedirect.com/science/article/pii/S0926580509001599" >
+                            <div class="submit" >
+                            
+                            <div style="float:left;padding-left:0px;"><input class="button" type="Submit" name="arrow" alt="Sign in to ScienceDirect" title="Sign in to ScienceDirect" value="Sign in"/></div>
+                        
+                            
+                            <div class="notRegistered"><span class="astPad">| </span><span><a href="https://www.sciencedirect.com/science/register-new-user" title="" target="_top">Not Registered?</a></span></div>
+                            
+                            
+                            <div style="clear:left;"></div>
+                            </div>
+                            
+                            <div class="forgotpass">
+                            <a href="http://www.sciencedirect.com/science?_ob=ReminderURL&_method=display&md5=4a97631c25ac81c09ad2f961106e9da2" target="passwd" onClick="var remindWin;remindWin=window.open('','passwd','scrollbars=yes,resizable=yes,directories=no,toolbar=n,menubar=no,status=no,width=650,height=300');" title="Click here for help in recovering your ScienceDirect access">Forgotten username or password?</a>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="last"><a class="S_C_helpLink" href="/science?_ob=HelpURL&_file=browse_open_doc.htm&_btn=Y&_zone=TopNavBar&_origin=article" target="sdhelp" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=browse_open_doc.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false" >Help</a></li>
+                
+            </ul>
+            </div>
+            
+            
+        <!-- logged in -->
+             
+    
+</div>
+
+
+            
+    <div class="clearfix" id="bannerTop" role="banner" aria-label="Institutional Access">                
+        <div >Brought to you by:<br>
+        
+            University of Camerino
+        
+        </div>
+    </div>
+    
+           
+
+
+
+
+</div><!--header-->
+
+
+
+
+
+
+
+
+
+</div><!--header-area-->
+<div id="page-area">
+    
+     
+     
+    <div id="articleToolbar" class="clearfix quicksearch prd_sci_dir">
+        <div id="articleNav">
+  <ul aria-label="Article options" role="navigation" class="clearfix">
+    <!-- return to gateway -->
+     
+
+
+
+
+
+
+<li>
+  <div class="icon_pdf toolbar">
+    <div class="largeIcon"></div>
+    <a id="pdfLink" rel="nofollow"   href="http://www.sciencedirect.com/science/article/pii/S0926580509001599/pdfft?md5=70820c68886ff5ce62703e478c8823cb&pid=1-s2.0-S0926580509001599-main.pdf" queryStr="?_origin=article&_zone=toolbar" target="newPdfWin"   pdfurl="http://www.sciencedirect.com/science/article/pii/S0926580509001599/pdfft?md5=70820c68886ff5ce62703e478c8823cb&pid=1-s2.0-S0926580509001599-main.pdf" queryStr="?_origin=article&_zone=toolbar" suggestedArtURL="http://www.sciencedirect.com/science/suggestedArt/citeList/pii/S0926580509001599/eid/1-s2.0-S0926580509001599/serial" class="S_C_pdfLink big pdf ext_sdlink cLink" style="cursor:pointer" title="Download PDF" >Download PDF
+    <span id="pdfExplanation" class="offscreen">Opens in a new window.  Article suggestions will be shown in a dialog on return to ScienceDirect.</span>
+    </a>
+  </div>
+</li>
+ 
+ 
+
+
+
+
+
+
+
+<li class="exportPopupListitem">
+<div class="pulldown">
+    <div class="exportDivision" title="Export citations">
+    <div class="exportIconText">
+    <div class="icon_exportarticlesci_dir initialImage export_icon" tabindex="0"> &nbsp; </div>
+    <input id="icon_exportarticle" value="Export" name="export" class="listAction export export_general" tabindex="-1" type="button">
+     <span class="downSM_sci_dir exportArrow"></span>
+    </div>
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+    </div>
+    <div class="menu export_popup hidden" id="export_popup">
+    <div  class='warningIcon' title="Warning Icon" alt="Warning Icon"></div>
+    <form name="exportCite" method=post action=/science?_ob=DownloadURL&_method=finish&_eidkey=1-s2.0-S0926580509001599&count=1&_docType=FLA&md5=72e77f0ce6c02cc36c2438319775e12d target="">
+    <input class='zone' name='zone' type='hidden' value='exportDropDown'/>
+            <script language="javascript" type="text/javascript">
+<!--
+
+function checkExportFormat(limit) {
+
+    var msg = "";
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].value == "REFWX") {
+            if (document.exportCite.elements[i].checked) {
+                document.exportCite.setAttribute('target',"RefWorksMain");
+                if (checkLimit()) {
+                    if (limit) {
+                        msg = "It is possible that some users may experience problems when downloading large numbers of citations. If this happens please contact RefWorks support at your regionally hosted site or e-mail support@refworks.com to assist you further.\n\n";
+                    }
+                    msg += "Exporting to RefWorks may take some time, please wait....";
+                    alert(msg);
+                }
+            }
+            else {
+                document.exportCite.setAttribute('target',"");
+            }
+            break;
+        }
+    }
+    return true;
+}
+
+function determineCount(numStr) {
+    var count=1;
+
+    if(numStr.indexOf("-")) {
+        var rangeStr = numStr.split("-");
+
+        if(rangeStr.length == 2) {
+            var highNum = parseInt(rangeStr[1]);
+            var lowNum = parseInt(rangeStr[0]);
+
+            if(highNum >= lowNum) { count = (highNum - lowNum) + 1; }
+        }
+    }
+    return count;
+}
+
+function checkLimit(){
+
+    var selectNum = "";
+    var useSelected = false;
+    var allNum = 0;
+    var count = 0;
+    var rdoc = 0;
+
+    for (i=0;i<document.exportCite.elements.length;i++) {
+        if (document.exportCite.elements[i].name == "count") {
+            allNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "NUMBER_LIST") {
+            selectNum = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].name == "_rdoc") {
+            rdoc = document.exportCite.elements[i].value;
+        }
+        if (document.exportCite.elements[i].value == "selected") {
+            if (document.exportCite.elements[i].checked) {
+                useSelected = true;
+            }
+        }
+    }
+
+    if (useSelected) {
+        selectNum = selectNum.replace(/ /g,"");
+        if(selectNum.indexOf(",")) {
+            var commaList = selectNum.split(",");
+            for(i=0; i < commaList.length; i++) {
+                count += determineCount(commaList[i]);
+            }
+        }
+        else {
+            count += determineCount(selectNum);
+        }
+    }
+    else { 
+        if (rdoc > 0) {
+            count = 1;
+        }
+        else {
+            count = allNum;
+        }
+    }
+
+    if(count > 50) { return true; }
+  
+    return false;
+}
+
+//-->
+</script>
+
+    <div class="exportInfo">
+        <div class="chkboxCount"></div>
+        <div class="exportHelp">
+            <a target="sdhelp" href="/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=art_export.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a>
+        </div>
+    </div>
+
+    <div class="expContainer">
+      <ul class="Export_Popup" width="100%">
+        <li class="subHeading"><h3> Direct export </h3></li>
+        <li class="direct_export">
+         
+            <div>
+              <div class="btn_export directExport">
+                <div class="icon_Mendeley" title="Save to Mendeley">&nbsp;</div>
+                <input id="directExport" type="button" value="Save to Mendeley" name="Save to Mendeley" alt="Save to Mendeley" class="mendeleyBT button"/>
+              </div>
+            </div>
+        
+        
+            <div class="btnLine">
+              <div class="btn_export refworks">
+                <div class="icon_Refworks" title="Save to RefWorks">&nbsp;</div>
+                <input id="REFWX" type="button" value="Save to RefWorks" name="Save to RefWorks" alt="Save to RefWorks" class="button refworks"/>
+              </div> 
+            </div>
+            <div class="clear"> </div>
+        
+        </li>
+        <li class="subHeading big"> <h3>Export file</h3></li>
+        <li class="export_radio RIS"><input type="radio" id="RIS" checked name="citation-type" value="RIS"  class="artRadio expRadio RIS">&nbsp;<label for="RIS">RIS&nbsp;(for EndNote, Reference Manager, ProCite)</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="BIBTEX" name="citation-type" value="BIBTEX"  class="artRadio expRadio BIBTEX">&nbsp;<label for="BIBTEX">BibTeX</label>
+        </li>
+        <li class="export_radio"><input type="radio" id="ASCII" name="citation-type" value="ASCII"  class="artRadio expRadio ASCII">&nbsp;<label for="ASCII">Text</label>
+        </li>
+        <li class="export_radio hidden"><input type="radio" id="REFWX" name="citation-type" value="REFWX"  class="artRadio expRadio REFWX">&nbsp;<label for="REFWX">RefWorks Direct Export</label>
+        </li>
+        <li class="subHeading big"><h3>Content</h3></li>
+        <li class="expCitab export_radio"><input type="radio" id="cite" class="cite artRadio expRadio" name="format" value="cite" >&nbsp;<label class="cit" for="cite"> Citation Only </label>
+        </li>
+        <li class="expCitab export_radio citab"><input type="radio" id="cite-abs" class="cite-abs artRadio expRadio" name="format" value="cite-abs" checked>&nbsp;<label class="cab" for="cite-abs"> Citation and Abstract </label>
+        </li>
+        <li class="export_submit">
+            <div class="downBtn export_downBtn">
+               <input type="submit" value="Export" name="export" alt="Export" class="button export_button" id="export_button"/>
+            </div> 
+        </li>
+      </ul>
+
+    </div>
+
+
+        
+        
+            
+         
+
+    </form>
+    </div> 
+</div>    
+</li>
+  
+
+
+
+</ul>
+</div>
+
+<div class="sdSearch" aria-label="Quick search" role="search">
+    <fieldset>
+        <div class="left">
+            <form id="quickSearch" name="qkSrch" method="get" target="_top" action="/science">
+            <input type="hidden" name="_ob" value="QuickSearchURL">
+            <input type="hidden" name="_method" value="submitForm">
+            <input type="hidden" name="_acct" value="C000061350">
+            <input type="hidden" name="searchtype" value="a">
+            <input type="hidden" name="_origin" value="article">
+            <input type="hidden" name="_zone" value="qSearch">
+            <input type="hidden" name="md5" value="8db8c21497c8b7cb946621fb39850735">
+            
+            <input  id="quickSearch" type="text" name="qs_all" placeholder="Search ScienceDirect" value="" size="30" maxlength="450" title="Perform a quick search on ScienceDirect"><input type="submit" class="submit" value="" title="Submit quick search"/>
+            
+            <a class="advanced S_C_advanced" href="http://www.sciencedirect.com/science/search" >Advanced search</a>
+            </form>
+        </div>
+    </fieldset>
+</div>
+<div class="clear"></div>
+<div id="erToolbar"></div>
+
+
+<div style="color : #FF0000; font-weight : bold;border:0px solid red;">
+  
+  
+  
+  
+</div>
+
+
+
+
+
+        <!-- PDFKING/PDFCITE -->
+        <div id="pdfModalWindow" class="pdfModalWindow" style="display:none;" onClick="pdfCite.closePopup();"></div>
+        <div id="suggestedPdfList" style="display:none;">
+         
+            <div id="suggestedPdfList" style="display: block;" class="newStyles">
+  <div id="modalBoxDisplay" class="nojs" tabindex="0" role="dialog" aria-labelledby="hdSDSuggestions">
+    <div class="pdfModalWindowMsgBox" id="pdfModalWindowMsgBox" >
+	  <div class = "modal" style="-webkit-box-shadow: none; box-shadow: none; margin-left: 12px; margin-right: 12px;">
+        <div id="displayPdfKing" style="display:block;">
+           <form method="get" name="Tag" action="/science/suggestedArt/export" style="padding:0px; margin:0px;" target="">
+            <input type="hidden" name="pdfDownload" value="download">
+            
+                <input type="hidden" name="PDF_DDM_MAX" value=25>
+             
+            <input type="hidden" name="_retainOrder" value="Y">
+            <input class='zone' name='zone' type='hidden' value='DDM'/>
+            <div class="header" style="height: auto; padding-bottom: 20px; background: rgb(255, 255, 255);">
+            <div class="pdfKingHeading" style="display:block;">Other users also viewed these articles
+            <a class="newCloseBtn" id="pdfKingcloseBtn" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></a></div></div>
+            <div id="SuggestedArtList" style="min-height: 100px;">
+                <div class="toolBar">
+                <ul class = "group"> 
+                    
+                    <li class="pdfDownloader" style="display: inline-block; padding: 4px 4px 0px 4px; border: 1px solid rgb(201, 201, 201);">
+                        <input value="Download All PDFs" name="pdfDownloadButton" class="listAction iconBg" type="submit" id="multiPdfIcon" aria-describedby="downloadAllPdfAx" style="width:auto; font-size: 14px; color: rgb(49, 108, 157);">
+                        <span class="arrow"></span>
+                        <span id="downloadAllPdfAx" class="hidden" >Opens document download manager</span>
+                    </li>
+                    
+                </ul>
+                </div>
+                
+                <div id="pdfkingContent" style="display:none;">
+                    <div class="popcontent"></div> 
+                    <div id="relatedArtList" data-entitled="Y"></div>
+                </div>
+                
+            </div>
+                
+                <div class="newFooter">
+                <a class = "do-not-show" href="#" onClick="pdfCite.setOptOutFlag('http://www.sciencedirect.com/science/suggestedArt/optOut');" style="cursor: pointer; float: none; line-height: normal;">Do not show again</a>
+                </div>
+          </form>
+        </div>
+        <div id="pdfKingMessage" style="display:none;">
+          <div class="pdfKingHeading" style="display:block;">
+            <span class="downloadMsg">Downloading zip file containing 3 articles...</span>
+            <a class="newCloseBtn" onClick="pdfCite.closePopup();" href = "#" title = "Close Article Suggestions" alt="Close Article Suggestions"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+        <!-- PDFKING/PDFCITE End -->
+    </div>
+    <div id="articleToolbarDummy"></div>
+  <div style="clear:both;"></div>
+  
+  <div id="leftPane" class="column" aria-label="table of contents" role="navigation">
+    <div id="leftPaneInner">
+        <div>
+        <div id="leftButton">
+            <ul>
+                <li class="tocbutton">
+                    <a class="outline-toggle" title="Open to view article outline"  alt="Open to view article outline" href="#" aria-expanded="false">
+                        <span class="icon outline_big"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="outlineContainer">
+            <a class="closeBt" title="Close">&nbsp;</a>
+            <div id="outline" class="outline">
+              <script type="text/javascript">
+              document.write("<div class='outlineMsg'>Article outline is loading...</div>");
+              </script>
+              <noscript>
+              <div class="infoMsg">
+              <div style="float: left; width: 20px; "><img border="0" src="http://cdn.els-cdn.com/sd/alertIcon.gif" valign="top" alt="Alert message"></div>
+              <div style="padding-left:25px;">JavaScript is disabled on your browser. <br><div style="padding-top:10px;">
+              Please enable JavaScript to use all the features on this page.</div></div>
+              </div>
+              </noscript>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div id="centerPane" class="column">
+    <div class="topBorder"></div>
+    <div id="centerContent" class="centerContent">
+    <div id="centerInner" class="centerInner svBigBox" aria-label="Article" role="main">
+        
+      
+      <noscript>
+      <div class="msgBox" style="margin-top:10px;">
+          <span class="errMsg">
+            <div>JavaScript is disabled on your browser.  Please enable JavaScript to use all the features on this page. This page uses JavaScript to progressively load the article content as a user scrolls. Click the View full text link to bypass dynamically loaded article content. <a rel="nofollow" href="http://www.sciencedirect.com/science/article/pii/S0926580509001599?np=y">View full text</a></div>
+         </span>
+      </div><br/>
+      </noscript>
+      <div class="head headTemplate page_fragment_ind">
+
+  
+<div class="publisherLogo">
+  <span class="spElsevierPubIcon"></span>
+</div>
+
+
+  
+    <?xml version="1.0" encoding="UTF-8"?><div xmlns:bk="http://www.elsevier.com/xml/bk/dtd" class="publicationHead"><div class="title"><a title="Go to Automation in Construction on ScienceDirect" href="/science/journal/09265805" queryStr="?zone=centerPane" class="cLink"><span>Automation in Construction</span></a></div><p class="volIssue"><a class="S_C_volIss" title="Go to table of contents for this volume/issue" href="/science/journal/09265805/19/2">Volume 19, Issue 2</a>, March 2010, Pages 183–196</p></div>
+  
+    <div class="publicationCover cover2">
+    
+      
+    <a queryStr="?zone=publicationLogo" class="cLink" href="/science/journal/09265805/19/2">
+      
+    
+    <img alt="Cover image" src="http://ars.els-cdn.com/content/image/1-s2.0-S0926580510X00024-cov150h.gif" class="toprightlogo" />
+    <noscript><img alt="Cover image" src="http://ars.els-cdn.com/content/image/1-s2.0-S0926580510X00024-cov150h.gif" class="toprightlogo" /></noscript>
+    </a>
+    
+  </div>
+
+
+</div>
+
+      <div id="frag_1" class="page_fragment auth_frag" data-first="true" data-fid="1"><div class="module_topic_paths"></div><h1 class="svTitle" id="">Rule-based intelligence for domotic environments</h1><ul class="authorGroup noCollab svAuthor"><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N41a07380N5feaf658" data-t="a" data-fn="Dario" data-ln="Bonino" data-pos="1" data-tb="">Dario Bonino</a><a title="Corresponding author contact information" href="#cor1" id="bcor1" class="intra_ref auth_corr"></a><sup>, </sup><a href="mailto:dario.bonino@polito.it" class="auth_mail" title="E-mail the corresponding author"></a>, </li><li><a href="#" class="authorName svAuthor" data-orcid="" id="authname_N41a07380N5feaf6e8" data-t="a" data-fn="Fulvio" data-ln="Corno" data-pos="2" data-tb="">Fulvio Corno</a> <a href="mailto:fulvio.corno@polito.it" class="auth_mail" title="E-mail the corresponding author"></a></li></ul><!--VALIDHTML--><ul class="affiliation authAffil"><li> <span id="">Politecnico di Torino, Dipartimento di Automatica ed Informatica, Corso Duca degli Abruzzi 24, 10129, Torino, Italy</span></li></ul><!--VALIDHTML--><!--VALIDHTML--><dl class="articleDates"><dd>Accepted 30 October 2009, Available online 19 November 2009</dd></dl><!--VALIDHTML--><div class="moreInformation"></div><div id="showMoreButtons"></div><div id="ppvPlaceHolder" class="hidden"></div><!--VALIDHTML--><dl class="extLinks"><dd class="doiLink"></dd><dd class="rightsLink"></dd></dl><div class="articleOAlabelForced"></div><div id="refersToAndreferredToBy"><dl id="referredToBy" class="documentThread"><!--Referred To By--></dl></div><!--FRAGMENTEND--><div class="page_fragment_ind auth_frag" data-id="frag_2"></div></div><div id="frag_2" class="page_fragment" data-fid="2"><script>prs.rt("abs_1st_beg");</script><!--VALIDHTML--><hr id="abs_author1" class="artHeader"><div class="abstract svAbstract " data-etype="ab"><h2 class="secHeading" id="author1">Abstract</h2><p id="">In the last years Home Automation systems gained new momentum, permeating many human-related environments, from homes to hospitals. The rapid evolution of such systems showed several interoperability pitfalls and a generally insufficient support for advanced user&ndash;home interaction. To tackle these emerging issues, recent research works defined the concept of Intelligent Domotic Environments (IDEs) where different automation systems, appliances and devices are integrated into a single powerful environment, capable of providing Ambient Intelligence (AmI) functionalities. IDEs represent one of the first attempts to define a framework for AmI environments based on off-the-shelf domotic systems. This paper contributes to extend IDE capabilities by supporting basic intelligence requirements through a rule-based reasoning mechanism. Starting from a formal model of IDE elements (DogOnt), rules are defined to evaluate environment properties. Property checking is done both off-line, for structural properties, i.e., properties involving the physical structure and configuration of the IDE, and on-line for properties dependent on current IDE states. Two rule languages, SWRL and JenaRules, are considered for rule formalization and their reasoning performance is evaluated by comparing two different rule engines, namely Jess and Jena. Results show that rule-based reasoning can deal with quite complex property checking, effectively addressing basic intelligence for IDEs and providing the basis for more advanced behaviors such as user adaptation and proactive interaction.</p></div><!--VALIDHTML--><h2 id="kwd_1" class="svKeywords">Keywords</h2><ul class="keyword" id=""><li id="" class="svKeywords"><span id="">Home automation Intelligent Domotic Environment</span>; </li><li id="" class="svKeywords"><span id="">Ambient Intelligence</span>; </li><li id="" class="svKeywords"><span id="">Rule-based reasoning</span>; </li><li id="" class="svKeywords"><span id="">Property checking</span></li></ul><!--VALIDHTML--><div id="embeddedPDF" style="display:none"></div><script>prs.rt("abs_end");</script><div id="SD_BA1P" class="sgfNoTitleBar sgfNoGadgetBorder svDoNotLink"></div><!--VALIDHTML--><hr class="artHeader"><h2 class="svArticle" id="section_lbl1">1. Introduction</h2><p class="svArticle section clear" id="">Home Automation systems recently gained new momentum thanks to the increasing availability of low-cost components, and to the growing demand for more automated and advanced user interaction with surrounding environments. Currently available solutions (known as domotic systems or domotic plants) are designed as evolutions of traditional electric plants, each satisfying a different set of functional and marketing requirements. As a consequence, they suffer from two main drawbacks: a lack of interoperability due to independent development and to the absence of a global standardization effort, and a lack of intelligence beyond simple automation.</p><!--VALIDHTML--><p class="svArticle section clear" id="">Ambient Intelligence research traditionally tackled these issues by introducing the concept of <em>Smart Home</em> <span id="bbib1"><a href="#bib1" id="ancbbib1" class="intra_ref">[1]</a></span>, a home pervaded by sensors, actuators and equipped with dedicated hardware and software supporting intelligent behaviors. Smart homes have been actively researched since the late '90s and pursue a <em>revolutionary</em> approach to the home concept, from design to final deployment. However, they still retain a futuristic connotation as the involved costs are very high and the required devices are often custom built. On the converse, very recent works try to address inter-operation and intelligence issues by integrating existing domotic systems with a device (Home Gateway  <a href="#bib2" id="bbib2" class="intra_ref">[2]</a>&#xA0;and&#xA0;<a href="#bib3" id="bbib3" class="intra_ref">[3]</a>) that allows inter-operation and provides means for designing more complex automation scenarios. In this <em>evolutionary</em> approach, the home evolves in a so-called Intelligent Domotic Environment (IDE).</p><!--VALIDHTML--><p class="svArticle section clear" id="">IDEs <a href="#bib4" id="bbib4" class="intra_ref">[4]</a>&#xA0;and&#xA0;<a href="#bib5" id="bbib5" class="intra_ref">[5]</a> address the interoperation problem with a strong modeling component, where the home environment is represented through a formal definition, in form of ontology. Modeling is the key to abstraction, allowing to make device and appliance descriptions independent from technology-specific aspects and enabling integrated automation scenarios. If modeled information also includes structural aspects and house states, the resulting ontology can be used as a knowledge base on which building more complex intelligent behaviors. In this case, resulting IDEs promise to reach capabilities comparable to smart homes at a fraction of the cost, as the needed components (hardware and software) are already available.</p><!--VALIDHTML--><p class="svArticle section clear" id="">This paper explores the kind of intelligent behaviors that IDEs can gain with the adoption of rule-based reasoning. Starting from a technology independent formalization of home environments based on the DogOnt <span id="bbib6"><a href="#bib6" id="ancbbib6" class="intra_ref">[6]</a></span> ontology, different types of rules are defined, with increasing complexity. <em>Structural rules</em> permit to check constraints on the home, and plant, structure and configuration, with respect to architectural elements, devices and appliances. <em>State rules</em>, instead, verify home conditions depending also on the current state of devices and appliances, providing support for more advanced policies. Structural rules are usually executed off-line, while state rules can be checked on-line or off-line depending on the application domain.</p><!--VALIDHTML--><p class="svArticle section clear" id="">Structural and state properties are formalized by means of two state-of-the-art, ontology-aware, rule languages: the standard Semantic Web Rule Language (SWRL) <span id="bbib7"><a href="#bib7" id="ancbbib7" class="intra_ref">[7]</a></span> and the Jena rule language <span id="bbib8"><a href="#bib8" id="ancbbib8" class="intra_ref">[8]</a></span>, a de-facto standard for Java-based semantic solutions. Resulting rule bases are then executed by means of an instance of the Jess reasoner <span id="bbib9"><a href="#bib9" id="ancbbib9" class="intra_ref">[9]</a></span>, through the SWRL/Jess bridge, and a Jena <span id="bbib10"><a href="#bib10" id="ancbbib10" class="intra_ref">[10]</a></span> instance for Jena Rules. The reasoning performance of the engines is evaluated with respect to 2 different benchmarks: a small domestic environment, composed of 6 rooms, and a more complex office environment corresponding to the university department in which the authors work (52 rooms). Results show that rule-based reasoning can be effectively applied to evaluate IDE properties, providing the basis for building on-line, context-aware, proactive behaviors. Besides feasibility evaluation, useful hints on rule engines performance have been derived. The Jess rule engine resulted more efficient than the Jena reasoner at the cost of a lower flexibility. Both engines showed difficulties in tackling multi-stage reasoning, i.e., in problems requiring different reasoning steps for their solution.</p><!--VALIDHTML--><p class="svArticle section clear" id="">The paper is organized as follows: <span id="bsec1"><a href="#sec1" id="ancbsec1" class="intra_ref">Section&nbsp;2</a></span> briefly introduces the logic architecture of IDEs and how they are modeled in DogOnt, while <span id="bsec2"><a href="#sec2" id="ancbsec2" class="intra_ref">Section&nbsp;3</a></span> defines property types and provides example application domains. <span id="bsec3"><a href="#sec3" id="ancbsec3" class="intra_ref">Section&nbsp;4</a></span> introduces case studies for structural and state properties, of increasing complexity, whereas <span id="bsec4"><a href="#sec4" id="ancbsec4" class="intra_ref">Section&nbsp;5</a></span> describes the implementation of analyzed properties in Jess and Jena, and the design of a multi-stage extension for the Jena rule engine. <span id="bsec5"><a href="#sec5" id="ancbsec5" class="intra_ref">Section&nbsp;6</a></span> reports evaluation results, while <span id="bsec6"><a href="#sec6" id="ancbsec6" class="intra_ref">Section&nbsp;7</a></span> provides information about relevant related works. Eventually, <span id="bsec7"><a href="#sec7" id="ancbsec7" class="intra_ref">Section&nbsp;8</a></span> draws conclusions and proposes future investigations.</p><!--VALIDHTML--><h2 class="svArticle" id="sec1">2. Basic principles</h2><h3 class="svArticle" id="section_lbl2.1">2.1. Intelligent Domotic Environments</h3><p class="svArticle section clear" id="">An Intelligent Domotic Environment (IDE, <span id="bfig1"><a href="#fig1" id="ancbfig1" class="intra_ref">Fig.&nbsp;1</a></span>) is usually composed by one, or more, domotic systems, by a variable set of (smart) home appliances, and by a Home Gateway that allows to implement inter-operation policies and to provide intelligent behaviors.</p><!--VALIDHTML--><div class="figTblUpiOuter svArticle" id="figure_fig1"><div><dl class="figure" id="fig1" data-t="f"><dt class="autoScroll" data-style="height:560px;width:625px;"><a class="figureLink" href="#gr1" title="Intelligent Domotic Environment."><img class="imgLazyJSB figure large smallImg" border="0" alt="Intelligent Domotic Environment." src="/sd/grey_pxl.gif" data-thumbEID="1-s2.0-S0926580509001599-gr1.sml" data-fullEID="1-s2.0-S0926580509001599-gr1.jpg" data-imgEIDs="1-s2.0-S0926580509001599-gr1.jpg" data-thumbheight="164" data-thumbwidth="183" data-fullheight="560" data-fullwidth="625"><noscript class="figure large" border="0" alt="Full-size image" data-thumbEID="1-s2.0-S0926580509001599-gr1.sml" data-fullEID="1-s2.0-S0926580509001599-gr1.jpg"><img class="figure large" border="0" alt="Intelligent Domotic Environment." src="http://origin-ars.els-cdn.com/content/image/1-s2.0-S0926580509001599-gr1.jpg" data-thumbEID="1-s2.0-S0926580509001599-gr1.sml" data-imgEIDs="1-s2.0-S0926580509001599-gr1.jpg" data-fullEID="1-s2.0-S0926580509001599-gr1.jpg"></noscript></a></dt><dd id="labelCaptionfig1"><div class="caption">Fig.&nbsp;1.&#xA0;<p id="">Intelligent Domotic Environment.</p><!--caption--></div></dd><dd class="menuButtonLinks"><div class="btnHolder"><a class="menuTitle" href="#">Figure options</a><div class="down_Btn"></div></div><ul class="menuButton"><li><a class="S_C_full_size" data-src="/science?_ob=MiamiCaptionURL&amp;_method=retrieve&amp;_eid=1-s2.0-S0926580509001599&amp;_image=1-s2.0-S0926580509001599-gr1.jpg&amp;_cid=271427&amp;_explode=defaultEXP_LIST&amp;_idxType=defaultREF_WORK_INDEX_TYPE&amp;_alpha=defaultALPHA&amp;_ba=&amp;_rdoc=1&amp;_fmt=FULL&amp;_issn=09265805&amp;_pii=S0926580509001599&amp;md5=ff46411e93c7670fde87bf49e08cf68d" data-label="labelCaptionfig1" data-ref="" data-format="S0926580509001599" href="#gr1" title="View full-size image - Opens in new window">Download full-size image</a></li><li><a class="ppt S_C_ppt" title="Download as PowerPoint slide" href="http://services.elsevier.com/SDWebExport/export/figure/S0926580509001599/1-s2.0-S0926580509001599-gr1.jpg/ppt">Download as PowerPoint slide</a></li></ul></dd></dl></div></div><!--VALIDHTML--><p class="svArticle section clear" id="">Domotic systems usually include domotic devices such as plugs, lights, door and shutter actuators, etc., and a so-called network-level gateway that allows to tunnel low-level protocol messages over more versatile, application independent, interconnection technologies, e.g., Ethernet. These gateways are not suitable for implementing features needed by IDEs since they have reduced computational power and they are usually closed, i.e., they cannot be programmed to provide more than factory default functionalities. However, they play a significant role in an IDE architecture as they offer an easy to exploit access point to domotic systems.</p><!--VALIDHTML--><p class="svArticle section clear" id="">Appliances can be either &ldquo;dumb&rdquo; devices that can only be controlled by switching on and off the plugs to which they are connected or &ldquo;smart&rdquo; devices able to provide complex functionalities and to control (or be controlled by) other devices, through a specific, often IP-based, communication protocol.</p><!--VALIDHTML--><p class="svArticle section clear" id="">The Home Gateway is the key component for achieving inter-operation and intelligence in IDEs; it is designed to respond to different requirements, ranging from simple bridging of network-specific protocols to complex interaction support. The cornerstone of intelligent behaviors and applications is a suitable house modeling methodology and language.</p><!--VALIDHTML--><p class="svArticle section clear" id="">In this paper, we consider IDEs based on the DOG <span id="bbib4"><a href="#bib4" id="ancbbib4" class="intra_ref">[4]</a></span> gateway, which exploits a DogOnt ontology <span id="bbib6"><a href="#bib6" id="ancbbib6" class="intra_ref">[6]</a></span> instance to address the knowledge representation problem.</p><!--VALIDHTML--><h3 class="svArticle" id="section_lbl2.2">2.2. DogOnt</h3><p class="svArticle section clear" id="">The DOG gateway models the house structure and the installed domotic components, together with their states and functionalities, by adopting a domain-specific <em>ontology</em>, called DogOnt  <span id="bbib6"><a href="#bib6" id="ancbbib6" class="intra_ref">[6]</a></span>. According to the classical Gruber's definition <span id="bbib11"><a href="#bib11" id="ancbbib11" class="intra_ref">[11]</a></span> an ontology is an &ldquo;explicit specification of a conceptualization,&rdquo; which is, in turn, &ldquo;the objects, concepts, and other entities that are presumed to exist in some area of interest and the relationships that hold among them&rdquo;. W3C Semantic Web standard suggests a specific formalism for encoding ontologies (OWL), in three variants that provide different expressive power <span id="bbib12"><a href="#bib12" id="ancbbib12" class="intra_ref">[12]</a></span>.</p><!--VALIDHTML--><div class="page_fragment_ind" data-id="frag_3"></div><script>prs.rt("abs_1st_end");</script></div>
+
+               
+
+       
+   
+        
+    </div>
+    <div id="footer-area-dummy"></div>
+	
+        <div id="footer-area" aria-label="product support" role="contentinfo">
+		    <div id="sdFoot">
+                <div id="footer" aria-label="Footer" role="navigation">	
+  <div class="bottomArticle"></div>
+  <div class="padding">
+    <div id="linkArea">
+      <div class="padding links">
+        <div style="float:left;width:0;height:1px;"></div>
+        <div id="banner-bottom">
+          <a class="S_C_aboutElsevier" href="http://www.elsevier.com" target="_blank" title="Elsevier homepage (opens in a new window)"></a>
+        </div>
+        <ul class="col5">
+<li><a target="_blank" href="http://www.elsevier.com/solutions/sciencedirect">About ScienceDirect</a></li>
+</ul>
+<ul class="col5">
+<li> <a target="_blank" href="http://www.sciencedirect.com/science/contactus">Contact and support</a></li>
+</ul>
+<ul class="col5">
+<li><a target="_blank" href="http://www.elsevier.com/locate/termsandconditions?utm_source=sciencedirect&utm_medium=link&utm_campaign=terms">Terms and conditions</a></li>
+</ul>
+<ul class="col5">
+<li><a target="_blank" href="http://www.elsevier.com/privacypolicy?utm_source=sciencedirect&utm_medium=link&utm_campaign=privacy">Privacy policy</a></li>
+</ul>
+        <div class="clear"></div>
+        <!-- CSAS will be providing the links-->
+      </div>
+      <div class="padding copyright">
+	<hr/>
+        Copyright &copy; 2016 Elsevier B.V. or its licensors or contributors. ScienceDirect&reg; is a registered trademark of Elsevier B.V.
+      </div>
+      <div class="padding" style="padding-bottom:4px;font-size:11px;">
+              Cookies are used by this site. To decline or learn more, visit our <a href="https://www.elsevier.com/solutions/sciencedirect/support/cookies" target="_blank">Cookies</a> page.
+        </div> 
+      
+        
+          <div class="padding links">
+            <div id="goToggleSite"><a class="mLink" site='Mobile' ckNm='Site' lnkOrg='article' lnkZn='footer' href='#'>Switch to Mobile Site</a></div>
+          </div>
+	  <form id="pgReload" method="get" action=""></form>
+        
+      
+    </div>
+  </div>
+</div> <!--footer-->
+
+            </div><!--sdFooter-->
+        </div><!--footer-area-->
+	
+    </div>
+ </div>
+ <div id="rightPane" class="column" aria-label="Related content" role="complementary">
+  <div id="rightOuter" class="rightOuter">
+    <div id="rightInner" class="rightInner">
+       <div class="innerPadding">
+
+    <div id="SD_BIB" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>
+ 
+
+    
+    
+        <div id="recommend_related_articles" class="entry separator related closed">
+            
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Recommended articles</a></h2>
+             
+             <ol id="relArtList"><li class="note"><p>No articles found.</p></li></ol>
+        </div>
+    
+    
+    
+        <div id="cited_by_articles" class="entry separator related closed">
+            <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Citing articles (<span id="hitcount">0</span>)</a></h2>
+            <ol id="citedByList"><li class="note"><p>This article has not been cited.</p></li></ol> 
+        </div>
+    
+    
+    
+        <div id="SD_CRA" class="hidden entry separator appBox sgfNoTitleBar sgfNoGadgetBorder"></div>  
+    
+    
+        
+            <div id="related_book_content" class="entry separator related closed">
+                <h2><a href="#articles" class="toggle" aria-controls="relArtList" aria-expanded="false"><span class="iconArrow">&nbsp;</span>Related book content</a></h2>
+                <ol id="relBkList"><li class="note" style="margin-left:15px;"><p>No articles found.</p></li></ol>
+            </div>
+        
+     
+     
+
+
+
+    
+        <div class="appContainerDummy"></div>
+        <div class="appContainer js_application_content">
+            <ul class="hidden" id="dataRepHolder"></ul>
+            
+                <div id="SD_AT1P" class="boxLink sgfNoTitleBar sgfNoGadgetBorder"></div>
+            
+
+            
+                <div id="SD_FTA1" class="boxLink sgfHorToolbar sgfShowMyApps sgfShowMoreLessApps"></div>
+            
+        </div>
+    
+
+
+</div>
+
+<div class="js_workspace_content popup" aria-live="polite" role="region" aria-label="Overlay" aria-describedby="skuip-3">
+    <a aria-label="close overlay" title="close overlay" alt="close overlay" href="#" id="buttonClose" role="button" class="closeBt">&nbsp;</a>
+    <div class="scrollArea"><div id="workSpaceView"></div></div>
+</div>
+
+    </div><!--rightInner-->
+  </div><!--rightOuter-->
+ </div><!--rightPane-->
+</div><!--page-area-->
+
+
+
+<div style="clear:both;"></div>
+
+<form name="citationInfo" id ="citationInfo" method="POST" action="">
+    <input type="hidden" name="art_citation" value=""/>
+</form>
+
+
+<script src="http://cdn.els-cdn.com/sd/js/sdX_1603R8.js"></script>
+
+
+
+
+<script src="http://cdn.els-cdn.com/sd/js/sd_1603R8.js"></script>
+
+
+
+<script src="http://cdn.els-cdn.com/sd/js/pa_1603R8.js"></script>
+
+
+<script>
+var sciverse="empty";
+var SDM=new Object;
+SDM.tm=new Object;
+SDM.tm.ahm='h'
+
+
+
+SDM.ep=new Object;
+SDM.ep.downloadCsvURL = "http://services.elsevier.com/SDWebExport/export/table/csv";
+SDM.ep.downloadActionURL = "http://www.sciencedirect.com/science/downloadActions/keyEvent/S0926580509001599/09265805";
+SDM.ep.gigyaLib="//cdn.gigya.com/JS/socialize.js?apiKey=3__Bt7bHrGM8mjKPwBuOVjWyMi678aF6-PewcnoHJJ6UR1fS5t9NG9RBbKHjE0oA6J";
+SDM.ep.imgUrlPrefix = "http://ars.els-cdn.com/content/image/";
+SDM.ep.thumbimgUrlPrefix = "http://ars.els-cdn.com/content/thumbimage/";
+SDM.ep.mendeleyJS = "https://www.mendeley.com/minified/bookmarklet.js";
+SDM.ep.enableUsabillaMsg = "Y";
+SDM.ep.prDevice = "http://pa.elsevier.com";
+SDM.ep.pru = "http://pa.elsevier.com";
+SDM.ep.ref2ref2by = "http://www.sciencedirect.com/science/relLink/ajaxReq?_eid=1-s2.0-S0926580509001599";
+SDM.ep.staticImgUrlPrefix = "http://cdn.els-cdn.com/sd";
+SDM.ep.urlPrefix = "http://www.sciencedirect.com/science";
+SDM.ep.urlQualifier = "science";
+SDM.ep.urlScheme = "http://www.sciencedirect.com";
+SDM.ep.userActionURL = "http://www.sciencedirect.com/science/UserActions";
+ SDM.helpUrlDomain="http://help.sciencedirect.com/flare"; 
+
+
+
+
+SDM.pm=new Object;
+SDM.pm.cid = '271427';
+SDM.pm.contentFamily = "serial";
+SDM.pm.contentType = "JL";
+SDM.pm.coverDate = '31-Mar-2010';
+
+SDM.pm.doi = '10.1016/j.autcon.2009.10.008';
+
+SDM.doi = '10.1016/j.autcon.2009.10.008';
+SDM.pm.eid = '1-s2.0-S0926580509001599';
+SDM.pm.entitled = true;
+ SDM.pm.hubEid = '1-s2.0-S0926580510X00024'; 
+SDM.pm.indexType = '';
+SDM.pm.issnisbn = "09265805";
+
+SDM.pm.itemWeight = 'FULL-TEXT';
+SDM.pm.mod_cid="";
+SDM.pm.mod_srcTitle="";
+SDM.pm.mod_ISBN = "";
+SDM.pm.pdfEid = '1-s2.0-S0926580509001599-main.pdf';
+SDM.pm.pdfSize = '2821737';
+SDM.pm.pii = 'S0926580509001599';
+SDM.pm.prodColor="sci_dir";if(SDM.pm.prodColor=="sci_dir")SDM.pm.prodColor="";
+ SDM.pm.rev = '20150515T031751130604'; 
+ SDM.pm.hrev = 'vH.11'; 
+ SDM.pm.pptURL = 'http://services.elsevier.com/SDWebExport/export/figure/'; 
+
+
+
+
+
+
+
+SDM.pf = new Object;
+SDM.pf.pdfAvail = true;
+SDM.pf.reqAllFrags = true;
+ SDM.pf.maxElemsAllFrags = 12000
+SDM.pf.relatedBkAvail=true;
+SDM.pf.mlktAvail = true;
+SDM.pf.hpccAvail = true;
+SDM.pf.blkSocialLogins=true;
+
+
+SDM.browserUserMsg=true;
+
+
+SDM.pf.citedByScAvail = true;
+SDM.pf.aetEnabled = false;
+ SDM.pf.suggestedArtPDFMaxWait="2000";
+ SDM.pf.pdfMenuAvail=true; 
+
+
+SDM.pf.ads = new Object;
+SDM.pf.ads.leftUrl="/science/advertisement/left/num/158159/mainCat/general/cat/general/acct/e4ac692c2374147a9e00bb078eeede9f/isn/09265805/doi/10.1016_j.autcon.2009.10.008/page/article/artOAstatus/N";
+
+
+
+
+SDM.pf.dc = new Object;
+SDM.pf.dc.retry = 10;
+SDM.pf.dc.retryDelay = 300;
+SDM.pf.dc.retryFactor = 1.0;
+SDM.pf.dc.respObj = '';
+
+
+SDM.pf.er = new Object();
+
+
+
+
+
+
+SDM.pf.frag = new Object();
+SDM.pf.frag.fat = 'f7b7e3762de88a0b8e10066638e23c06d2a68816184d5ae05de915da0595847fd3d33c367b313f50d1240d07ef8b48e372d3df55ebebfe68ff5d20337fd8caf3cfec6732dadba01d0c261788524e607e738e3966f15c4a63d5738d198449b2dc3bac3c56b9cc0efd0cae8d098514495891bf38191181ebe486c3b0f815a391618b8b2521b1991c1c98c9b4ad5b5ae649478ad3b1095aa590';
+SDM.pf.frag.mapRetry = 20;
+SDM.pf.frag.mapRetryDelay = 2000;
+SDM.pf.frag.mapRetryFactor = 1.1;
+SDM.pf.frag.retry = 5;
+SDM.pf.frag.retryDelay = 2000;
+SDM.pf.frag.foldFactor = 1.5;
+SDM.pf.frag.hashWait = 5000;
+
+
+
+
+
+
+SDM.pf.gadget = new Object();
+SDM.pf.gadget.displayGadgets=true;
+SDM.pf.gadget.sciverseUrlPfx="http://www.sciencedirect.com";
+SDM.pf.gadget.sciverseJsonObject='';
+SDM.pf.gadget.sciverseGadgetDetailsID = "";
+SDM.pf.gadget.svShindigLib="http://sciverse-shindig.elsevier.com/gadgets/js/shindig-container:pubsub-2.js?c=1";
+SDM.pf.gadget.svSciverseLib="http://www.sciencedirect.com/gadgetservices/gadgets/v9/js/SciverseShindigService,GadgetToolBar,jquery-outside,jquery.ba-bbq.min,SciverseShindigContainer,ScienceDirectShindigServices.js";
+
+
+
+SDM.pf.mrwmod = new Object();
+SDM.pf.mrwmod.breadCrumbPathURL = "http://www.sciencedirect.com/science/module/breadCrumbPaths/isbn//pii/S0926580509001599";
+
+SDM.pf.mrwmod.ldrAvail = true;
+
+
+ 
+
+
+SDM.pf.oa = new Object();
+
+
+
+
+
+
+
+
+SDM.pf.ref = new Object();
+SDM.pf.ref.bs = 20;
+SDM.pf.ref.citedByURL = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_updateCitedBy=";
+SDM.pf.ref.fd = 300;
+
+SDM.pf.ref.resolveURL = "http://www.sciencedirect.com/science/referenceResolution/ajaxRefResol?_pii=S0926580509001599&_refCnt=23&_docType=article";
+
+
+
+
+
+SDM.pf.toc=new Object;
+SDM.pf.toc.retry = 20;
+SDM.pf.toc.retryDelay = 1000;
+SDM.pf.toc.retryFactor = 1.09;
+SDM.pf.toc.outlineGraphics = false;
+SDM.pf.toc.outlineTab = "";
+
+SDM.pf.toc.urlTOCLink="http://www.sciencedirect.com/science/article/pii/S0926580509001599";
+SDM.pf.toc.urlTOCLinkQueryStr="?_rdoc=1&_fmt=full&_origin=&md5=22543fb95e34d36391c44b9d9cd72533";
+
+SDM.pf.ddm = new Object();
+SDM.pf.ddm.endpoint = "http://services.elsevier.com/SDWebExport/export/pdfdownload/pdf";
+
+
+
+
+
+
+SDM.si = new Object();
+SDM.si.webUserId = "3776756";
+SDM.si.sds = "1fc77a2af113b7d0ac3505ba0e478865be08f4b021606834e979e90a16010ffddeff04733004b17c";
+SDM.si.euidCookieObject='4f04ac6f32c07deffac230549719195375d7c44ad16504d5e1a07e11207681a4eb9c49b2d38c61ae';
+
+SDM.pageTransKey = "04/02/2016 11:27:47 EDT#1845_002#10418#90.147.43.27";
+SDM.pageType = "article_full";
+SDM.tid = "74149696-f8e7-11e5-96ad-00000aab0f01";
+SDM.ud = "3776756||C000061350|87455|IPRANGE";
+SDM.ieVersion="8";
+
+SDM.dac = new Object;
+SDM.svapi = SVApi;
+
+</script>
+
+
+<script src="http://cdn.els-cdn.com/sd/js/importer-api_1603R8.js.min"></script>
+
+
+<script>
+
+initializeArticlePage();
+</script>
+
+
+
+
+<script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/14bb862cc5c4.js");
+/*]]>{/literal}*/
+if(typeof SDM != "undefined") {
+  if(SDM.ud) { usabilla_live("data", {"custom": {"ud":SDM.ud} }); }
+  if(SDM.pf&&SDM.pf.oa) {
+    if(SDM.pf.oa.item) { usabilla_live("data", {"custom": {"open_access":SDM.pf.oa.item} });}
+    if(SDM.pf.oa.archive) { usabilla_live("data", {"custom": {"open_archive":SDM.pf.oa.archive} });}
+  }
+}
+</script>
+
+
+<div id="sdpa"></div>
+<script>SDPA.init();</script>
+<div id="appBackground"></div>
+<div id="appDialog" class="files">
+    <div id="header">
+     <div class="pdfSearchHeading"> Download PDFs
+    <span class="close" id="closeBtn" href = "#" title = "Close Search Results " alt="Close Search Results"><img src="http://cdn.els-cdn.com/sd/sci_dir/closeButton.png"></span>
+    </div></div>
+    <div id="contentBlk" class="view">
+        <div class="help_button" id="ddmMainHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_main.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div class="help_button" id="ddmNewformatHelp"><a class="ddmHelp" target="sdhelp" href="/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article" title="Help (Opens new window)" onClick="var helpWin; helpWin=window.open('/science?_ob=HelpURL&_file=DM_newformat.htm&_btn=Y&_zone=TopNavBar&_origin=article','sdhelp','scrollbars=yes,resizable=yes,directories=no,toolbar=no,menubar=no,status=no,width=984,height=738'); helpWin.focus(); return false">Help</a></div>
+        <div id="filesTemplate"></div>
+        <div id="namingTemplate"></div> 
+    </div>
+    <div class="footer"></div>
+</div>
+
+
+
+
+
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-b7cfe8df39a4e5eec5536bba80e13f4b6fa0dd7c.js"></script>
+<script>
+
+
+var pageData=new Object;
+
+var page=new Object;
+page["businessUnit"]="ELS:RAP:ST";
+page["isProduction"]="true";
+page["language"]="en";
+page["name"]="product:journal:article";
+page["productName"]="SD";
+page["environment"]="prod";
+page["noTracking"]="false";
+page["loadTime"]="";
+page["loadTimestamp"]=Date.now().toString();
+page["type"]="CP-CA";
+pageData["page"]=page;
+
+var visitor=new Object;
+visitor["accessType"]="CSAS:CSAS-STYLE-A:ANON-IP:ONLINE_REGISTERED";
+visitor["accountId"]="ae:61350";
+
+visitor["industry"]="";
+visitor["ipAddress"]="90.147.43.27";
+visitor["loginStatus"]="";
+visitor["sisId"]="";
+visitor["userId"]="ae:3776756";
+pageData["visitor"]=visitor;
+
+try { pageDataTracker.trackPageLoad(); }
+catch(e) { console.warn("There was an error loading or running Adobe DTM:\r\n ", e); }
+</script>
+
+
+</body></html>
+

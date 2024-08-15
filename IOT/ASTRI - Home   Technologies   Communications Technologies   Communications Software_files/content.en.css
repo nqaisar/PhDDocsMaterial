@@ -1,0 +1,95 @@
+
+
+#contentContainer {
+	width:733px;
+	text-align:left;
+
+}
+
+#contentContainer.right {
+
+	float: right;
+	margin-top: 8px;
+	background: #ffffff url(../images/bg_dotted_at_left.gif) repeat-y;
+}
+
+#contentContainer #keyvisual {
+
+}
+#contentContainer #keyvisual.right {
+	float: right;
+}
+
+#contentContainer #breadcrumb {
+	background-color: #5376a0;
+	width: 710px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+#contentContainer #breadcrumb.right {
+	float: right;
+}
+
+#contentContainer #breadcrumb #path 					{ padding-left: 10px; color: #ffffff; line-height: 13px; padding-top: 2px; }
+#contentContainer #breadcrumb #path a:link		{ color:#ffffff; text-decoration: none; }
+#contentContainer #breadcrumb #path a:visited	{ color:#ffffff; text-decoration: none; }
+#contentContainer #breadcrumb #path a:hover		{ color:#ffffff; text-decoration: underline; }
+
+
+#contentBox {
+	padding-left:50px;
+	padding-right:25px;
+	padding-bottom:10px;
+	text-align:justify;
+}
+
+#contentBox h1 { font-size: 21px; font-weight: normal; color:#004282; text-align:left; line-height: 24px;  }
+#contentBox h2 { font-size: 12px; font-weight: bold;   color:#004282; text-align:left; line-height: 17px; }
+
+.imgAlignToRight { margin-left: 40px; margin-bottom: 5px; }
+.imgAlignToLeft { margin-right: 40px; margin-bottom: 5px; }
+
+#contentBox a:visited { color:#006FB7; text-decoration: underline; }
+#contentBox a:link    { color:#006FB7; text-decoration: underline; }
+#contentBox a:hover   { color:#004282; text-decoration: underline; }
+
+.contentSmall {
+	font-size: 10px;
+	line-height: 13px;
+	}
+	
+#contentBox.larger h1 { font-size: 24px; line-height: 28px; } 
+#contentBox.larger h2 { font-size: 15px; line-height: 21px; } 
+#contentBox.larger div,
+#contentBox.larger a,
+#contentBox.larger span,
+#contentBox.larger td,
+#contentBox.larger p,
+#contentBox.larger    { font-size: 16px; line-height: 20px; } 
+                                                              
+#contentBox.largest h1 { font-size: 28px; line-height: 34px; }
+#contentBox.largest h2 { font-size: 24px; line-height: 28px; }
+#contentBox.largest div,
+#contentBox.largest a,
+#contentBox.largest span,
+#contentBox.largest td,
+#contentBox.largest p,
+#contentBox.largest    { font-size: 22px; line-height: 27px; }
+
+
+.pressReleaseListDate a:visited { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.pressReleaseListDate a:link    { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.pressReleaseListDate a:hover   { color:#004282; font-weight:bold; text-decoration: underline; } 
+ 
+.newsListDate a:visited { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.newsListDate a:link    { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.newsListDate a:hover   { color:#004282; font-weight:bold; text-decoration: underline; } 
+
+.announcementListDate a:visited { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.announcementListDate a:link    { color:#006FB7; font-weight:bold; text-decoration: underline; }
+.announcementListDate a:hover   { color:#004282; font-weight:bold; text-decoration: underline; } 
+
+.newsListSubject         { width: 90%; }
+.announcementListSubject { width: 90%; }
+.pressReleaseListSubject { width: 90%; }

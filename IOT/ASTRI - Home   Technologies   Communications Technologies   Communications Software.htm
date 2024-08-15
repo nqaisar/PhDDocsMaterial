@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:GSGP -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>ASTRI - Home | Technologies | Communications Technologies | Communications Software</title>
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/common.en.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header.en.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/leftmenu.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/content.en.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/search.css">
+	<link media="screen, print" type="text/css" rel="stylesheet" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/search.en.css">
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/common.js"></script><style type="text/css"></style>
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/jquery-1.8.3.min.js"></script>
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/jquery-smoothanchor-1.0.js"></script>
+	<!-- fancy-box related -->
+	<script type="text/javascript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/jquery.fancybox.css" media="screen">
+	<script type="text/javascript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/jquery.fancybox-media.js"></script>
+	<!--/fancy-box related -->
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/leftmenu.js"></script>
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/swfobject_modified.js"></script>
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/validation.js"></script>
+	<script language="JavaScript1.2" type="text/JavaScript" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/formchk.en.js"></script>
+	<script language="JavaScript1.2" type="text/JavaScript">
+
+	$(function() {
+		// Replace table width for width=100% to fix CSS issue on IE7
+		//$('div#contentContainer > div#contentBox > table[width=100%]').attr('width', 655);
+	});
+
+	$(document).ready(function() {
+		// popMenu mousehover handling (for mainNav)
+		$("div.popMenuItem").hover(
+		      function () {
+		        $(this).addClass("popMenuItemHover");
+		      },
+		      function () {
+		        $(this).removeClass("popMenuItemHover");
+		      }
+		    );
+
+		// Fix div#contentContainer's height
+		window.onload = function()
+		{
+			fixContentContainerHeight();
+		}
+	});
+	
+	function fixContentContainerHeight()
+	{
+			var leftMenuHeight         = $("div#leftMenu").height();
+			var contentContainerHeight = $("div#contentContainer").height();
+			var contentBoxHeight = $("div#contentBox").height();
+
+			//if (contentContainerHeight < leftMenuHeight)
+			//{
+			//	$("div#contentContainer").height(leftMenuHeight + 20);
+			//}
+			
+			//alert("contentContainerHeight = "+contentContainerHeight);
+			//alert("contentBoxHeight = "+contentBoxHeight);
+			//alert("leftMenuHeight = "+leftMenuHeight);
+			
+			if (contentBoxHeight < 440)
+			{
+				var newHeight = ((contentBoxHeight + 180) > 550) ? (contentBoxHeight + 180) : 550;
+				
+				$("div#contentContainer").height(newHeight);
+				$("div#leftMenu").height(newHeight);
+			}
+			
+			// Added for Font Adjustment Function
+			else
+			{
+				$("div#leftMenu").height(contentBoxHeight);	
+			}
+			
+			if (contentContainerHeight < contentBoxHeight)
+			{
+				$("div#contentContainer").height(contentBoxHeight);
+			}
+			
+			
+			
+	}
+
+
+	// PopMenu
+	var defaultDisplayTime = 1000;
+
+	// PopMenu - About ----------------------------------------------------------
+	var popmenu_interval_about;
+	$(document).ready(function() {
+		$("div#mainNav li a#about").bind("mouseenter focus",
+			function () {
+				popmenu_HideAll();
+				clearInterval(popmenu_interval_about);
+				$("div#popMenu_about div.popMenuContainer").slideDown(500);
+			}).bind("mouseleave blur",
+			function () {
+				clearInterval(popmenu_interval_about);
+				popmenu_interval_about = setInterval(function() { $("div#popMenu_about div.popMenuContainer").slideUp(500); } ,defaultDisplayTime);
+			}
+		);
+
+		$("div#popMenu_about div.popMenuContainer div.popMenuItem").bind("mouseenter focus", function() { clearInterval(popmenu_interval_about); popmenu_interval_about = setInterval(function() { $("div#popMenu_about div.popMenuContainer").slideUp(500); } ,3000); });
+	});
+
+
+	// PopMenu - Achievement ----------------------------------------------------------
+	var popmenu_interval_achieve;
+	$(document).ready(function() {
+		$("div#mainNav li a#achieve").bind("mouseenter focus",
+			function () {
+				popmenu_HideAll();
+				clearInterval(popmenu_interval_achieve);
+				$("div#popMenu_achieve div.popMenuContainer").slideDown(500);
+			}).bind("mouseleave blur",
+			function () {
+				clearInterval(popmenu_interval_achieve);
+				popmenu_interval_achieve = setInterval(function() { $("div#popMenu_achieve div.popMenuContainer").slideUp(500); } ,defaultDisplayTime);
+			}
+		);
+
+		$("div#popMenu_achieve div.popMenuContainer div.popMenuItem").bind("mouseenter focus", function() { clearInterval(popmenu_interval_achieve); popmenu_interval_achieve = setInterval(function() { $("div#popMenu_achieve div.popMenuContainer").slideUp(500); } ,3000); });
+	});
+
+	// PopMenu - Technologies ----------------------------------------------------------
+	var popmenu_interval_tech;
+	$(document).ready(function() {
+		$("div#mainNav li a#tech").bind("mouseenter focus",
+			function () {
+				popmenu_HideAll();
+				clearInterval(popmenu_interval_tech);
+				$("div#popMenu_technologies div.popMenuContainer").slideDown(500);
+			}).bind("mouseleave blur",
+			function () {
+				clearInterval(popmenu_interval_tech);
+				popmenu_interval_tech = setInterval(function() { $("div#popMenu_technologies div.popMenuContainer").slideUp(500); } ,defaultDisplayTime);
+			}
+		);
+
+		$("div#popMenu_technologies div.popMenuContainer div.popMenuItem").bind("mouseenter focus", function() { clearInterval(popmenu_interval_tech); popmenu_interval_tech = setInterval(function() { $("div#popMenu_technologies div.popMenuContainer").slideUp(500); } ,3000); });
+	});
+
+	// PopMenu - Achievement ----------------------------------------------------------
+	var popmenu_interval_news;
+	$(document).ready(function() {
+		$("div#mainNav li a#news").bind("mouseenter focus",
+			function () {
+				popmenu_HideAll();
+				clearInterval(popmenu_interval_news);
+				$("div#popMenu_news div.popMenuContainer").slideDown(500);
+			}).bind("mouseleave blur",
+			function () {
+				clearInterval(popmenu_interval_news);
+				popmenu_interval_news = setInterval(function() { $("div#popMenu_news div.popMenuContainer").slideUp(500); } ,defaultDisplayTime);
+			}
+		);
+
+		$("div#popMenu_news div.popMenuContainer div.popMenuItem").bind("mouseenter focus", function() { clearInterval(popmenu_interval_news); popmenu_interval_news = setInterval(function() { $("div#popMenu_news div.popMenuContainer").slideUp(500); } ,3000); });
+	});
+
+	function popmenu_HideAll()
+	{
+		if (popmenu_interval_about  ) { $("div#popMenu_about div.popMenuContainer"       ).slideUp(200); }
+		if (popmenu_interval_achieve) { $("div#popMenu_achieve div.popMenuContainer"     ).slideUp(200); }
+		if (popmenu_interval_tech   ) { $("div#popMenu_technologies div.popMenuContainer").slideUp(200); }
+		if (popmenu_interval_news   ) { $("div#popMenu_news_room div.popMenuContainer"   ).slideUp(200); }
+	}
+
+	// For Text fields
+	function textfieldOnFocus(obj, placeholderMsg)
+	{
+		obj.style.color = '#000000';
+		obj.className = '';
+		
+		if (obj.value == placeholderMsg)
+		{
+			obj.value = '';	
+		}
+	}
+	
+
+
+	</script>
+</head>
+<body>
+<center>
+<div id="body">
+
+<div id="header">
+	<div class="left">
+		<div id="headerLogo">
+			<a href="http://www.astri.org/main/" title="ASTRI logo" tabindex="1"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_logo.gif" alt="ASTRI logo" border="0"></a>
+			<a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:GSGP#contentBegins" style="color: white; text-decoration: none">Skip to content</a>
+		</div>
+	</div>
+	<div class="right">
+		<div id="topNav" lang="en">
+			
+			<a href="http://www.astri.org/main/?contentnamespace=customerlogin" title="Customers">Customers</a> |
+			<a href="http://www.astri.org/main/?contentnamespace=technologies:eoi" title="Expressions of Interest">Expressions of Interest</a> |
+			<a href="http://www.astri.org/main/?contentnamespace=careers:consultancy" title="Consultancy Services">Consultancy Services</a> |
+			<a href="http://www.astri.org/main/?contentnamespace=tender:home" title="Tender Notice">Tender Notice</a> |
+			<a href="http://www.astri.org/main/?contentnamespace=locationmap" title="Location Map">Location Map</a> |
+			<a href="http://www.astri.org/main/?contentnamespace=contactus" title="Contact Us">Contact Us</a>
+			&nbsp; &nbsp; &nbsp;
+			[
+			<a href="http://www.astri.org/main/index.php?contentnamespace=technologies:ct:communications_software:GSGP&lang=ZH">繁</a> | <a href="http://www.astri.org/main/index.php?contentnamespace=technologies:ct:communications_software:GSGP&lang=CN">简</a>			]
+		</div>
+		<div id="searchBox">
+			<table cellpadding="0" cellspacing="0" border="0">
+			<form method="get" action="http://www.astri.org/main/"></form>
+			<tbody><tr>
+				<td><a href="http://www.youtube.com/user/hkastri#p/a" title="ASTRI Youtube Channel" target="_blank"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/icon_youtube.gif" alt="ASTRI Youtube Channel" border="0"></a></td><td width="15">&nbsp;</td>
+				<td><a href="https://www.facebook.com/ASTRI.hk" title="ASTRI Facebook Page" target="_blank"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/icon_facebook.gif" alt="ASTRI Facebook Page" border="0"></a></td><td width="15">&nbsp;</td>
+
+				<td><input type="text" name="k" id="k" value="Enter Keyword" onfocus="this.value=&#39;&#39;; this.className=&#39;searchBoxOnFocus&#39;;" onblur="if (this.value == &#39;&#39;) { this.value = &#39;Enter Keyword&#39;; this.className=&#39;searchBoxOnBlur&#39;; }"></td>
+				<td><input type="image" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_searchBox_btnSubmit.gif" border="0" align="absmiddle" hspace="2" title="Search" alt="Search"></td>
+			</tr>
+			<input type="hidden" name="action" id="action" value="search">
+			
+			</tbody></table>
+		</div>
+	</div>
+</div><!--[id=header]-->
+<div id="mainNav">
+	<ul>
+		<li><a id="about" href="http://www.astri.org/main/?contentnamespace=about_astri" title="About ASTRI"><b>About ASTRI</b></a></li>
+		<li><a id="achieve" href="http://www.astri.org/main/?contentnamespace=achievements" title="Achievements"><b>Achievements</b></a></li>
+		<li><a id="tech" href="http://www.astri.org/main/?contentnamespace=technologies" title="Technologies"><b>Technologies</b></a></li>
+		<li><a id="app" href="http://www.astri.org/main/?contentnamespace=applications" title="Applications"><b>Applications</b></a></li>
+		<li><a id="news" href="http://www.astri.org/main/?contentnamespace=news_room" title="News Room"><b>News Room</b></a></li>
+		<li><a id="careers" href="http://www.astri.org/main/?contentnamespace=careers" title="Careers"><b>Careers</b></a></li>
+	</ul>
+</div><!--[id=mainNav]-->
+<div id="mainNavShadow"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_bg.gif" alt="Header shadow image for decoration only"></div>
+<div id="popMenu_technologies"><div class="popMenuContainer"><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct">Communications Technologies</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece">Enterprise &amp; Consumer Electronics</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd">IC Design</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt">Material &amp; Packaging Technologies</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme">Bio-Medical Electronics</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=technologies:ERL">Exploratory Research Laboratory</a></div></div></div>
+<div id="popMenu_about"><div class="popMenuContainer"><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:company_profile">Company Profile</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:mission_goal">Mission &amp; Goals</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:20130822je02">A personal note from the CEO</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:org_structure">Organization Structure</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:corporate_governance">Corporate Governance</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:corp_responsibilities">Corporate Social Responsibility</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:publications">Publications</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=about_astri:video">Videos</a></div></div></div>
+<div id="popMenu_achieve"><div class="popMenuContainer"><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=achievements:patents">Patents</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=achievements:awards">Awards</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=achievements:tech_transfers">Technology Transfers</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=achievements:industry_income">Income from Industry</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=achievements:business_deals">Business Deals</a></div></div></div>
+<div id="popMenu_news"><div class="popMenuContainer"><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:press_releases">Press Releases</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:announcement">Announcements</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:event">Events</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:visits_activities">Visits &amp; Activities</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:news">ASTRI in the News</a></div><div class="popMenuItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:enewsletter">e-Newsletter</a></div><div class="popMenuItem popMenuLastItem"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/header_nav_popmenu_bullet.gif" alt="" hspace="5" align="absmiddle" border="0"><a href="http://www.astri.org/main/?contentnamespace=news_room:facts_figures">Facts and Figures</a></div></div></div>
+
+<div id="main">
+<div id="leftMenu" style="height: 1681px;">
+	<div class="leftmenu_split"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/px.gif"></div>
+	<div class="leftmenu_split leftmenu_lv1_highlighted" id="leftmenu_lv1_nav2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:home">Communications Technologies</a><input id="leftmenu_lv2_nav2_status" type="hidden" value="1"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav2" style="">
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav2_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:wirelesscom:home">Wireless Communications</a><input id="leftmenu_lv3_nav2_2_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav2_2" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_2_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:wirelesscom:td_lte_terminal_baseband_core">TD-LTE Terminal Baseband Core Technologies</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_2_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:wirelesscom:lte_smallcell_baseband_core">LTE  Small Cell Baseband Core Technologies</a></div>
+</div>
+<div class="leftmenu_split leftmenu_lv2_highlighted" id="leftmenu_lv2_nav2_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:home">Communications Software</a><input id="leftmenu_lv3_nav2_3_status" type="hidden" value="1"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav2_3" style="">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_3_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:home">LTE EPC Solution</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_3_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:lte_femtocell">LTE Small Cell Gateway Solution</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_3_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:cwms">Customizable Wireless Network Management System</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_3_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:communications_software:nds">Network Dimension System</a></div>
+<div class="leftmenu_split leftmenu_lv3_highlighted" id="leftmenu_lv3_nav2_3_5"><a href="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/ASTRI - Home   Technologies   Communications Technologies   Communications Software.htm">ASTRI’s Sensor &amp; Internet-of-Things (IoT) Gateway and Management Solution</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav2_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:rf_systems:home">RF Systems</a><input id="leftmenu_lv3_nav2_4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav2_4" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_4_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:rf_systems:home">Antenna Research and Development Centre</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_4_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:rf_systems:digital_rf">Digital RF</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_4_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:rf_systems:Consortium">ASTRI's Antennas Consortium</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav2_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:broadband:td-lte_td-scdma">Broadband Communications</a><input id="leftmenu_lv3_nav2_5_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav2_5" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_5_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:broadband:td-lte_td-scdma">Dual-mode TD-LTE/TD-SCDMA RF Transceiver Chip</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_5_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:broadband:mtv_rf_tuner_chip">Multi-mode MTV RF Tuner Chip (CMMB, DVB-T/H, T-DMB)</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav2_5_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:broadband:cwpan_zigbee">Dual-mode CWPAN/ZigBee RF Transceiver Chip</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav2_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:ct:ctkti:ct_ktileaders">KTI Leaders</a><input id="leftmenu_lv3_nav2_6_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav2_6" style="display:none;">
+</div>
+</div>
+<div class="leftmenu_lv1 leftmenu_split" id="leftmenu_lv1_nav3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:home">Enterprise &amp; Consumer Electronics</a><input id="leftmenu_lv2_nav3_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav3" style="display:none;">
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:dlc:digital_living_consortium">Digital Living Consortium</a><input id="leftmenu_lv3_nav3_2_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_2" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav3_2_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:dlc:fdl">The Future of Digital Living</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:dht:home">Digital Home Technology</a><input id="leftmenu_lv3_nav3_3_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_3" style="display:none;">
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:mmct:home">Mobile Multimedia Communications Technology</a><input id="leftmenu_lv3_nav3_4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_4" style="display:none;">
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:mti:home">Multimedia Technology IP</a><input id="leftmenu_lv3_nav3_5_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_5" style="display:none;">
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:pst:home">Pervasive Service Technology</a><input id="leftmenu_lv3_nav3_6_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_6" style="display:none;">
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav3_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:ece:ecekti:ece_ktileaders">KTI Leaders</a><input id="leftmenu_lv3_nav3_7_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav3_7" style="display:none;">
+</div>
+</div>
+<div class="leftmenu_lv1 leftmenu_split" id="leftmenu_lv1_nav4"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:home">IC Design</a><input id="leftmenu_lv2_nav4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav4" style="display:none;">
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav4_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:home">Applied SoC Design</a><input id="leftmenu_lv3_nav4_3_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav4_3" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:hpscp">High Performance Storage Controller Platform</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:ssdusb3">SSD Controller with Super-Speed USB3.0 Interface</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:usb3_app_processor">USB3.0 Application Processor</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:lcdtv_display_enhance">LCD TV Display Enhancement Controller</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:micro-controller_unit_design_platform">Micro-controller Unit Design Platform</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:cpipq">Common Platform for IP Qualification (CPIPQ)</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_8"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:lowpower_soc">Low-power System-on-Chip (SoC) Design Platform</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_3_9"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:applied_soc:nanometer_soc">Nanometer System-on-Chip (SoC) Design Platform</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav4_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:home">Portable Analog and Mixed Signal Design</a><input id="leftmenu_lv3_nav4_4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav4_4" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:led_drivers">LED Drivers</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:pico-projector_ic">Pico-Projector IC</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:micro-inverter">Micro-Inverter</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:ic_esd_protection_modelling">IC ESD Protection &amp; Modelling</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:analog_signal_processing">Analog Signal Processing for MEMS Sensor</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:wireless_body_sensor_network_signal_processing">Wireless Body Sensor Network Signal Processing Platform</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_4_8"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:portable_ams:hi_voltage_motor_driver">High Voltage Motor Driver</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav4_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:optical_communication_circuit_design:home">Optical Communication Circuit Design</a><input id="leftmenu_lv3_nav4_5_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav4_5" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav4_5_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:optical_communication_circuit_design:hi_speed_integrate_circuits">High-Speed Integrated Circuits for Optical Fibre Communication</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav4_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:icd:icdkti:icd_ktileaders">KTI Leaders</a><input id="leftmenu_lv3_nav4_7_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav4_7" style="display:none;">
+</div>
+</div>
+<div class="leftmenu_lv1 leftmenu_split" id="leftmenu_lv1_nav5"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:home">Material &amp; Packaging Technologies</a><input id="leftmenu_lv2_nav5_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav5" style="display:none;">
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav5_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:LED">LED</a><input id="leftmenu_lv3_nav5_2_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav5_2" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_2_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:LEDChipPackaging">LED Chip &amp; Packaging</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_2_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:LEDLightingApplications">LED Lighting Applications</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_2_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:LEDLightingControl">LED Lighting Control</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_2_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:pico_projector">Pico-Projector Platform</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_2_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:LED:LargeDisplayPlatform">Large Display Platform</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav5_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:PackagingandSensing">Packaging and Sensing</a><input id="leftmenu_lv3_nav5_3_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav5_3" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:SysteminPackage">System-in-Package (SiP)</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:3DPackaging">3D Packaging</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:HealthcareElectronics">Healthcare Electronics</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:PrintedElectronics">Printed Electronics</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_8"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:AdvancedCompactCameraModules">Advanced Compact Camera Modules</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_3_9"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:PackagingandSensing:aptc">Advanced Packaging Technologies Consortium (APTC)</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav5_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:GreenEnergy:GreenEnergy">Green Energy</a><input id="leftmenu_lv3_nav5_4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav5_4" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_4_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:GreenEnergy:EnergyHarvestingandStorage">Energy Harvesting and Storage</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav5_6"><a href="javascript:" onclick="expandMenuLv3(&#39;leftmenu_lv3_nav5_6&#39;);">Patents</a><input id="leftmenu_lv3_nav5_6_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav5_6" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_6_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:patents:us-patents">US Patents Granted to MPT</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav5_6_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:patents:cn-patents">China Patents Granted to MPT</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav5_7"><a href="http://www.astri.org/main/?contentnamespace=technologies:mpt:mptkti:mpt_ktileaders">KTI Leaders</a><input id="leftmenu_lv3_nav5_7_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav5_7" style="display:none;">
+</div>
+</div>
+<div class="leftmenu_lv1 leftmenu_split" id="leftmenu_lv1_nav6"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:home">Bio-Medical Electronics</a><input id="leftmenu_lv2_nav6_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav6" style="display:none;">
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav6_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:mri:1_5t_neo_mri">Magnetic Resonance Imaging</a><input id="leftmenu_lv3_nav6_2_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav6_2" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_2_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:mri:palpategram">Diagnostic MR Elastography Device (Palpategram)</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_2_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:mri:mri_incubator">Magnetic Resonance Imaging Incubator</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_2_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:mri:1_5t_neo_mri">0.35T Neonatal Magnetic Resonance Imaging System</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav6_3"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:neuro_electronics:btd_f">Neuro-Electronics</a><input id="leftmenu_lv3_nav6_3_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav6_3" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_3_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:neuro_electronics:btd_f">Multiple Function Brain Training Device for Amblyopia Treatment and Binocular Vision Training</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_3_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:neuro_electronics:ven">Virtual Environment for Neurology</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav6_4"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:thermal_therapy_device:ttad">Thermal Therapy Device</a><input id="leftmenu_lv3_nav6_4_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav6_4" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_4_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:thermal_therapy_device:ttad">Thermal Therapy Apparatus &amp; Devices for Surgical Applications</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_4_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:thermal_therapy_device:ttrm">Therapeutic Temperature Regulation Mattress</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav6_5"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:ats:home">Tele-Healthcare</a><input id="leftmenu_lv3_nav6_5_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav6_5" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_5_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:ats:home">ASTRI Tele-care System</a></div>
+</div>
+<div class="leftmenu_lv2 leftmenu_split" id="leftmenu_lv2_nav6_6"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:pathologic_electronics:hsdp">Pathologic Electronics</a><input id="leftmenu_lv3_nav6_6_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv3_div" id="leftmenu_lv3_nav6_6" style="display:none;">
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_6_1"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:pathologic_electronics:hsdp">High Speed Digital Pathology System</a></div>
+<div class="leftmenu_lv3 leftmenu_split" id="leftmenu_lv3_nav6_6_2"><a href="http://www.astri.org/main/?contentnamespace=technologies:bme:pathologic_electronics:dnas">DNA-cytometry for Cancer Screening</a></div>
+</div>
+</div>
+<div class="leftmenu_lv1 leftmenu_split" id="leftmenu_lv1_nav7"><a href="http://www.astri.org/main/?contentnamespace=technologies:ERL:home">Exploratory Research Laboratory</a><input id="leftmenu_lv2_nav7_status" type="hidden" value="0"></div>
+<div class="leftmenu_lv2_div" id="leftmenu_lv2_nav7" style="display:none;">
+</div>
+	<div id="leftMenuBottom"></div>
+</div><!--[id=leftMenu]-->
+
+<script type="text/JavaScript" language="JavaScript1.2">
+highlightLv3('leftmenu_lv1_nav2','leftmenu_lv2_nav2','leftmenu_lv2_nav2_3','leftmenu_lv3_nav2_3','leftmenu_lv3_nav2_3_5');</script>
+<div id="contentContainer" class="right">
+<img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/keyvisual.kinKLSlNeI.en.jpg" border="0" alt="Corporate image photo: ASTRI’s Sensor &amp; Internet-of-Things (IoT) Gateway and Management Solution" title="Corporate image photo: ASTRI’s Sensor &amp; Internet-of-Things (IoT) Gateway and Management Solution" id="keyvisual" class="right"><div id="breadcrumb" class="right"><div id="path"><a href="http://www.astri.org/main/?contentnamespace=ROOT">Home</a> &gt; <a href="http://www.astri.org/main/?contentnamespace=ROOT:technologies">Technologies</a> &gt; <a href="http://www.astri.org/main/?contentnamespace=ROOT:technologies:ct">Communications Technologies</a> &gt; <a href="http://www.astri.org/main/?contentnamespace=ROOT:technologies:ct:communications_software">Communications Software</a></div></div>
+<!-- Font adjustment menu -->
+<div style="width: 100%">
+<div style="float: right; margin-right:12px; *margin-right:4px;">
+	                                       Adjust font size: 	<a href="javascript:fontSizeNormal()">Standard</a> |  
+	<a href="javascript:fontSizeLarger()">Medium</a> |  
+	<a href="javascript:fontSizeLargest()">Large</a>
+	
+	<script>
+		function fontSizeReset()
+		{
+			$('#contentBox').removeClass("larger");
+			$('#contentBox').removeClass("largest");
+		}
+		function fontSizeNormal()
+		{
+			fontSizeReset();
+			fixContentContainerHeight();
+		}
+		function fontSizeLarger()
+		{
+			fontSizeReset();
+			$('#contentBox').addClass("larger");
+			fixContentContainerHeight();
+		}
+		function fontSizeLargest()
+		{
+			fontSizeReset();
+			$('#contentBox').addClass("largest");
+			fixContentContainerHeight();
+		}
+		
+	</script>
+</div>
+</div>
+<!-- /Font adjustment menu -->
+<div style="clear:both"></div>
+
+<div id="contentBox">
+<a name="contentBegins"></a><h1>ASTRI’s Sensor &amp; Internet-of-Things (IoT) Gateway and Management Solution</h1>
+<table width="650" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td colspan="4" height="8"><img width="1" height="1" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/px(1).gif"></td>
+    </tr>
+    <tr>
+    		<td align="left" valign="bottom"><a title="Expressions of Interest" href="http://www.astri.org/main/?contentnamespace=technologies:eoi#mpt"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/function-btn-expression.gif" alt="Expressions of Interest" border="0"></a></td>
+        <td align="left" valign="bottom"><a title="Contact our expert" href="http://www.astri.org/main/?contentnamespace=technologies:grpcontact:ct"><img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/function-btn-contact.gif" alt="Contact our expert" border="0" hspace="1"></a></td>
+        <td align="left" valign="bottom"><a title="Print" href="javascript:window.print();"><img border="0" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/function-btn-print.gif" alt="Print"></a></td>
+        <td width="100%">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4" bgcolor="#cfcfcf"><img width="1" height="1" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/px(1).gif"></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="12"><img width="1" height="1" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/px(1).gif"></td>
+    </tr>
+  </tbody>
+</table>
+<h2>Introduction</h2>
+
+<ul>
+	
+<li>Technology Trend and Migration </li>
+</ul>
+
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+	
+<p>Future Internet consists of billions of smart devices and sensors, which enable different smart applications like power and energy management, building management, home automation, healthcare, smart transport applications etc. Besides, there is a technology trend and migration for current small-scale, localized and isolated into future large-scale, ubiquitous and IP-enabled sensor, IoT and M2M applications and deployment by many on-going standard development and efforts. <span style="FONT-FAMILY: Wingdings; mso-fareast-font-family: Wingdings; mso-bidi-font-family: Wingdings"><span style="mso-list: Ignore"><span style="FONT: 7pt &#39;Times New Roman&#39;">&nbsp;</span></span></span></p></blockquote>
+
+<h2>Challenges for the Migration</h2>
+
+<ul>
+	
+<li>Connectivity 
+		
+<ul>
+			
+<li>
+				
+<div>Large-scale, ubiquitous and data-intensive deployment, which involves huge amount of sensors, devices, and data.</div></li>
+			
+<li>
+				
+<div>Sensors and devices should be IPv6-connected, and accessible via the Internet with standard web services and protocols.</div></li>
+			
+<li>
+				
+<div>Gateway should be needed for connecting the constrained COAP-based 6LoWPAN sensor networks into the core IP network, with HTTP-COAP proxy and caching functionalities.</div></li>
+			
+<li>
+				
+<div>Gateway with standard web interfaces should also be needed for providing the embedded web services and connectivity.</div></li>
+		</ul></li>
+</ul>
+
+<ul>
+	
+<li>
+		
+<div>Management</div>
+		
+<ul>
+			
+<li>
+				
+<div>Multi-vendor sensor and device deployment, which involves various vendor-specific &amp; proprietary sensors, devices and systems.</div></li>
+			
+<li>
+				
+<div>Multiple standards and protocols Integration like IEEE 802.15.4 6LoWPAN and Zigbee IP sensor standard, IETF CORE, ETSI M2M, 3GPP MTC, BACnet, Lonwork, Modbus etc.</div></li>
+			
+<li>
+				
+<div>Multi-vendor gateway and management platform should be needed to support different sensors and devices with different standard and protocols.</div></li>
+		</ul></li>
+</ul>
+
+<ul>
+	
+<li>
+		
+<div>Application Enabling</div>
+		
+<ul>
+			
+<li>
+				
+<div>Gateway with standard data interfacing should be needed for multiple data collaboration and management, which is necessary for enabling different sensor, IoT and M2M applications in web platform like smart home, smart building management system, healthcare etc.</div></li>
+		</ul></li>
+</ul>
+
+<h2>ASTRI's Solution provides</h2>
+
+<ul>
+	
+<li>Generic Sensor Gateway Platform (GSGP) 
+		
+<ul>
+			
+<li>
+				
+<div>Multi-vendor adaptation and extensible platform</div>
+				
+<ul>
+					
+<li>
+						
+<div>Allow rapid customization and adaptation using software adaptors for multi-vendor, multi-standard sensors, and devices integration and support.</div></li>
+					
+<li>
+						
+<div>Allow simplified, scalable and IPv6-connected deployment with common gateway platform.</div></li>
+					
+<li>
+						
+<div>Support various Contiki-OS &amp;Tiny OS enabled, IEEE802.15.4, 6LoWPAN, Zigbee IP, BACnet, Lonwork, Modbus, vendor-specific sensors and devices etc.</div></li>
+				</ul></li>
+			
+<li>
+				
+<div>Standard Webinterfaces for Data Interfacing and Control</div>
+				
+<ul>
+					
+<li>
+						
+<div>Support standard REST/HTTP/COAP interface, XML and JSON data format for application enabling.</div></li>
+				</ul></li>
+			
+<li>
+				
+<div>Customized Interfaces and Software Adaptors</div>
+				
+<ul>
+					
+<li>
+						
+<div>Allow rapid customization, system integration and expansion for vendors’ existing systems.</div></li>
+				</ul></li>
+		</ul></li>
+</ul>
+
+<ul>
+	
+<li>
+		
+<div>Web-based Management System</div>
+		
+<ul>
+			
+<li>
+				
+<div>Sensor, Device and Gateway Management</div>
+				
+<ul>
+					
+<li>
+						
+<div>Support multi-vendor multi-standard sensor, device, and gateway management.</div></li>
+					
+<li>
+						
+<div>Provide inventory record, configuration, status, alarm, performance, security and access control &amp; redundancy etc.</div></li>
+					
+<li>
+						
+<div>Support web-based user Interface.</div></li>
+				</ul></li>
+			
+<li>
+				
+<div>Data Management</div>
+				
+<ul>
+					
+<li>
+						
+<div>Support standard REST/HTTP/COAP interface and data format (e.g. XML, JSON) for cost-effective data adaptation, collaboration and mining.<br>
+							</div></li>
+				</ul></li>
+		</ul></li>
+</ul>
+
+<h2 dir="ltr">ASTRI's Solution benefits</h2>
+
+<ul>
+	
+<li>
+		
+<div>Sensor and Device Vendors, and System Integrators</div>
+		
+<ul>
+			
+<li>
+				
+<div>Provides easy and fast system integration and expansion, enables migration to large-scale sensor, IoT, and M2M systems and applications.</div></li>
+			
+<li>
+				
+<div>Provides customizable management system for sensors, devices and gateway.</div></li>
+			
+<li>
+				
+<div>Enables efficient data management and mining for potential applications.</div></li>
+			
+<li>
+				
+<div>Offers complete end-to-end solution (sensors, devices, gateway, management system, applications) to customers.</div></li>
+		</ul></li>
+</ul>
+
+<ul>
+	
+<li>
+		
+<div>Application Developers and Users</div>
+		
+<ul>
+			
+<li>
+				
+<div>Provides standard data interfacing, collaboration and management, to enable different sensor, IoT and M2M applications like smart home, smart building management system, healthcare etc.<br>
+					</div></li>
+		</ul></li>
+</ul>
+
+<p><span style="FONT-WEIGHT: bold">&nbsp;</span></p>
+
+<p align="center">
+	<img style="WIDTH: 455px; HEIGHT: 296px" border="0" alt="" src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/GSGP.JPG" width="1496" height="1066"></p>
+
+<div><br>
+	</div>
+
+<p align="center"><span style="FONT-WEIGHT: bold">Figure 1. End-to-End Architecture for ASTRI’s Sensor &amp; Internet-of-Things (IoT) Gateway and Management Solution</span></p>  	</div>
+</div></div><!--[id=main]-->
+
+	<div id="footer">
+		<img src="./ASTRI - Home   Technologies   Communications Technologies   Communications Software_files/footer_line.gif" border="0"><br>
+		<div id="copyright">
+			© 2000-2013 Hong Kong Applied Science and Technology Research Institute Company Limited (ASTRI)<br>
+			© 2000-2013 香港應用科技研究院有限公司 版權所有</div>
+		<div id="links">
+			<a href="http://www.astri.org/main/?contentnamespace=others:relatedlinks">Related Links</a>
+			<a href="http://www.astri.org/main/?contentnamespace=sitemap">Site Map</a>
+			<a href="http://www.astri.org/main/?contentnamespace=others:tou">Terms of Use</a>
+			<a href="http://www.astri.org/main/?contentnamespace=others:privacypolicy">Privacy Policy</a>
+		</div>
+	</div>
+</div><!--[id=body]-->
+</center>
+
+ </body></html>

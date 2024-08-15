@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <title>WebRTC DSCP Control API</title>
+  <meta content="WD" name="w3c-status">
+  <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
+  <meta content="Bikeshed version 2c9a9a721fc32a5205a74753d47a41e1d5b633da" name="generator">
+  <link href="https://www.w3.org/TR/webrtc-dscp/" rel="canonical">
+<style>/* style-md-lists */
+
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}</style>
+<style>/* style-selflinks */
+
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: gray;
+    color: white;
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: black;
+}
+
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }</style>
+<style>/* style-counters */
+
+body {
+    counter-reset: example figure issue;
+}
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
+}
+
+.example {
+    counter-increment: example;
+}
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example" counter(example);
+}
+
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}</style>
+<style>/* style-autolinks */
+
+.css.css, .property.property, .descriptor.descriptor {
+    color: #005a9c;
+    font-size: inherit;
+    font-family: inherit;
+}
+.css::before, .property::before, .descriptor::before {
+    content: "‘";
+}
+.css::after, .property::after, .descriptor::after {
+    content: "’";
+}
+.property, .descriptor {
+    /* Don't wrap property and descriptor names */
+    white-space: nowrap;
+}
+.type { /* CSS value <type> */
+    font-style: italic;
+}
+pre .property::before, pre .property::after {
+    content: "";
+}
+[data-link-type="property"]::before,
+[data-link-type="propdesc"]::before,
+[data-link-type="descriptor"]::before,
+[data-link-type="value"]::before,
+[data-link-type="function"]::before,
+[data-link-type="at-rule"]::before,
+[data-link-type="selector"]::before,
+[data-link-type="maybe"]::before {
+    content: "‘";
+}
+[data-link-type="property"]::after,
+[data-link-type="propdesc"]::after,
+[data-link-type="descriptor"]::after,
+[data-link-type="value"]::after,
+[data-link-type="function"]::after,
+[data-link-type="at-rule"]::after,
+[data-link-type="selector"]::after,
+[data-link-type="maybe"]::after {
+    content: "’";
+}
+
+[data-link-type].production::before,
+[data-link-type].production::after,
+.prod [data-link-type]::before,
+.prod [data-link-type]::after {
+    content: "";
+}
+
+[data-link-type=element],
+[data-link-type=element-attr] {
+    font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: .9em;
+}
+[data-link-type=element]::before { content: "<" }
+[data-link-type=element]::after  { content: ">" }
+
+[data-link-type=biblio] {
+    white-space: pre;
+}</style>
+<style>/* style-dfn-panel */
+
+.dfn-panel {
+    position: absolute;
+    z-index: 35;
+    height: auto;
+    width: -webkit-fit-content;
+    width: fit-content;
+    max-width: 300px;
+    max-height: 500px;
+    overflow: auto;
+    padding: 0.5em 0.75em;
+    font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
+    background: #DDDDDD;
+    color: black;
+    border: outset 0.2em;
+}
+.dfn-panel:not(.on) { display: none; }
+.dfn-panel * { margin: 0; padding: 0; text-indent: 0; }
+.dfn-panel > b { display: block; }
+.dfn-panel a { color: black; }
+.dfn-panel a:not(:hover) { text-decoration: none !important; border-bottom: none !important; }
+.dfn-panel > b + b { margin-top: 0.25em; }
+.dfn-panel ul { padding: 0; }
+.dfn-panel li { list-style: inside; }
+.dfn-panel.activated {
+    display: inline-block;
+    position: fixed;
+    left: .5em;
+    bottom: 2em;
+    margin: 0 auto;
+    max-width: calc(100vw - 1.5em - .4em - .5em);
+    max-height: 30vh;
+}
+
+.dfn-paneled { cursor: pointer; }
+</style>
+<style>/* style-syntax-highlighting */
+pre.idl.highlight { color: #708090; }
+.highlight:not(.idl) { background: hsl(24, 20%, 95%); }
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+.highlight .c { color: #708090 } /* Comment */
+.highlight .k { color: #990055 } /* Keyword */
+.highlight .l { color: #000000 } /* Literal */
+.highlight .n { color: #0077aa } /* Name */
+.highlight .o { color: #999999 } /* Operator */
+.highlight .p { color: #999999 } /* Punctuation */
+.highlight .cm { color: #708090 } /* Comment.Multiline */
+.highlight .cp { color: #708090 } /* Comment.Preproc */
+.highlight .c1 { color: #708090 } /* Comment.Single */
+.highlight .cs { color: #708090 } /* Comment.Special */
+.highlight .kc { color: #990055 } /* Keyword.Constant */
+.highlight .kd { color: #990055 } /* Keyword.Declaration */
+.highlight .kn { color: #990055 } /* Keyword.Namespace */
+.highlight .kp { color: #990055 } /* Keyword.Pseudo */
+.highlight .kr { color: #990055 } /* Keyword.Reserved */
+.highlight .kt { color: #990055 } /* Keyword.Type */
+.highlight .ld { color: #000000 } /* Literal.Date */
+.highlight .m { color: #000000 } /* Literal.Number */
+.highlight .s { color: #a67f59 } /* Literal.String */
+.highlight .na { color: #0077aa } /* Name.Attribute */
+.highlight .nc { color: #0077aa } /* Name.Class */
+.highlight .no { color: #0077aa } /* Name.Constant */
+.highlight .nd { color: #0077aa } /* Name.Decorator */
+.highlight .ni { color: #0077aa } /* Name.Entity */
+.highlight .ne { color: #0077aa } /* Name.Exception */
+.highlight .nf { color: #0077aa } /* Name.Function */
+.highlight .nl { color: #0077aa } /* Name.Label */
+.highlight .nn { color: #0077aa } /* Name.Namespace */
+.highlight .py { color: #0077aa } /* Name.Property */
+.highlight .nt { color: #669900 } /* Name.Tag */
+.highlight .nv { color: #222222 } /* Name.Variable */
+.highlight .ow { color: #999999 } /* Operator.Word */
+.highlight .mb { color: #000000 } /* Literal.Number.Bin */
+.highlight .mf { color: #000000 } /* Literal.Number.Float */
+.highlight .mh { color: #000000 } /* Literal.Number.Hex */
+.highlight .mi { color: #000000 } /* Literal.Number.Integer */
+.highlight .mo { color: #000000 } /* Literal.Number.Oct */
+.highlight .sb { color: #a67f59 } /* Literal.String.Backtick */
+.highlight .sc { color: #a67f59 } /* Literal.String.Char */
+.highlight .sd { color: #a67f59 } /* Literal.String.Doc */
+.highlight .s2 { color: #a67f59 } /* Literal.String.Double */
+.highlight .se { color: #a67f59 } /* Literal.String.Escape */
+.highlight .sh { color: #a67f59 } /* Literal.String.Heredoc */
+.highlight .si { color: #a67f59 } /* Literal.String.Interpol */
+.highlight .sx { color: #a67f59 } /* Literal.String.Other */
+.highlight .sr { color: #a67f59 } /* Literal.String.Regex */
+.highlight .s1 { color: #a67f59 } /* Literal.String.Single */
+.highlight .ss { color: #a67f59 } /* Literal.String.Symbol */
+.highlight .vc { color: #0077aa } /* Name.Variable.Class */
+.highlight .vg { color: #0077aa } /* Name.Variable.Global */
+.highlight .vi { color: #0077aa } /* Name.Variable.Instance */
+.highlight .il { color: #000000 } /* Literal.Number.Integer.Long */
+</style>
+  <link href="./WebRTC DSCP Control API_files/W3C-WD" rel="stylesheet">
+ <style type="text/css">
+:root #header + #content > #left > #rlblock_left
+{ display: none !important; }</style></head><body class="h-entry toc-sidebar"><p id="toc-nav"><a id="toc-jump" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#toc"><span aria-hidden="true">↑</span> <span>Jump to Table of Contents</span></a><a id="toc-toggle" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#toc"><span aria-hidden="true">←</span> <span>Collapse Sidebar</span></a></p>
+  <div class="head">
+   <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="./WebRTC DSCP Control API_files/W3C" width="72"> </a> </p>
+   <h1 class="p-name no-ref" id="title">WebRTC DSCP Control API</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C First Public Working Draft, <time class="dt-updated" datetime="2018-07-03">3 July 2018</time></span></h2>
+   <div data-fill-with="spec-metadata">
+    <dl>
+     <dt>This version:
+     </dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/">https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/</a>
+     </dd><dt>Latest published version:
+     </dt><dd><a href="https://www.w3.org/TR/webrtc-dscp/">https://www.w3.org/TR/webrtc-dscp/</a>
+     </dd><dt>Editor's Draft:
+     </dt><dd><a href="https://w3c.github.io/webrtc-dscp-exp/">https://w3c.github.io/webrtc-dscp-exp/</a>
+     </dd><dt>Feedback:
+     </dt><dd><span><a href="mailto:public-webrtc@w3.org?subject=%5Bwebrtc-dscp%5D%20YOUR%20TOPIC%20HERE">public-webrtc@w3.org</a> with subject line “<kbd>[webrtc-dscp] <i data-lt="">… message topic …</i></kbd>” (<a href="https://lists.w3.org/Archives/Public/public-webrtc/" rel="discussion">archives</a>)</span>
+     </dd><dt class="editor">Editor:
+     </dt><dd class="editor p-author h-card vcard" data-editor-id="24610"><a class="p-name fn u-email email" href="mailto:hta@google.com">Harald Alvestrand</a> (<span class="p-org org">Google Inc.</span>)
+    </dd></dl>
+   </div>
+   <div data-fill-with="warning"></div>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2018 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
+   <hr title="Separator for header">
+  </div>
+  <div class="p-summary" data-fill-with="abstract">
+   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
+   <p>This API defines a control surface for manipulating the network
+
+control bits (DSCP bits) of outgoing WebRTC packets.</p>
+  </div>
+  <h2 class="no-num no-toc no-ref heading settled" id="sotd"><span class="content">Status of this document</span></h2>
+  <div data-fill-with="status">
+   <p> <em>This section describes the status of this document at the time of
+  its publication. Other documents may supersede this document. A list of
+  current W3C publications and the latest revision of this technical report
+  can be found in the <a href="https://www.w3.org/TR/">W3C technical reports
+  index at https://www.w3.org/TR/.</a></em> </p>
+   <p> This document was published by the <a href="https://www.w3.org/2011/04/webrtc/">Web Real-Time Communications Working Group</a> as a Working Draft. This document is intended to become a W3C Recommendation. </p>
+   <p> If you wish to make comments regarding this document, please send them to <a href="mailto:public-webrtc@w3.org?Subject=%5Bwebrtc-dscp%5D%20PUT%20SUBJECT%20HERE">public-webrtc@w3.org</a> (<a href="mailto:public-webrtc-request@w3.org?subject=subscribe">subscribe</a>, <a href="https://lists.w3.org/Archives/Public/public-webrtc/">archives</a>).
+	When sending e-mail,
+	please put the text “webrtc-dscp” in the subject,
+	preferably like this:
+	“[webrtc-dscp] <em>…summary of comment…</em>”.
+	All comments are welcome. </p>
+   <p> This document is a <strong>First Public Working Draft</strong>. </p>
+   <p> Publication as a First Public Working Draft does not imply endorsement by the W3C
+  Membership. This is a draft document and may be updated, replaced or
+  obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress. </p>
+   <p> This document was produced by a group operating under
+	the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+	W3C maintains a <a href="https://www.w3.org/2004/01/pp-impl/47318/status" rel="disclosure">public list of any patent disclosures</a> made in connection with the deliverables of the group;
+	that page also includes instructions for disclosing a patent.
+	An individual who has actual knowledge of a patent which the individual believes contains <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>. </p>
+   <p> This document is governed by the <a href="https://www.w3.org/2018/Process-20180201/" id="w3c_process_revision">1 February 2018 W3C Process Document</a>. </p>
+   <p></p>
+  </div>
+  <div data-fill-with="at-risk"></div>
+  <nav data-fill-with="table-of-contents" id="toc">
+   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
+   <ol class="toc" role="directory">
+    <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
+    </li><li>
+     <a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#idl"><span class="secno">2</span> <span class="content">IDL specification</span></a>
+     <ol class="toc">
+      <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#networkPriority"><span class="secno">2.1</span> <span class="content">networkPriority definition</span></a>
+     </li></ol>
+    </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
+    </li><li>
+     <a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index"><span class="secno"></span> <span class="content">Index</span></a>
+     <ol class="toc">
+      <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index-defined-here"><span class="secno"></span> <span class="content">Terms defined by this specification</span></a>
+      </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index-defined-elsewhere"><span class="secno"></span> <span class="content">Terms defined by reference</span></a>
+     </li></ol>
+    </li><li>
+     <a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
+     </li></ol>
+    </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#idl-index"><span class="secno"></span> <span class="content">IDL Index</span></a>
+   </li></ol>
+  </nav>
+  <main>
+   <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#intro"></a></h2>
+   <p>The <a data-link-type="biblio" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#biblio-webrtc">[WEBRTC]</a> spec defines a "<code class="idl"><a data-link-type="idl" href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-priority" id="ref-for-dom-rtcrtpencodingparameters-priority">priority</a></code>" field as part of its
+RTCRtpEncodingParameters structure, with the possible values "very-low",
+"low", "medium" and "high".</p>
+   <p>This specification adds a field to <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters" id="ref-for-dom-rtcrtpencodingparameters">RTCRtpEncodingParameters</a></code> that allows
+control over the DSCP markings without affecting local prioritization.</p>
+   <h2 class="heading settled" data-level="2" id="idl"><span class="secno">2. </span><span class="content">IDL specification</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#idl"></a></h2>
+<pre class="idl highlight def"><span class="kt">partial</span> <span class="kt">dictionary</span> <a class="nv idl-code" data-link-type="dictionary">RTCRtpEncodingParameters</a> {
+    <a class="n" data-link-type="idl-name" href="https://w3c.github.io/webrtc-pc/#dom-rtcprioritytype" id="ref-for-dom-rtcprioritytype">RTCPriorityType</a> <dfn class="nv dfn-paneled idl-code" data-dfn-for="RTCRtpEncodingParameters" data-dfn-type="dict-member" data-export="" data-type="RTCPriorityType " id="dom-rtcrtpencodingparameters-networkpriority"><code>networkPriority</code></dfn>;  // Note: No default
+};
+</pre>
+   <h3 class="heading settled" data-level="2.1" id="networkPriority"><span class="secno">2.1. </span><span class="content">networkPriority definition</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#networkPriority"></a></h3>
+   <p><dfn data-dfn-for="RTCRtpEncodingParameters" data-dfn-type="dfn" data-noexport="" id="rtcrtpencodingparameters-networkpriority">networkPriority<a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#rtcrtpencodingparameters-networkpriority"></a></dfn> has the same
+effect as <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-priority" id="ref-for-dom-rtcrtpencodingparameters-priority①">priority</a></code>, except that it only affects the DSCP markings of
+the generated packets, as described in <a data-link-type="biblio" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#biblio-rtcweb-transport">[RTCWEB-TRANSPORT]</a> section 4.2.</p>
+   <p>If <code class="idl"><a data-link-type="idl" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#dom-rtcrtpencodingparameters-networkpriority" id="ref-for-dom-rtcrtpencodingparameters-networkpriority">networkPriority</a></code> is unset, the DSCP markings of the generated
+packets are controlled by the <code class="idl"><a data-link-type="idl" href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-priority" id="ref-for-dom-rtcrtpencodingparameters-priority②">priority</a></code> member.</p>
+  </main>
+  <div data-fill-with="conformance">
+   <h2 class="no-ref no-num heading settled" id="conformance"><span class="content"> Conformance</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#conformance"></a></h2>
+   <p> Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
+            The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
+            in the normative parts of this document
+            are to be interpreted as described in RFC 2119.
+            However, for readability,
+            these words do not appear in all uppercase letters in this specification. </p>
+   <p> All of the text of this specification is normative
+            except sections explicitly marked as non-normative, examples, and notes. <a data-link-type="biblio" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#biblio-rfc2119">[RFC2119]</a> </p>
+   <p> Examples in this specification are introduced with the words “for example”
+            or are set apart from the normative text with <code>class="example"</code>, like this: </p>
+   <div class="example" id="example-example"><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#example-example"></a> This is an example of an informative example. </div>
+   <p> Informative notes begin with the word “Note”
+            and are set apart from the normative text with <code>class="note"</code>, like this: </p>
+   <p class="note" role="note"> Note, this is an informative note. </p>
+  </div>
+<script>
+(function() {
+  "use strict";
+  var collapseSidebarText = '<span aria-hidden="true">←</span> '
+                          + '<span>Collapse Sidebar</span>';
+  var expandSidebarText   = '<span aria-hidden="true">→</span> '
+                          + '<span>Pop Out Sidebar</span>';
+  var tocJumpText         = '<span aria-hidden="true">↑</span> '
+                          + '<span>Jump to Table of Contents</span>';
+
+  var sidebarMedia = window.matchMedia('screen and (min-width: 78em)');
+  var autoToggle   = function(e){ toggleSidebar(e.matches) };
+  if(sidebarMedia.addListener) {
+    sidebarMedia.addListener(autoToggle);
+  }
+
+  function toggleSidebar(on) {
+    if (on == undefined) {
+      on = !document.body.classList.contains('toc-sidebar');
+    }
+
+    /* Don’t scroll to compensate for the ToC if we’re above it already. */
+    var headY = 0;
+    var head = document.querySelector('.head');
+    if (head) {
+      // terrible approx of "top of ToC"
+      headY += head.offsetTop + head.offsetHeight;
+    }
+    var skipScroll = window.scrollY < headY;
+
+    var toggle = document.getElementById('toc-toggle');
+    var tocNav = document.getElementById('toc');
+    if (on) {
+      var tocHeight = tocNav.offsetHeight;
+      document.body.classList.add('toc-sidebar');
+      document.body.classList.remove('toc-inline');
+      toggle.innerHTML = collapseSidebarText;
+      if (!skipScroll) {
+        window.scrollBy(0, 0 - tocHeight);
+      }
+      tocNav.focus();
+      sidebarMedia.addListener(autoToggle); // auto-collapse when out of room
+    }
+    else {
+      document.body.classList.add('toc-inline');
+      document.body.classList.remove('toc-sidebar');
+      toggle.innerHTML = expandSidebarText;
+      if (!skipScroll) {
+        window.scrollBy(0, tocNav.offsetHeight);
+      }
+      if (toggle.matches(':hover')) {
+        /* Unfocus button when not using keyboard navigation,
+           because I don’t know where else to send the focus. */
+        toggle.blur();
+      }
+    }
+  }
+
+  function createSidebarToggle() {
+    /* Create the sidebar toggle in JS; it shouldn’t exist when JS is off. */
+    var toggle = document.createElement('a');
+      /* This should probably be a button, but appearance isn’t standards-track.*/
+    toggle.id = 'toc-toggle';
+    toggle.class = 'toc-toggle';
+    toggle.href = '#toc';
+    toggle.innerHTML = collapseSidebarText;
+
+    sidebarMedia.addListener(autoToggle);
+    var toggler = function(e) {
+      e.preventDefault();
+      sidebarMedia.removeListener(autoToggle); // persist explicit off states
+      toggleSidebar();
+      return false;
+    }
+    toggle.addEventListener('click', toggler, false);
+
+
+    /* Get <nav id=toc-nav>, or make it if we don’t have one. */
+    var tocNav = document.getElementById('toc-nav');
+    if (!tocNav) {
+      tocNav = document.createElement('p');
+      tocNav.id = 'toc-nav';
+      /* Prepend for better keyboard navigation */
+      document.body.insertBefore(tocNav, document.body.firstChild);
+    }
+    /* While we’re at it, make sure we have a Jump to Toc link. */
+    var tocJump = document.getElementById('toc-jump');
+    if (!tocJump) {
+      tocJump = document.createElement('a');
+      tocJump.id = 'toc-jump';
+      tocJump.href = '#toc';
+      tocJump.innerHTML = tocJumpText;
+      tocNav.appendChild(tocJump);
+    }
+
+    tocNav.appendChild(toggle);
+  }
+
+  var toc = document.getElementById('toc');
+  if (toc) {
+    createSidebarToggle();
+    toggleSidebar(sidebarMedia.matches);
+
+    /* If the sidebar has been manually opened and is currently overlaying the text
+       (window too small for the MQ to add the margin to body),
+       then auto-close the sidebar once you click on something in there. */
+    toc.addEventListener('click', function(e) {
+      if(e.target.tagName.toLowerCase() == "a" && document.body.classList.contains('toc-sidebar') && !sidebarMedia.matches) {
+        toggleSidebar(false);
+      }
+    }, false);
+  }
+  else {
+    console.warn("Can’t find Table of Contents. Please use <nav id='toc'> around the ToC.");
+  }
+
+  /* Wrap tables in case they overflow */
+  var tables = document.querySelectorAll(':not(.overlarge) > table.data, :not(.overlarge) > table.index');
+  var numTables = tables.length;
+  for (var i = 0; i < numTables; i++) {
+    var table = tables[i];
+    var wrapper = document.createElement('div');
+    wrapper.className = 'overlarge';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  }
+
+})();
+</script>
+  <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index-defined-here"></a></h3>
+  <ul class="index">
+   <li>
+    networkPriority
+    <ul>
+     <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#rtcrtpencodingparameters-networkpriority">dfn for RTCRtpEncodingParameters</a><span>, in §2.1</span>
+     </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#dom-rtcrtpencodingparameters-networkpriority">dict-member for RTCRtpEncodingParameters</a><span>, in §2</span>
+    </li></ul>
+  </li></ul>
+  <aside class="dfn-panel" data-for="term-for-dom-rtcprioritytype">
+   <a href="https://w3c.github.io/webrtc-pc/#dom-rtcprioritytype">https://w3c.github.io/webrtc-pc/#dom-rtcprioritytype</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcprioritytype">2. IDL specification</a>
+   </li></ul>
+  </aside>
+  <aside class="dfn-panel" data-for="term-for-dom-rtcrtpencodingparameters">
+   <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters">https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcrtpencodingparameters">1. Introduction</a>
+   </li></ul>
+  </aside>
+  <aside class="dfn-panel" data-for="term-for-dom-rtcrtpencodingparameters-priority">
+   <a href="https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-priority">https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-priority</a><b>Referenced in:</b>
+   <ul>
+    <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcrtpencodingparameters-priority">1. Introduction</a>
+    </li><li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcrtpencodingparameters-priority%E2%91%A0">2.1. networkPriority definition</a> <a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcrtpencodingparameters-priority%E2%91%A1">(2)</a>
+   </li></ul>
+  </aside>
+  <h3 class="no-num no-ref heading settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#index-defined-elsewhere"></a></h3>
+  <ul class="index">
+   <li>
+    <a data-link-type="biblio">[webrtc-pc]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="term-for-dom-rtcprioritytype" style="color:initial">RTCPriorityType</span>
+     </li><li><span class="dfn-paneled" id="term-for-dom-rtcrtpencodingparameters" style="color:initial">RTCRtpEncodingParameters</span>
+     </li><li><span class="dfn-paneled" id="term-for-dom-rtcrtpencodingparameters-priority" style="color:initial">priority</span>
+    </li></ul>
+  </li></ul>
+  <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#references"></a></h2>
+  <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#normative"></a></h3>
+  <dl>
+   <dt id="biblio-rfc2119">[RFC2119]
+   </dt><dd>S. Bradner. <a href="https://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
+   </dd><dt id="biblio-webrtc">[WEBRTC]
+   </dt><dd>Adam Bergkvist; et al. <a href="https://www.w3.org/TR/webrtc/">WebRTC 1.0: Real-time Communication Between Browsers</a>. 21 June 2018. CR. URL: <a href="https://www.w3.org/TR/webrtc/">https://www.w3.org/TR/webrtc/</a>
+  </dd></dl>
+  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#informative"></a></h3>
+  <dl>
+   <dt id="biblio-rtcweb-transport">[RTCWEB-TRANSPORT]
+   </dt><dd>H. Alvestrand. <a href="https://tools.ietf.org/html/draft-ietf-rtcweb-transports">Transports for RTCWEB</a>. 31 October 2016. Active Internet-Draft. URL: <a href="https://tools.ietf.org/html/draft-ietf-rtcweb-transports">https://tools.ietf.org/html/draft-ietf-rtcweb-transports</a>
+  </dd></dl>
+  <h2 class="no-num no-ref heading settled" id="idl-index"><span class="content">IDL Index</span><a class="self-link" href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#idl-index"></a></h2>
+<pre class="idl highlight def"><span class="kt">partial</span> <span class="kt">dictionary</span> <a class="nv idl-code" data-link-type="dictionary">RTCRtpEncodingParameters</a> {
+    <a class="n" data-link-type="idl-name" href="https://w3c.github.io/webrtc-pc/#dom-rtcprioritytype" id="ref-for-dom-rtcprioritytype①">RTCPriorityType</a> <a class="nv" data-type="RTCPriorityType " href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#dom-rtcrtpencodingparameters-networkpriority"><code>networkPriority</code></a>;  // Note: No default
+};
+
+</pre>
+  <aside class="dfn-panel" data-for="dom-rtcrtpencodingparameters-networkpriority">
+   <b><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#dom-rtcrtpencodingparameters-networkpriority">#dom-rtcrtpencodingparameters-networkpriority</a></b><b>Referenced in:</b>
+   <ul>
+    <li><a href="https://www.w3.org/TR/2018/WD-webrtc-dscp-20180703/#ref-for-dom-rtcrtpencodingparameters-networkpriority">2.1. networkPriority definition</a>
+   </li></ul>
+  </aside>
+<script>/* script-dfn-panel */
+
+document.body.addEventListener("click", function(e) {
+    var queryAll = function(sel) { return [].slice.call(document.querySelectorAll(sel)); }
+    // Find the dfn element or panel, if any, that was clicked on.
+    var el = e.target;
+    var target;
+    var hitALink = false;
+    while(el.parentElement) {
+        if(el.tagName == "A") {
+            // Clicking on a link in a <dfn> shouldn't summon the panel
+            hitALink = true;
+        }
+        if(el.classList.contains("dfn-paneled")) {
+            target = "dfn";
+            break;
+        }
+        if(el.classList.contains("dfn-panel")) {
+            target = "dfn-panel";
+            break;
+        }
+        el = el.parentElement;
+    }
+    if(target != "dfn-panel") {
+        // Turn off any currently "on" or "activated" panels.
+        queryAll(".dfn-panel.on, .dfn-panel.activated").forEach(function(el){
+            el.classList.remove("on");
+            el.classList.remove("activated");
+        });
+    }
+    if(target == "dfn" && !hitALink) {
+        // open the panel
+        var dfnPanel = document.querySelector(".dfn-panel[data-for='" + el.id + "']");
+        if(dfnPanel) {
+            dfnPanel.classList.add("on");
+            var rect = el.getBoundingClientRect();
+            dfnPanel.style.left = window.scrollX + rect.right + 5 + "px";
+            dfnPanel.style.top = window.scrollY + rect.top + "px";
+            var panelRect = dfnPanel.getBoundingClientRect();
+            var panelWidth = panelRect.right - panelRect.left;
+            if(panelRect.right > document.body.scrollWidth && (rect.left - (panelWidth + 5)) > 0) {
+                // Reposition, because the panel is overflowing
+                dfnPanel.style.left = window.scrollX + rect.left - (panelWidth + 5) + "px";
+            }
+        } else {
+            console.log("Couldn't find .dfn-panel[data-for='" + el.id + "']");
+        }
+    } else if(target == "dfn-panel") {
+        // Switch it to "activated" state, which pins it.
+        el.classList.add("activated");
+        el.style.left = null;
+        el.style.top = null;
+    }
+
+});
+</script>
+<script src="./WebRTC DSCP Control API_files/fixup.js.download"></script>
+
+</body></html>

@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6 {
+	color: #444444;
+	margin-bottom: 10px;
+}
+
+.download-container h2 {
+	overflow: hidden;
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+	font-weight: normal;
+	color: #999999;
+
+}
+
+.download-container h3 {
+	border-top: 1px solid #cccccc;
+	padding: 5px 0;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.download-container ul li strong {
+	color: #666666;
+	font-size: 12px;
+}
+
+p {
+	color: #525252;
+	margin-bottom: 15px;
+}
+ 
+.grid_9 p {
+	line-height: 23px;
+}
+
+.grid_3 p {
+	line-height: 18px;
+}
+
+.grid_6 p {
+	line-height: 20px;
+}
+
+.grid_12 p {
+	line-height: 25px;
+}
+
+.grid_12.breadcrumbs p {
+	line-height: 15px;
+}
+
+.smalltext {
+	color: #666666;
+}
+
+
+.content-container h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content-container h2 {
+	font-size: 18px;
+	font-weight: normal;
+}

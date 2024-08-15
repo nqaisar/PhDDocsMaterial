@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.formbuilder {
+  width: 300px;
+  margin-left: 50px;
+}
+
+.formbuilder_dateRangeStart {
+  width: 107px;
+  margin-left: 50px;
+  padding-right: 30px;
+}
+
+.formbuilder_dateRangeEnd {
+  width: 107px;
+  padding-left: 30px;
+}
+
+.formbuilder_checkbox_required {
+ padding-left: 5px;
+}
+
+.formbuilder_checkbox {
+margin-left: 50px;
+}
+.formbuilder_checkbox_label {
+	float:none;
+    display: inline;
+	margin-right:auto;
+	width:250px;
+}
+.dropdown_values {
+  margin-top: 10px;
+  margin-left: 253px;
+  width: 300px;
+  padding-bottom: 10px;
+}
+.textbox_params {
+  margin-top: 10px;
+  margin-left: 253px;
+  width: 300px;
+  padding-bottom: 10px;
+}
+.helptext_value {
+	font-size:0.7em;
+	padding-left:27.75em;
+	width:40em;
+}
+.dropdown_value_list {
+  width: 300px;
+  height: 150px;
+}
+
+/*used on select form inputs page*/
+#input_widgets { float:left; width: 330px;}
+	#selected_widgets { margin-left:350px; width: 330px;  }
+	/* style the list to maximize the droppable hitarea */
+	#selected_widgets ol{ margin: 0;  }
+	
+	#input_widgets  li {
+    cursor: move;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+#selected_widgets  li {
+    cursor: move;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    list-style: none outside none;
+    margin-left: 0px;
+    padding-left: 10px;
+}
+
+
+.clear_link {
+	font-size:12px;
+	margin-left:70px;
+}
+
+b.editable_select{
+display: inline; 
+vertical-align:top;
+color: rgb(181, 0, 0);
+	
+}

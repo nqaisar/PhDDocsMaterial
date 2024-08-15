@@ -1,0 +1,83 @@
+/* 
+	Base CSS used (but modified) from
+  http://www.scriptiny.com/2011/04/javascript-dropdown-menu/
+	8/15/13 
+*/
+
+/* Primary Menu is the top level menu, not the dropdowns */
+.primaryMenu li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position:relative;
+	z-index:1000;
+	font-size:85%
+}
+ 
+.primaryMenu li li{font-size:100%}
+
+li.endstatic{border-right:1px solid #fff;}
+.primaryMenu li:hover {
+	background: #efefef;
+}
+
+.primaryMenu li:hover a {
+	color: #444;
+	text-shadow: none;
+}
+
+.primaryMenu .menu-link {
+	color: #fff;
+	text-shadow: 0 1px 1px #000;
+	text-decoration: none;
+	display: block;
+	padding: 12px 17px;
+}
+
+.menu {
+	z-index: 1000;
+}
+
+/* Dropdown Level One */
+.menu ul {
+	display: none;
+	position: absolute;
+	background: #efefef;
+	padding: 0;
+	margin: 0;
+	width: 220px;
+}
+
+.menu ul li {
+	float:none;
+}
+
+.menu ul li:hover {
+	background: #dedede;
+}
+
+.menu ul li a {
+	float: none;
+	display: block;
+	padding: 5px;
+	
+	text-decoration: none;
+}
+
+.menu ul li a:hover
+{
+	background: #dedede;
+}
+
+
+/* Dropdown Level Two */
+.menu ul ul {
+	background: #dedede;
+	top: 0;
+	left: 220px; /* Amount of parent's width */
+}
+
+.menu ul ul li a:hover {
+	background: #cccccc
+}

@@ -1,0 +1,14 @@
+
+
+.searchResultItem { margin-top: 15px; padding-bottom:10px; margin-bottom:15px; border-bottom: 1px #cccccc dotted; }
+
+#contentBox .searchResultItem .title 						{ margin-bottom: 4px; }
+#contentBox .searchResultItem .title a:link 		{ font-size: 12px; color:#004282; font-weight: bold; text-decoration: none; }
+#contentBox .searchResultItem .title a:visited	{ font-size: 12px; color:#004282; font-weight: bold; text-decoration: none; }
+#contentBox .searchResultItem .title a:hover		{ font-size: 12px; color:#004282; font-weight: bold; text-decoration: underline; }
+
+.searchResultItem .title a b { background-color: #d2d2d2; }
+.searchResultItem .content b { background-color: #d2d2d2;  }
+.searchResultItem .content   { margin-left: 10px }
+
+#contentBox #searchResult #page { text-align: center; }

@@ -1,0 +1,24 @@
+Youtube Introduction about the Grid computing
+
+https://www.youtube.com/watch?v=6KWLC_RaAAc
+
+Summary:
+-Integration of pool of computers and resources to get the power of a super computer.
+-Layers, Structures, Middleware
+--Grid Fabric(GF)
+---Process Management Technology
+---It is the middleware that entirely manages all the resources.
+---Grid computing application requires more parallalism.
+---User Level Grid Middleware
+---Applications that facilitate the parallalism
+
+Operation
+--First Layer: Applicaiton Pool
+--Grid Broker(GB):Central Character
+---Grid Info Services(GIS): Have the knowledge about the available resources.
+---Grid Market Dictory(GMD):Knows the cost of the resources
+---Grid Data Catalog(GDC): If the app requires the data, GB access the DGC and checks which one is the nearest data resource.
+---then the DB send your request to the resource
+---Grid Bank: you are charged completly. You have to pay that amont of resources.
+There is no standardization of Grids so far, organizaitons are working on to have standards such as CERN.
+

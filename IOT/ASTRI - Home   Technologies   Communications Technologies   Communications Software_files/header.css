@@ -1,0 +1,101 @@
+/* header */
+
+div#header {
+	width: 960px;
+	height: 70px;
+	display: block;
+	float: left;
+}
+	div#header .left {
+		text-align:left;
+		float: left;
+	}
+	div#header .right {
+		text-align:right;
+		float: right;
+	}
+	div#header div#headerLogo {
+		margin-left : 9px;
+		margin-top  : 7px;
+	}
+	div#header div#topNav {
+		margin-right : 9px;
+		margin-top  : 7px;
+	}
+	div#header div#searchBox {
+		margin-right: 9px;
+		margin-top  : 7px;
+		text-align: right;
+		width: 280px;
+		float:right;
+	}
+	#k                  { width: 145px; color:#999999; }
+	#k.searchBoxOnFocus { color:#333333; }
+	#k.searchBoxOnBlur  { color:#999999; }
+
+	div#mainNav {
+		width: 960px;
+		clear: both;
+	}
+	div#mainNavShadow {
+		clear: both;
+	}
+/*	div#mainNavShadow {
+		width: 960px;
+		height: 5px;
+		background: url(../images/header_nav_bg.gif);
+		background-repeat: no-repeat;
+		border: 0px #ff0000 dotted;
+	}*/
+
+	/*div { border:1px #999999 dotted; }*/
+
+	div#mainNav ul {
+			list-style-type:none;
+			list-style-image:none;
+			list-style-position:outside;
+			list-style-type:none;
+			padding: 0;
+			margin: 0;
+	}
+		div#mainNav ul li {
+				display:block;
+				height:20px;
+				text-indent:-9999px;
+				float:left;
+		}
+
+div.popMenuItem {
+	width: 210px;
+	height:20px;
+	border-top: 1px #0055aa solid;
+	border-left: 1px #0055aa solid;
+	border-right: 1px #0055aa solid;
+	background-color: #002e76;
+	padding-right: 10px;
+	padding-top: 2px;
+	color: #0093d8;
+	font-size: 8pt;
+	text-align: left;
+}
+div.popMenuItemHover {
+	background-color: #00173b;
+}
+div.popMenuLastItem {
+	border-bottom: 1px #0055aa solid;
+}
+div.popMenuContainer {
+	position:absolute;
+	display:none;
+}
+
+div.popMenuItem a:link    { color:#00adef; text-decoration: none; }
+div.popMenuItem a:visited { color:#00adef; text-decoration: none; }
+div.popMenuItem a:hover   { color:#00adef; text-decoration: none; }
+
+div#popMenu_about        { position:relative; float: left; left:0px;   top: -4px; }
+div#popMenu_achieve      { position:relative; float: left; left:160px; top: -4px; }
+div#popMenu_technologies { position:relative; float: left; left:320px; top: -4px; }
+div#popMenu_news         { position:relative; float: left; left:640px; top: -4px; }
+
+.textfieldWithCaption { color:#999999; }

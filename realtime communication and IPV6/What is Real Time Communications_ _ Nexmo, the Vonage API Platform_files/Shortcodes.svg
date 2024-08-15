@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Shortcodes</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 20.25 12 20.25 12 0 0 0"></polygon>
+    </defs>
+    <g id="Shortcodes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(6.750000, 2.250000)">
+            <path d="M5.62576802,5.25 C2.52372338,5.25 0,7.62079007 0,10.5346607 C0,12.5640858 1.238821,14.4055077 3.1707827,15.2881489 L3.1707827,17.7437389 C3.1707827,18.2871803 3.64119675,18.7292226 4.21913401,18.7292226 L4.33817757,18.7292226 C4.59508124,19.2041023 5.04015053,19.5 5.52976516,19.5 L5.72253891,19.5 C6.21407359,19.5 6.65799085,19.2041023 6.91297447,18.7292226 L7.03048198,18.7292226 C7.60841924,18.7292226 8.07883329,18.2871803 8.07883329,17.7437389 L8.07883329,15.2881489 C10.010795,14.4076728 11.25,12.5658901 11.25,10.5346607 C11.25,7.62042922 8.72666064,5.25 5.62576802,5.25 Z" id="Stroke-1" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M1.5,1.5 L3,3.75" id="Stroke-3" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M9,3.75 L10.5,1.5" id="Stroke-5" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M6,0.75 L6,3" id="Stroke-7" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M7.5,15.75 L3.69830846,15.75" id="Stroke-9" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M4.33192372,18.75 L6.86638474,18.75" id="Stroke-11" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3.69830846,17.25 L7.5,17.25" id="Stroke-13" stroke="#0074C4" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"></path>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-16"></g>
+            <path d="M5.07844248,10.6842305 L6.22730973,10.6842305 L6.22730973,9.56576952 L5.07844248,9.56576952 L5.07844248,10.6842305 Z M8.25,9.56576952 L8.25,8.36372252 L7.46166372,8.36372252 L7.46166372,7.5 L6.22730973,7.5 L6.22730973,8.36372252 L5.07844248,8.36372252 L5.07844248,7.5 L3.8440885,7.5 L3.8440885,8.36372252 L3,8.36372252 L3,9.56576952 L3.8440885,9.56576952 L3.8440885,10.6842305 L3,10.6842305 L3,11.8859156 L3.8440885,11.8859156 L3.8440885,12.75 L5.07844248,12.75 L5.07844248,11.8859156 L6.22730973,11.8859156 L6.22730973,12.75 L7.46166372,12.75 L7.46166372,11.8859156 L8.25,11.8859156 L8.25,10.6842305 L7.46166372,10.6842305 L7.46166372,9.56576952 L8.25,9.56576952 Z" id="Fill-15" fill="#0074C4" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

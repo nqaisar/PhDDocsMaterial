@@ -1,0 +1,69 @@
+Platform on which they work on!!
+http://www.zephyranywhere.com/products/bioharness-3/
+sent middleware for WSN (Survey).pdf ***
+sent Middleware Challenges for Wireless Sensor Networks.pdf ***
+sent Uranus A Middleware Architecture for Dependable AAL and Vital Signs Monitoring Applications.pdf ***
+sent Emstar.pdf ***
+sent A Coordination Middleware for Wireless Sensor Networks.pdf ***
+sent Wiley-Interscience - Wireless Sensor Networks - Technology, Protocols, And Applications - 2007.pdf ***
+sent 2010-Dargie, W. and Poellabauer, C.-Fundamentals.of.Wireless.Sensor.Networks-theory and practice.pdf 2010-Dargie, W. and Poellabauer, C. Fundamentals.of.Wireless.Sensor.Networks-theory and practice.pdf ***
+sent 7-Wiley-Interscience - Wireless Sensor Networks - Technology, Protocols, And Applications - 2007.pdf 7-Wiley-Interscience - Wireless Sensor Networks - Technology, Protocols, And Applications - 2007.pdf ***
+
+AAL-Spain (An Ambient Assisted-Living Architecture Based on Wireless Sensor Networks, http://link.springer.com/chapter/10.1007%2F978-3-540-85867-6_28)
+http://www.smartspace.it/solutions/smartcity/smartcity_overview.htm
+
+
+
+>>Hardware: 
+From an America company Bioharness
+HeartBeat Monitor- Bioharness (Bluetooth)
+http://www.smartspace.it/index.htm
+omnet++, castalia
+
+Control Room for Smartcity:
+-open source code for command and contol
+-in the smart city we have dashboard center to manage the city
+-http://ccf.sourceforge.net/
+-http://cctcorp.com/products/command-and-control-software/ (from me)
+take the data from many systems in the smart city like transportation system, energy, water system, urban system, healthcare sytem ...the data comes from these systems will proces and manage in our control room to make real time decision. 
+-It is to control many heterogenous wsn's
+
+>>middleware:
+they are using bioharness
+
+>>Message Queues: 
+:IBM Web Sphere
+:Jave Message Services
+:JBOSS
+:JMS is the middleware service between the different Message Queues and SOA
+:JDBC is the middle service between the DBMS and the application
+:http://www.mulesoft.com/resources/esb/integration-middleware-technology
+
+
+Spanish Supervisor:
+: jholgado@ugr.es
+://www.ugr.es/~jholgado/index_en.html
+
+>>ANT+ based PC application
+http://portal.mhealth.uah.edu/public/index.php/mhealth-ant-pc-application
+
+
+http://openaal.org/documentation
+: http://www-micrel.deis.unibo.it/MPHS/slidecorso0506/WSN_Protocol.pdf
+: http://aaloa.org/
+: http://www.soprano-ip.org/
+: http://www.myui.eu/
+: http://www.universaal.org/index.php/en/
+: http://andreas.schmidt.name/activities
+: http://en.wikipedia.org/wiki/Alfresco_(software)
+sent Progetto_RD_StatoAttuale-BIGDATA[1].doc ***
+
+http://searchcloudcomputing.techtarget.com/definition/Hadoop
+[12/11/2013 11:19:13 PM] Nadeem Mehmood: managing BigData with SOA Middleware i.e. Hadoop
+While considering the previous discussion I am more focused towards the integration area especially in context to the communication and data integration middlewares. I have plan to write the REST Clients to retrieve data from the tele-medicine platforms for the integration purposes. Such REST Clients and other controls commends shall be the part of the data integration and analysis task of mine. I have the following reserve plans for the goals to achieve in the next two years in context to this selected area.
+[12/11/2013 11:34:35 PM] Nadeem Mehmood: -------
+[12/11/2013 11:34:36 PM] Nadeem Mehmood: While considering the previous discussion I am more focused towards managing the BigData  by using the SOA based middleware i.e. Apache’s Hadoop.  In context to the communication and data integration middlewares, I have plans to write the REST Clients to retrieve data from the telemedicine platforms for the integration purposes. Such REST Clients and other controls commends shall be the part of the data integration and analysis task of mine. I have the following reserve plans for the goals to achieve in the next two years in context to this selected area.
+[12/11/2013 11:34:45 PM] Nadeem Mehmood: this is your PhD upto me!
+
+
+>>How to merge two WSNs

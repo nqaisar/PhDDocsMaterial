@@ -1,0 +1,63 @@
+
+#leftMenu, #leftMenuBottom   { width: 225px; min-height:300px; margin-top: 8px; float: left; /*overflow:hidden; overflow-x:hidden; overflow-y:hidden;*/ }
+#leftMenuBg { width: 227px; min-height:300px; margin-top: 8px; float: left; }
+
+.leftmenu_lv1_highlighted a	{ font-weight: bold; color: #004281; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv1 a							{ font-weight: bold; color: #004281; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv1 a:link				{ color: #004281; text-decoration: none}
+.leftmenu_lv1 a:visited			{ color: #004281; text-decoration: none}
+.leftmenu_lv1 a:hover				{ color: #004281; text-decoration: none; cursor: pointer;}
+
+.leftmenu_lv2_highlighted a	{ font-weight: normal; color: #227CB2; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv2 a 						{ font-weight: normal; color: #0093d8; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv2 a:link				{ color: #006FB7; text-decoration: none}
+.leftmenu_lv2 a:visited			{ color: #006FB7; text-decoration: none}
+.leftmenu_lv2 a:hover				{ color: #0093d8; text-decoration: none; cursor: pointer;}
+
+
+.leftmenu_lv3_highlighted a	{ font-weight: normal; color: #227CB2; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv3 a							{ font-weight: normal; color: #666666; text-decoration: none ; letter-spacing:  normal}
+.leftmenu_lv3 a:link				{ color: #666666; text-decoration: none}
+.leftmenu_lv3 a:visited			{ color: #666666; text-decoration: none}
+.leftmenu_lv3 a:hover				{ color: #227CB2; text-decoration: none; cursor: pointer;}
+
+
+div.leftmenu_lv1, div.leftmenu_lv1_highlighted {
+	/*width: 225px;*/
+	text-align:left; 
+	vertical-align:middle;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+	padding-top:4px; 
+	padding-bottom:4px;
+}
+.leftmenu_lv1_highlighted { background-color: #dde6ef; } 
+
+div.leftmenu_lv2, div.leftmenu_lv2_highlighted {
+	/*width: 205px;*/
+	height: auto;
+  text-align:left;
+	vertical-align: middle;
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-top: 4px;
+ 	padding-bottom: 4px;
+}
+.leftmenu_lv2_highlighted { } 
+
+div.leftmenu_lv3, div.leftmenu_lv3_highlighted {
+	/*width: 195px;*/
+	height: auto;
+  text-align:left;
+	vertical-align: middle;
+	padding-left: 30px;
+	padding-right: 10px;
+	padding-top: 4px;
+ 	padding-bottom: 4px;
+}
+.leftmenu_lv3_highlighted { background-color: #f2f2f2; } 
+
+.leftmenu_top_border { border-top: 1px #cfcfcf solid; } 
+.leftmenu_bottom_border { border-bottom: 1px #cfcfcf solid; } 
+.leftmenu_split { border-bottom: 1px #cfcfcf solid; } 
+/*div.leftmenu_split { height:1px; background-color: #cfcfcf; } */
